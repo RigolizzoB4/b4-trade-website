@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B4 Trade - Comércio Exterior</title>
+    <meta name="description" content="B4 Trade - Sua parceira confiável para comércio exterior. Importação, exportação, logística e assessoria especializada. Parte do Grupo B4.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    
+    
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .top-bar {
+            background: #1a1a1a;
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        .hero-section {
+            position: relative;
+            padding: 80px 0;
+            color: white;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('Containers-bg-modified.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+        
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+        
+        .highlight-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .highlight {
+            color: #ff6600;
+        }
+        
+        .stat-item {
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ff6600;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        .transport-card {
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .transport-card .text-muted {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+        
+        .transport-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .transport-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #ff6600;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .service-icon i {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .about-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+            color: white;
+        }
+        
+        .contact-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            border-radius: 10px;
+            padding: 10px 15px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-float i {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+        
+        .btn-warning {
+            background-color: #ff6600;
+            border-color: #ff6600;
+        }
+        
+        .btn-warning:hover {
+            background-color: #e55a00;
+            border-color: #e55a00;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 1s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 1s ease-out;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .contact-black-section {
+            background: #1a1a1a;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .contact-black-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-black-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .map-section {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .map-section iframe {
+            width: 100vw;
+            height: 400px;
+            border: 0;
+            margin-left: calc(-50vw + 50%);
+        }
+        
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .footer p {
+            margin: 0;
+            opacity: 0.8;
+        }
+    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --font-heading: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-size-base: 1rem; /* 16px */
+  --line-height-base: 1.6;
+  --letter-spacing-tight: -0.015em;
+  --letter-spacing-normal: 0;
+  --measure: 70ch; /* optimal text measure */
+}
+/* Bind base text */
+html { font-size: 100%; }
+body, p, li, input, button, textarea, select {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-normal);
+  max-width: none;
+}
+/* Headings adopt logo-inspired display */
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3 {
+  font-family: var(--font-heading);
+  letter-spacing: var(--letter-spacing-tight);
+  font-weight: 600;
+  line-height: 1.2;
+}
+/* Scale */
+h1 { font-size: clamp(2rem, 4vw + 1rem, 3rem); }
+h2 { font-size: clamp(1.5rem, 2.5vw + 1rem, 2.25rem); }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+/* Navigation & buttons */
+.navbar-brand { font-family: var(--font-heading); font-weight: 700; letter-spacing: -0.01em; }
+.nav-link, .btn, .form-control { font-family: var(--font-body); }
+/* Paragraph rhythm and measure */
+main p { max-width: var(--measure); }
+
+/* Custom CSS */
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+.top-bar {
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.hero-section {
+    position: relative;
+    padding: 80px 0;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Containers-bg-modified.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.highlight-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #ff6600;
+}
+
+.stat-item {
+    padding: 2rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff6600;
+    display: block;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.transport-card {
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.transport-card .text-muted {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.transport-card:hover {
+    transform: translateY(-5px);
+}
+
+.transport-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: #ff6600;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.service-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.about-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+    color: white;
+}
+
+
+
+
+/* Refino de posicionamento para estética de site de trade */
+.hero-section h1 { margin-bottom: 0.75rem; }
+.hero-section p.lead { margin-top: 0.25rem; max-width: 65ch; }
+.navbar-brand { text-transform: none; }
+
+
+/* ====================
+   Tipografia refinada para todo o site
+   ==================== */
+:root {
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  letter-spacing: 0.015em;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  max-width: 65ch;
+}
+
+nav, .navbar-brand, button, input, select, textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-section h1 { margin-bottom: 0.75rem; }
+.hero-section p.lead { margin-top: 0.25rem; max-width: 65ch; }
+.navbar-brand { text-transform: none; }
+
+</style>
+
+<style>
+/* Ajustes específicos solicitados */
+.navbar-nav .nav-link {
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+}
+
+/* Aumentar fontes proporcionalmente */
+body {
+    font-size: 1.1rem !important;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw + 1rem, 4rem) !important; }
+h2 { font-size: clamp(2rem, 3vw + 1rem, 3rem) !important; }
+h3 { font-size: 1.8rem !important; }
+h4 { font-size: 1.5rem !important; }
+h5 { font-size: 1.3rem !important; }
+h6 { font-size: 1.1rem !important; }
+
+.lead { font-size: 1.3rem !important; }
+
+/* Ajustes para as estatísticas */
+.stat-number {
+    font-size: 2.8rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+.stat-label {
+    font-size: 1.1rem !important;
+}
+
+/* Ajustes para área laranja reduzida */
+.cta-section {
+    padding: 0.5cm 0 !important;
+}
+
+/* Ajustes para WhatsApp button e espaçamento do header */
+.navbar {
+    padding: 1rem 0 !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem !important;
+}
+
+/* ===== MELHORIAS DO CABEÇALHO SOLICITADAS ===== */
+
+/* Alinhamento e consistência visual do cabeçalho */
+.navbar {
+    padding: 0.75rem 0 !important;
+    min-height: 80px;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    padding: 0.75rem 1rem !important;
+    white-space: nowrap;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Ajuste dos botões para ficarem menores e alinhados */
+.btn-sm {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1rem !important;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Hover laranja para todos os itens do cabeçalho */
+.header-item {
+    transition: all 0.3s ease !important;
+    border-radius: 4px !important;
+}
+
+.header-item:hover {
+    background-color: #FFA500 !important;
+    color: #000 !important;
+}
+
+/* Hover específico para links de navegação */
+.nav-link.header-item:hover {
+    background-color: #FFA500 !important;
+    color: #000 !important;
+}
+
+/* Hover para botões */
+.btn.header-item:hover {
+    background-color: #FFA500 !important;
+    color: #000 !important;
+    border-color: #FFA500 !important;
+}
+
+/* Seletor de idiomas estilizado */
+.language-selector {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1rem !important;
+    border: 1px solid #ddd !important;
+    height: auto;
+}
+
+.language-selector:hover {
+    background-color: #FFA500 !important;
+    color: #000 !important;
+    border-color: #FFA500 !important;
+}
+
+/* Alinhamento dos itens do cabeçalho */
+.d-flex.align-items-center {
+    height: 100%;
+    align-items: center !important;
+}
+
+.d-flex.align-items-center > * {
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo ajustado */
+.navbar-brand {
+    font-size: 1.5rem !important;
+    height: 110px;
+    display: flex;
+    align-items: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem !important;
+        padding: 0.6rem 0.8rem !important;
+    }
+    
+    .btn-sm {
+        font-size: 0.85rem !important;
+        padding: 0.4rem 0.8rem !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav .nav-link {
+        font-size: 0.95rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    .d-flex.align-items-center {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+}
+</style>
+</head>
+
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <small>
+                        <i class="fas fa-phone me-2"></i>(19) 3751-4300
+                        <i class="fas fa-envelope ms-3 me-2"></i>contato@b4.com.br
+                    </small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small class="social-links">
+                        <a href="https://br.linkedin.com/company/grupob4" target="_blank" class="text-white text-decoration-none">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="assets/BA-logo-new.png" alt="B4 Trade" style="width: 150px; height: auto;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class='nav-link fw-medium active header-item' href='/' data-translate="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium header-item" href="quem-somos.html" data-translate="quem-somos">Quem Somos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-medium header-item" href="#" id="servicosDropdown" role="button" data-bs-toggle="dropdown" data-translate="servicos">
+                                Serviços
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><span class="dropdown-item-text fw-bold text-muted" data-translate="dropdown-title">Nossos Serviços</span></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#assessoria" data-translate="assessoria">Assessoria</a></li>
+                                <li><a class="dropdown-item" href="#logistica" data-translate="logistica">Gestão da Logística</a></li>
+                                <li><a class="dropdown-item" href="#transporte" data-translate="transporte">Transporte Internacional</a></li>
+                                <li><a class="dropdown-item" href="#despachante" data-translate="despachante">Despachante Aduaneiro</a></li>
+                                <li><a class="dropdown-item" href="#exportacao" data-translate="exportacao">Exportação</a></li>
+                                <li><a class="dropdown-item" href="#importacao" data-translate="importacao">Importação</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium header-item" href="https://br.linkedin.com/company/grupob4" target="_blank" data-translate="informacoes">Informações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium header-item" href="#contato" data-translate="contato">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium header-item" href="curiosidades.html" data-translate="curiosidades">Curiosidades</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <!-- Seletor de Idiomas -->
+                        <div class="dropdown me-3">
+                            <button class="btn btn-outline-secondary btn-sm dropdown-toggle header-item language-selector" type="button" id="languageSelector" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/flags/br.png" alt="Brasil" style="width: 16px; height: auto; margin-right: 5px;"> Português
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('pt')"><img src="assets/flags/br.png" alt="Brasil" style="width: 16px; height: auto; margin-right: 5px;"> Português</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')"><img src="assets/flags/us.png" alt="Estados Unidos" style="width: 16px; height: auto; margin-right: 5px;"> English</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('es')"><img src="assets/flags/es.png" alt="Espanha" style="width: 16px; height: auto; margin-right: 5px;"> Español</a></li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5519999999999" class="btn btn-success btn-sm me-2 header-item whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp me-1"></i><span data-translate="whatsapp">WhatsApp</span>
+                        </a>
+                        <a href="http://www2.b4.com.br/Seguranca/Login" target="_blank" class="btn btn-outline-dark btn-sm header-item">
+                            <i class="fas fa-sign-in-alt me-1"></i><span data-translate="entrar">Entrar</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-5">
+                        <h1 class="display-4 fw-bold mb-3 fade-in" data-translate="hero-title">Comércio Exterior</h1>
+                        <p class="lead mb-4 fade-in" data-translate="hero-subtitle">
+                            Conheça os nossos serviços para <strong>Importar</strong> ou <strong>Exportar</strong>. Sua parceira confiável para negócios internacionais.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 fade-in">
+                            <a href="#servicos" class="btn btn-warning btn-md" data-translate="nossos-servicos">
+                                Nossos Serviços
+                            </a>
+                            <a href="#contato" class="btn btn-outline-light btn-md">
+                                <i class="fas fa-phone me-2"></i><span data-translate="entre-contato">Entre em Contato</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center" style="margin-left: 1cm;">
+                        <img src="MapaLaranja.png" alt="Mapa Laranja" class="img-fluid rounded shadow-lg fade-in" style="opacity: 0.8;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Destaque do Grupo B4 -->
+        <section class="highlight-section">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-4">Grupo B4 há mais de 25 anos cultivando valor</h2>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="1995" style="font-size: 2.5rem; font-weight: bold;">1995</span>
+                            <div class="stat-label">Ano de Fundação</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="60" style="font-size: 2.5rem; font-weight: bold;">60+</span>
+                            <div class="stat-label">Funcionários</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5" style="font-size: 2.5rem; font-weight: bold;">5</span>
+                            <div class="stat-label">Áreas de Atuação</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="1000" style="font-size: 2.5rem; font-weight: bold;">1000+</span>
+                            <div class="stat-label">Operações Realizadas</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="lead mb-4 narrow-text text-center" style="font-size: 1.25rem;">
+                    O Grupo B4 atua em diferentes áreas: <strong>Fomento Mercantil</strong>, <strong>Fundo de Investimento</strong>, <strong>Assessoria de Investimentos</strong> e agora também <strong>Comércio Exterior</strong>, oferecendo soluções completas para o mercado financeiro e de comércio internacional.
+                </p>
+                <a href="#contato" class="btn btn-warning btn-md">
+                    <i class="fas fa-phone me-2"></i>Entre em contato
+                </a>
+            </div>
+        </section>
+
+        <!-- Modalidades de Transporte -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="highlight">Modalidades</span> de Transporte
+                </h2>
+                <p class="text-center lead mb-5" style="font-size: 1.3rem;">Oferecemos soluções completas em todos os modais de transporte</p>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="transport-card text-center bg-white rounded shadow">
+                            <div class="transport-image mb-3">
+                                <img src="airplane.jpg" alt="Transporte Aéreo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <h5 class="fw-bold">Transporte Aéreo</h5>
+                            <p class="text-muted">Rapidez e segurança para cargas urgentes e de alto valor agregado</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="transport-card text-center bg-white rounded shadow">
+                            <div class="transport-image mb-3">
+                                <img src="ship.jpg" alt="Transporte Marítimo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <h5 class="fw-bold">Transporte Marítimo</h5>
+                            <p class="text-muted">Economia e capacidade para grandes volumes de mercadorias</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="transport-card text-center bg-white rounded shadow">
+                            <div class="transport-image mb-3">
+                                <img src="truck.jpg" alt="Transporte Terrestre" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <h5 class="fw-bold">Transporte Terrestre</h5>
+                            <p class="text-muted">Flexibilidade e agilidade para entregas porta a porta</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="transport-card text-center bg-white rounded shadow">
+                            <div class="transport-image mb-3">
+                                <img src="Multimodal.png" alt="Multimodal" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <h5 class="fw-bold">Multimodal</h5>
+                            <p class="text-muted">Combinação inteligente de modais para otimizar custos e prazos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossos Serviços -->
+        <section id="servicos" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="highlight">Nossos</span> serviços
+                </h2>
+                <p class="text-center lead mb-5">Oferecemos soluções completas para o seu comércio exterior</p>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card fade-in" id="importacao">
+                            <div class="service-icon">
+                                <i class="fas fa-ship"></i>
+                            </div>
+                            <h5>Importação & Exportação</h5>
+                            <p>Nossos serviços abrangem desde a identificação do cliente, a negociação dos preços e o pagamento, frete internacional, documentação para despachos aduaneiros até a entrega no local solicitado pelo contratante dos nossos serviços.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card fade-in" id="assessoria">
+                            <div class="service-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5>Assessoria Especializada</h5>
+                            <p>Nossos serviços abrangem a análise da legislação aduaneira do destino e da origem da carga, com base no NCM e HS, planejamos as previsões de todos os custos, inclusos os impostos e taxas locais, oferecendo consultoria completa.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card fade-in" id="logistica">
+                            <div class="service-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h5>Gestão da Logística</h5>
+                            <p>Fazemos gerenciamento completo de frete e armazenagem, no Brasil e no exterior, proporcionando ótimas taxas na contratação de contêineres e frete para pequenas e grandes cargas, com rastreamento em tempo real.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card fade-in" id="transporte">
+                            <div class="service-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <h5>Transporte Internacional</h5>
+                            <p>Oferecemos soluções completas de transporte marítimo, aéreo e terrestre, com parcerias estratégicas globais para garantir a melhor rota e custo-benefício para sua carga, independente do modal escolhido.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card fade-in" id="despachante">
+                            <div class="service-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h5>Despachante Aduaneiro</h5>
+                            <p>Elaboramos a emissão das licenças de exportação e importação, bem como o Registro de Exportação e Declaração de Importação, garantindo conformidade total com a legislação aduaneira brasileira e internacional.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card fade-in">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h5>Segurança e Rastreamento</h5>
+                            <p>Nossos serviços têm total segurança e disponibilizamos ferramentas avançadas para rastreamento da sua carga. O importador ou exportador é informado sobre a data de saída, posição atual e previsão de chegada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- A EMPRESA -->
+        <section class="about-section" id="quem-somos">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="bg-light p-4 rounded shadow-lg slide-in-left" style="height: 400px; display: flex; align-items: center; justify-content: center;">
+                            <img src="ship_full.png" alt="Navio B4 Trade" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in-right">
+                        <h2 class="mb-4">
+                            A EMPRESA<br>
+                            <span class="highlight">Nós Importamos para você.</span>
+                        </h2>
+                        <p class="mb-4">
+                            Com sede em Campinas, a <strong>B4 Trade</strong> é uma empresa brasileira especializada em comércio exterior, transporte marítimo e aéreo, logística e serviços de despachante aduaneiro.
+                        </p>
+                        <p class="mb-4">
+                            Com experiência de mais de 25 anos no mercado de Fomento Mercantil e Fundo de Investimento, o Grupo B4 expandiu sua atuação para o comércio exterior, aplicando toda sua expertise financeira para oferecer soluções completas em importação e exportação.
+                        </p>
+                        <p class="mb-4">
+                            Negociamos com o seu fornecedor no exterior e providenciamos o transporte marítimo ou aéreo. Fazemos a logística completa, porta a porta, e os serviços de despachante aduaneiro para desembaraço e liberação da sua carga.
+                        </p>
+                        <p class="mb-4">
+                            Possuímos em nosso quadro de colaboradores profissionais com larga experiência nas áreas de compra internacional, de logística, de consultoria e de prestação de serviços para o comércio exterior.
+                        </p>
+                        <a class='btn btn-warning' href='/curiosidades'>
+                            <i class="fas fa-lightbulb me-2"></i>Saiba Mais - Curiosidades do Trade
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="contato" style="padding: 0.25cm 0;">
+            <div class="container text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3" style="font-size: 1.8rem;">PRECISA DE MAIS INFORMAÇÕES PARA COMÉRCIO EXTERIOR?</h2>
+                        <p style="font-size: 1rem;">Nossos especialistas o aguardam para responder às dúvidas.</p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center mt-3">
+                            <a class="btn btn-light btn-lg" href="#contato">
+                                <i class="fas fa-phone me-2"></i>Entre em Contato
+                            </a>
+                            <a href="https://wa.me/5519999999999" class="btn btn-outline-light btn-lg" target="_blank">
+                                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Black Section -->
+        <section class="contact-black-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2>Entre em Contato</h2>
+                        <p>
+                            O Grupo B4 está preparado para ajudar nas realizações de operações de importação e exportação para os mais diversos tipos de empresas. São mais, oferecendo soluções inteligentes para negócios.
+                        </p>
+                        
+                        <!-- Contact Buttons -->
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <a href="https://wa.me/5519999999999" class="btn btn-success btn-lg" target="_blank">
+                                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                            </a>
+                            <a href="tel:+551937514300" class="btn btn-warning btn-lg">
+                                <i class="fas fa-phone me-2"></i>Telefone
+                            </a>
+                            <a href="mailto:contato@b4.com.br" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-envelope me-2"></i>E-mail
+                            </a>
+                        </div>
+                        
+                        <!-- Address Info -->
+                        <div class="mb-4">
+                            <h5><i class="fas fa-map-marker-alt me-2"></i>Nosso Endereço</h5>
+                            <p class="mb-1"><strong>B4 Trade - Comércio Exterior</strong></p>
+                            <p class="mb-1">Rua Exemplo, 123 - Centro</p>
+                            <p class="mb-1">Campinas - SP, CEP 13000-000</p>
+                            <p class="mb-0">
+                                <i class="fas fa-phone me-2"></i>(19) 3751-4300 |
+                                <i class="fas fa-envelope ms-2 me-2"></i>contato@b4.com.br
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img src="Contato B4 Trade.png" alt="Contato B4 Trade" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1234567890!2d-47.0608!3d-22.9068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU0JzI0LjUiUyA0N8KwMDMnMzkuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 B4 Trade - Comércio Exterior. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5519999999999" target="_blank" class="btn btn-success rounded-circle p-3 shadow">
+            <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Sistema de Traduções -->
+    <script src="translations.js"></script>
+</body>
+</html>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbar = document.querySelector('.navbar-scrolled');
+        if (navbar) {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+    });
+</script>
+

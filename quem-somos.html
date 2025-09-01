@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quem Somos - <span style="color: #ff6b35;">B4 Trade</span></title>
+    <meta name="description" content="Conheça a história, missão, visão e valores da B4 Trade. Parte do Grupo B4, atuando no comércio exterior há mais de 25 anos.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom CSS baseado no index.html */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .top-bar {
+            background: #1a1a1a;
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        .hero-section {
+            position: relative;
+            padding: 80px 0;
+            color: white;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('entrada2.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+        
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff6600;
+            z-index: -1;
+        }
+        
+        .highlight-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .highlight {
+            color: #ff6600;
+        }
+        
+        .about-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ff6600;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 50%;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 2rem;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 2rem;
+            text-align: left;
+        }
+        
+        .timeline-year {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #ff6600;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-year {
+            right: -1.5rem;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-year {
+            left: -1.5rem;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .values-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+        
+        .values-card:hover {
+            transform: translateY(-5px);
+        }
+        
+            .values-icon {
+                width: 80px;
+                height: 80px;
+                background: #ff6600;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 1rem; /* Alinha à esquerda */
+            }
+        
+        .values-icon i {
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .btn-warning {
+            background-color: #ff6600;
+            border-color: #ff6600;
+        }
+        
+        .btn-warning:hover {
+            background-color: #e55a00;
+            border-color: #e55a00;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .footer p {
+            margin: 0;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 2rem;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 4rem !important;
+                padding-right: 1rem !important;
+                text-align: left !important;
+            }
+            
+            .timeline-year {
+                left: 0.5rem !important;
+                right: auto !important;
+            }
+        }
+    </style>
+<style>
+
+:root {
+  --font-heading: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-size-base: 1rem; /* 16px */
+  --line-height-base: 1.6;
+  --letter-spacing-tight: -0.015em;
+  --letter-spacing-normal: 0;
+  --measure: 70ch; /* optimal text measure */
+}
+/* Bind base text */
+html { font-size: 100%; }
+body, p, li, input, button, textarea, select {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-normal);
+  max-width: none;
+}
+/* Headings adopt logo-inspired display */
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3 {
+  font-family: var(--font-heading);
+  letter-spacing: var(--letter-spacing-tight);
+  font-weight: 600;
+  line-height: 1.2;
+}
+/* Scale */
+h1 { font-size: clamp(2rem, 4vw + 1rem, 3rem); }
+h2 { font-size: clamp(1.5rem, 2.5vw + 1rem, 2.25rem); }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+/* Navigation & buttons */
+.navbar-brand { font-family: var(--font-heading); font-weight: 700; letter-spacing: -0.01em; }
+.nav-link, .btn, .form-control { font-family: var(--font-body); }
+/* Paragraph rhythm and measure */
+main p { max-width: var(--measure); }
+
+/* Custom CSS */
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+.top-bar {
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.hero-section {
+    position: relative;
+    padding: 80px 0;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('entrada2.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.highlight-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #ff6600;
+}
+
+.stat-item {
+    padding: 2rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff6600;
+    display: block;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.transport-card {
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.transport-card .text-muted {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.transport-card:hover {
+    transform: translateY(-5px);
+}
+
+.transport-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: #ff6600;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.service-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.about-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+    color: white;
+}
+
+
+
+
+/* Refino de posicionamento para estética de site de trade */
+.hero-section h1 { margin-bottom: 0.75rem; }
+.hero-section p.lead { margin-top: 0.25rem; max-width: 65ch; }
+.navbar-brand { text-transform: none; }
+
+
+/* ====================
+   Tipografia refinada para todo o site
+   ==================== */
+:root {
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  letter-spacing: 0.015em;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  max-width: 65ch;
+}
+
+nav, .navbar-brand, button, input, select, textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-section h1 { margin-bottom: 0.75rem; }
+.hero-section p.lead { margin-top: 0.25rem; max-width: 65ch; }
+.navbar-brand { text-transform: none; }
+
+</style>
+</head>
+
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <small>
+                        <i class="fas fa-phone me-2"></i>(19) 3751-4300
+                        <i class="fas fa-envelope ms-3 me-2"></i>contato@b4.com.br
+                    </small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small class="social-links">
+                        <a href="https://br.linkedin.com/company/grupob4" target="_blank" class="text-white text-decoration-none">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm navbar-scrolled">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/BA-logo-new.png" alt="B4 Trade" style="width: 150px; height: auto;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class=\'nav-link fw-medium header-item\' href=\'index.html\' data-translate="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium active header-item" href="quem-somos.html" data-translate="quem-somos">Quem Somos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-medium header-item" href="#" id="servicosDropdown" role="button" data-bs-toggle="dropdown" data-translate="servicos">
+                                Serviços
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><span class="dropdown-item-text fw-bold text-muted" data-translate="dropdown-title">Nossos Serviços</span></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index.html#assessoria" data-translate="assessoria">Assessoria</a></li>
+                                <li><a class="dropdown-item" href="index.html#logistica" data-translate="logistica">Gestão da Logística</a></li>
+                                <li><a class="dropdown-item" href="index.html#transporte" data-translate="transporte">Transporte Internacional</a></li>
+                                <li><a class="dropdown-item" href="index.html#despachante" data-translate="despachante">Despachante Aduaneiro</a></li>
+                                <li><a class="dropdown-item" href="index.html#exportacao" data-translate="exportacao">Exportação</a></li>
+                                <li><a class="dropdown-item" href="index.html#importacao" data-translate="importacao">Importação</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium header-item" href="https://br.linkedin.com/company/grupob4" target="_blank" data-translate="informacoes">Informações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium header-item" href="index.html#contato" data-translate="contato">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium header-item" href="curiosidades.html" data-translate="curiosidades">Curiosidades</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <!-- Seletor de Idiomas -->
+                        <div class="dropdown me-3">
+                            <button class="btn btn-outline-secondary btn-sm dropdown-toggle header-item language-selector" type="button" id="languageSelector" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/flags/br.png" alt="Brasil" style="width: 16px; height: auto; margin-right: 5px;"> Português
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage(\'pt\')"><img src="assets/flags/br.png" alt="Brasil" style="width: 16px; height: auto; margin-right: 5px;"> Português</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage(\'en\')"><img src="assets/flags/us.png" alt="Estados Unidos" style="width: 16px; height: auto; margin-right: 5px;"> English</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage(\'es\')"><img src="assets/flags/es.png" alt="Espanha" style="width: 16px; height: auto; margin-right: 5px;"> Español</a></li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5519999999999" class="btn btn-success btn-sm me-2 header-item whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp me-1"></i><span data-translate="whatsapp">WhatsApp</span>
+                        </a>
+                        <a href="http://www2.b4.com.br/Seguranca/Login" target="_blank" class="btn btn-outline-dark btn-sm header-item">
+                            <i class="fas fa-sign-in-alt me-1"></i><span data-translate="entrar">Entrar</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="display-4 fw-bold mb-3 fade-in">Quem Somos - <span style="color: #ff6600;">B4 Trade</span></h2>
+                        <p class="lead mb-4 fade-in">
+                            Conheça a história, missão e valores da <strong style="color: black;">B4 Trade</strong>, parte do Grupo B4 há mais de 25 anos no mercado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre o Grupo B4 -->
+        <section class="highlight-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="mb-4">Sobre o <span class="highlight">Grupo B4</span></h2>
+                        <p class="lead mb-4">
+                            Fundado em 1995, o Grupo B4 é uma empresa consolidada no mercado brasileiro, atuando em diversas áreas do setor financeiro e agora expandindo para o comércio exterior.
+                        </p>
+                        <p class="mb-4">
+                            Com mais de 25 anos de experiência, construímos uma trajetória sólida baseada na confiança, inovação e excelência no atendimento aos nossos clientes. Nossa expertise abrange desde fomento mercantil até soluções completas em comércio internacional.
+                        </p>
+                        <p class="mb-4">
+                            A B4 Trade representa nossa entrada estratégica no mercado de comércio exterior, oferecendo serviços especializados em importação, exportação e logística internacional, sempre com o mesmo padrão de qualidade que nos caracteriza.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="./logistica.png" alt="Logística" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossa História - Timeline -->
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">Nossa <span class="highlight">História</span></h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1995</div>
+                        <div class="timeline-content">
+                            <h5 class="highlight">Fundação do Grupo B4</h5>
+                            <p>Início das atividades com foco em fomento mercantil, estabelecendo as bases para o crescimento futuro da empresa.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2000</div>
+                        <div class="timeline-content">
+                            <h5 class="highlight">Expansão dos Serviços</h5>
+                            <p>Ampliação do portfólio com serviços de assessoria de investimentos e gestão de fundos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2010</div>
+                        <div class="timeline-content">
+                            <h5 class="highlight">Consolidação no Mercado</h5>
+                            <p>Estabelecimento como referência no setor financeiro, com mais de 500 operações realizadas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-content">
+                            <h5 class="highlight">Modernização e Tecnologia</h5>
+                            <p>Investimento em tecnologia e processos digitais para melhor atendimento aos clientes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">
+                            <h5 class="highlight">Lançamento da B4 Trade</h5>
+                            <p>Entrada no mercado de comércio exterior, oferecendo soluções completas em importação e exportação.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Missão, Visão e Valores -->
+        <section class="highlight-section">
+            <div class="container">
+                <h2 class="section-title">Missão, Visão e <span class="highlight">Valores</span></h2>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="values-card">
+                            <div class="values-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h4 class="highlight mb-3">Missão</h4>
+                            <p>Facilitar e otimizar as operações de comércio exterior dos nossos clientes, oferecendo soluções personalizadas e eficientes que contribuam para o crescimento dos seus negócios internacionais.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="values-card">
+                            <div class="values-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h4 class="highlight mb-3">Visão</h4>
+                            <p>Ser reconhecida como a principal parceira em comércio exterior no Brasil, destacando-se pela excelência, inovação e confiabilidade em todos os serviços prestados.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="values-card">
+                            <div class="values-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h4 class="highlight mb-3">Valores</h4>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="fas fa-check text-warning me-2"></i>Integridade e Transparência</li>
+                                <li><i class="fas fa-check text-warning me-2"></i>Excelência no Atendimento</li>
+                                <li><i class="fas fa-check text-warning me-2"></i>Inovação Constante</li>
+                                <li><i class="fas fa-check text-warning me-2"></i>Compromisso com Resultados</li>
+                                <li><i class="fas fa-check text-warning me-2"></i>Responsabilidade Social</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Por que escolher a B4 Trade -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img src="./duvida.png" alt="Dúvida" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Por que escolher a <span class="highlight">B4 Trade</span>?</h2>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="d-flex align-items-start">
+                                    <div class="values-icon me-3" style="width: 50px; height: 50px; min-width: 50px;">
+                                        <i class="fas fa-award" style="font-size: 1.2rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="highlight">Experiência Comprovada</h5>
+                                        <p>Mais de 25 anos de atuação no mercado brasileiro, com expertise consolidada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="d-flex align-items-start">
+                                    <div class="values-icon me-3" style="width: 50px; height: 50px; min-width: 50px;">
+                                        <i class="fas fa-users" style="font-size: 1.2rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="highlight">Equipe Especializada</h5>
+                                        <p>Profissionais qualificados e especializados em comércio exterior.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="d-flex align-items-start">
+                                    <div class="values-icon me-3" style="width: 50px; height: 50px; min-width: 50px;">
+                                        <i class="fas fa-cogs" style="font-size: 1.2rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="highlight">Soluções Personalizadas</h5>
+                                        <p>Atendimento customizado para cada necessidade específica do cliente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="d-flex align-items-start">
+                                    <div class="values-icon me-3" style="width: 50px; height: 50px; min-width: 50px;">
+                                        <i class="fas fa-shield-alt" style="font-size: 1.2rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="highlight">Segurança e Confiabilidade</h5>
+                                        <p>Processos seguros e transparentes em todas as operações.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section-padding" style="background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%); color: white;">
+            <div class="container text-center">
+                <h2 class="mb-4">Pronto para expandir seus negócios internacionalmente?</h2>
+                <p class="lead mb-4">Entre em contato conosco e descubra como a B4 Trade pode ser sua parceira ideal no comércio exterior.</p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
+                    <a href="index.html#contato" class="btn btn-light btn-lg">
+                        <i class="fas fa-phone me-2"></i>Entre em Contato
+                    </a>
+                    <a href="https://wa.me/5519999999999" class="btn btn-outline-light btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 B4 Trade - Comércio Exterior. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5519999999999" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="d-none d-md-inline">WhatsApp</span>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Animação dos números
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observar elementos para animação
+            document.querySelectorAll('.timeline-item, .values-card').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+    
+    <!-- Sistema de Traduções -->
+    <script src="translations.js"></script>
+</body>
+</html>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.querySelector(".navbar-scrolled");
+        if (navbar) {
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+            });
+        }
+    });
+</script>
+
