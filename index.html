@@ -3,98 +3,391 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>B4 Trade - Comércio Exterior</title>
-    <meta name="description" content="B4 Trade - Sua parceira confiável para comércio exterior. Importação, exportação, logística e assessoria especializada. Parte do Grupo B4.">
+    <title>B4 Soluções Financeiras - Sua Parceira em Investimentos</title>
+    <meta name="description" content="B4 Soluções Financeiras - Mais de 25 anos oferecendo fomento mercantil, assessoria de investimentos, fundos de investimento e soluções financeiras completas para sua empresa.">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Google Fonts - Optimized loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
     
-    <style>
-        /* Custom CSS */
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-        }
-        
-        .top-bar {
-            background: #1a1a1a;
-            color: white;
-            padding: 8px 0;
-            font-size: 14px;
-        }
-        
-        .hero-section {
-            position: relative;
-            padding: 80px 0;
-            color: white;
-        }
-        
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('Containers-bg-modified.png');
-            background-size: cover;
-            background-position: center;
-            z-index: -2;
-        }
-        
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            z-index: -1;
-        }
-        
-        .highlight-section {
-            padding: 80px 0;
-            background: #fff;
-        }
-        
-        .section-padding {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-        
-        .highlight {
-            color: #ff6600;
-        }
-        
-        .stat-item {
-            padding: 2rem;
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #ff6600;
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            color: #666;
-            margin-top: 0.5rem;
-        }
-        
-        .transport-card {
+    <!-- Performance optimizations -->
+    <meta name="theme-color" content="#ff6600">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone me-1"></i>(19) 3751-4300</span>
+                <span><i class="fas fa-envelope ms-3 me-1"></i>contato@b4.com.br</span>
+            </div>
+            <div class="social-links">
+                <a href="https://br.linkedin.com/company/grupob4" target="_blank" rel="noopener" aria-label="LinkedIn B4">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" aria-label="Facebook B4">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" aria-label="Instagram B4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="/" aria-label="B4 Soluções Financeiras - Página inicial">
+                <img src="logo.png" alt="B4 Soluções Financeiras">
+            </a>
+            
+            <button class="navbar-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="navbar-nav">
+                <li><a href="#inicio" class="nav-link active">Início</a></li>
+                <li><a href="#quem-somos" class="nav-link">Quem Somos</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#investimentos" class="nav-link">Investimentos</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            
+            <div class="navbar-actions">
+                <a href="https://wa.me/5519999999999" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="http://www2.b4.com.br/Seguranca/Login" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Área do Cliente
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main role="main">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>B4 Soluções Financeiras</h1>
+                        <p class="lead">
+                            Há mais de <strong>25 anos</strong> oferecendo as melhores soluções em 
+                            <strong>fomento mercantil</strong>, <strong>assessoria de investimentos</strong> 
+                            e <strong>fundos de investimento</strong> para fazer seu dinheiro crescer.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#servicos" class="btn btn-primary btn-lg">
+                                <i class="fas fa-chart-line"></i>
+                                Nossos Serviços
+                            </a>
+                            <a href="#contato" class="btn btn-white btn-lg">
+                                <i class="fas fa-phone"></i>
+                                Fale Conosco
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="MapaLaranja.png" alt="Mapa de atuação B4 Soluções Financeiras" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="container">
+                <h2 class="text-center">Grupo B4 há mais de 25 anos cultivando valor</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1995">1995</div>
+                        <div class="stat-label">Ano de Fundação</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="60">60+</div>
+                        <div class="stat-label">Funcionários</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">5</div>
+                        <div class="stat-label">Áreas de Atuação</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1000">1000+</div>
+                        <div class="stat-label">Operações Realizadas</div>
+                    </div>
+                </div>
+                <p class="lead text-center">
+                    O Grupo B4 atua em diferentes áreas: <strong class="text-primary">Fomento Mercantil</strong>, 
+                    <strong class="text-primary">Fundo de Investimento</strong>, 
+                    <strong class="text-primary">Assessoria de Investimentos</strong>, 
+                    <strong class="text-primary">Gestão de Patrimônio</strong> e 
+                    <strong class="text-primary">Consultoria Financeira</strong>, oferecendo 
+                    soluções completas para o mercado financeiro.
+                </p>
+                <div class="text-center">
+                    <a href="#contato" class="btn btn-primary btn-lg">
+                        <i class="fas fa-phone"></i>
+                        Entre em contato
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><span class="text-primary">Nossos</span> Serviços</h2>
+                    <p class="lead">Oferecemos soluções financeiras completas para sua empresa crescer</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Fomento Mercantil</h3>
+                        <p>Antecipação de recebíveis, desconto de duplicatas e soluções de capital de giro para melhorar o fluxo de caixa da sua empresa com agilidade e segurança.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Assessoria de Investimentos</h3>
+                        <p>Consultoria especializada em investimentos com foco no seu perfil de risco, oferecendo as melhores opções do mercado para fazer seu patrimônio crescer.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <h3>Fundos de Investimento</h3>
+                        <p>Gestão profissional de fundos de investimento com estratégias diversificadas, buscando rentabilidade superior e segurança para seus investimentos.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Gestão de Patrimônio</h3>
+                        <p>Planejamento financeiro personalizado e gestão completa do seu patrimônio, com estratégias de proteção e crescimento a longo prazo.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Consultoria Financeira</h3>
+                        <p>Análise completa da situação financeira, planejamento tributário e estratégias personalizadas para otimizar recursos e maximizar resultados.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Soluções Corporativas</h3>
+                        <p>Soluções financeiras sob medida para empresas, incluindo estruturação de operações, financiamentos e consultoria estratégica empresarial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="quem-somos" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2><span class="text-primary">Quem</span> Somos</h2>
+                        <p class="lead">
+                            A B4 Soluções Financeiras é uma empresa consolidada no mercado financeiro há mais de 25 anos, 
+                            especializada em oferecer soluções completas para empresas e investidores.
+                        </p>
+                        <p>
+                            Com sede em Campinas-SP, nossa trajetória começou com o fomento mercantil e se expandiu para 
+                            diversas áreas do mercado financeiro, sempre mantendo o compromisso com a excelência e 
+                            a satisfação dos nossos clientes.
+                        </p>
+                        <p>
+                            Nossa equipe é formada por profissionais especializados com vasta experiência nas áreas de 
+                            investimentos, consultoria financeira, gestão de patrimônio e fomento mercantil, garantindo 
+                            sempre as melhores soluções para cada perfil de cliente.
+                        </p>
+                        <p>
+                            Atendemos desde pequenas empresas até grandes corporações, sempre com foco na personalização 
+                            do atendimento e na busca pelos melhores resultados para nossos clientes.
+                        </p>
+                        <a href="#contato" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope"></i>
+                            Fale Conosco
+                        </a>
+                    </div>
+                    <div class="about-image">
+                        <img src="entrada2.jpg" alt="Sobre a B4 Soluções Financeiras" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Types Section -->
+        <section id="investimentos" class="investment-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><span class="text-primary">Tipos</span> de Investimento</h2>
+                    <p class="lead">Conheça as principais modalidades de investimento que oferecemos</p>
+                </div>
+                
+                <div class="investment-grid">
+                    <div class="investment-card">
+                        <div class="investment-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Renda Fixa</h4>
+                        <p>CDBs, LCIs, LCAs e fundos de renda fixa com segurança e rentabilidade superior à poupança.</p>
+                    </div>
+                    
+                    <div class="investment-card">
+                        <div class="investment-icon">
+                            <i class="fas fa-trending-up"></i>
+                        </div>
+                        <h4>Renda Variável</h4>
+                        <p>Ações, fundos de ações e investimentos em bolsa com potencial de alta rentabilidade.</p>
+                    </div>
+                    
+                    <div class="investment-card">
+                        <div class="investment-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h4>Fundos Imobiliários</h4>
+                        <p>Investimentos em imóveis comerciais com distribuição mensal de dividendos.</p>
+                    </div>
+                    
+                    <div class="investment-card">
+                        <div class="investment-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h4>Investimentos Internacionais</h4>
+                        <p>Diversificação internacional com fundos e ETFs do mercado americano e europeu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Pronto para fazer seu dinheiro trabalhar para você?</h2>
+                    <p class="lead">
+                        Entre em contato conosco e descubra como podemos ajudar sua empresa ou patrimônio pessoal 
+                        a alcançar melhores resultados financeiros.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="https://wa.me/5519999999999" class="btn btn-white btn-lg" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                        <a href="#contato" class="btn btn-outline-white btn-lg">
+                            <i class="fas fa-phone"></i>
+                            Telefone
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Entre em Contato</h2>
+                        <p class="lead">
+                            A B4 Soluções Financeiras está preparada para ajudar você a alcançar seus objetivos 
+                            financeiros. Nossa equipe especializada está à disposição para oferecer as melhores 
+                            soluções para seu perfil.
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <a href="https://wa.me/5519999999999" class="contact-method" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="tel:+551937514300" class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <span>Telefone</span>
+                            </a>
+                            <a href="mailto:contrato@b4.com.br" class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>E-mail</span>
+                            </a>
+                        </div>
+                        
+                        <div class="address-info">
+                            <h3>Nosso Endereço</h3>
+                            <p><strong>B4 Soluções Financeiras</strong></p>
+                            <p>Rua Exemplo, 123 - Centro</p>
+                            <p>Campinas - SP, CEP 13000-000</p>
+                            <p>(19) 3751-4300 | contato@b4.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contact-image">
+                        <img src="ContatoB4Trade.png" alt="Contato B4 Soluções Financeiras" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 B4 Soluções Financeiras. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://br.linkedin.com/company/grupob4" target="_blank" rel="noopener" aria-label="LinkedIn B4">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook B4">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram B4">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5519999999999" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp B4">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
             padding: 2rem;
             border-radius: 10px;
             transition: transform 0.3s ease;
