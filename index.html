@@ -184,24 +184,49 @@
             margin-bottom: 2rem;
         }
         
+        /* Enhanced WhatsApp Float Button */
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
             right: 20px;
             z-index: 1000;
-            border-radius: 10px;
-            padding: 10px 15px;
-            background-color: #25D366;
+            border-radius: 50px;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #25D366 0%, #20c55a 100%);
             color: white;
             text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .whatsapp-float:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            color: white;
+            text-decoration: none;
         }
         
         .whatsapp-float i {
             font-size: 1.5rem;
-            margin-right: 5px;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 16px;
+                border-radius: 50px;
+            }
+            
+            .whatsapp-float i {
+                font-size: 1.3rem;
+                margin-right: 6px;
+            }
         }
         
         /* Modern Button Design - Consistent & Accessible */
@@ -393,23 +418,101 @@ h6 { font-size: 1rem; }
 /* Paragraph rhythm and measure */
 main p { max-width: var(--measure); }
 
+/* Smooth animations and micro-interactions */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 /* Custom CSS */
 body {
     font-family: var(--font-body);
     line-height: 1.6;
 }
 
+/* Enhanced focus states for accessibility */
+.btn:focus, .nav-link:focus, .header-item:focus {
+    outline: 2px solid #ff6600;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2);
+}
+
+/* Improved dropdowns */
+.dropdown-menu {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 102, 0, 0.1);
+    color: #ff6600;
+}
+
+/* Enhanced top bar */
 .top-bar {
     background: #1a1a1a;
     color: white;
     padding: 8px 0;
     font-size: 14px;
+    position: relative;
+    z-index: 1030;
 }
 
+/* Smooth scroll and enhanced UX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Professional section spacing and visual hierarchy */
 .hero-section {
     position: relative;
-    padding: 80px 0;
+    padding: 5rem 0;
     color: white;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.highlight-section, .about-section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Enhanced statistics display */
+.stat-item {
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Better image optimization */
+.transport-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.transport-image img:hover {
+    transform: scale(1.05);
 }
 
 .hero-section::before {
