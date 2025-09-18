@@ -120,17 +120,20 @@
             object-fit: cover;
         }
         
+        /* Enhanced Cards with Professional Design */
         .service-card {
             background: white;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
             height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.04);
         }
         
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
         
         .service-icon {
@@ -201,14 +204,62 @@
             margin-right: 5px;
         }
         
+        /* Modern Button Design - Consistent & Accessible */
+        .btn {
+            min-height: 44px !important;
+            padding: 0.75rem 1.5rem !important;
+            border-radius: 10px !important;
+            font-weight: 600 !important;
+            font-size: 1rem !important;
+            letter-spacing: 0.025em;
+            transition: all 0.3s ease !important;
+            border: 2px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%) !important;
+            border-color: transparent !important;
+            color: white !important;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #e55a00 0%, #e55a00 100%) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.3);
+        }
+
         .btn-warning {
-            background-color: #ff6600;
-            border-color: #ff6600;
+            background-color: #ff6600 !important;
+            border-color: #ff6600 !important;
+            color: white !important;
         }
         
         .btn-warning:hover {
-            background-color: #e55a00;
-            border-color: #e55a00;
+            background-color: #e55a00 !important;
+            border-color: #e55a00 !important;
+            color: white !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.3);
+        }
+
+        .btn-light {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            border-color: rgba(255, 255, 255, 0.3) !important;
+            color: #333 !important;
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-light:hover {
+            background-color: white !important;
+            border-color: #ff6600 !important;
+            color: #ff6600 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
         
         .fade-in {
@@ -546,34 +597,84 @@ nav, .navbar-brand, button, input, select, textarea {
     font-weight: 500 !important;
 }
 
-/* Aumentar fontes proporcionalmente */
+/* Enhanced Typography Scale for Better Hierarchy */
 body {
     font-size: 1.1rem !important;
 }
 
-h1 { font-size: clamp(2.5rem, 5vw + 1rem, 4rem) !important; }
-h2 { font-size: clamp(2rem, 3vw + 1rem, 3rem) !important; }
-h3 { font-size: 1.8rem !important; }
-h4 { font-size: 1.5rem !important; }
-h5 { font-size: 1.3rem !important; }
+h1 { 
+    font-size: clamp(2.2rem, 5vw + 1rem, 3.5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 { 
+    font-size: clamp(1.8rem, 3vw + 1rem, 2.5rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h3 { 
+    font-size: 1.6rem !important;
+    font-weight: 600 !important;
+    line-height: 1.3;
+}
+
+h4, h5 { 
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    line-height: 1.4;
+}
+
 h6 { font-size: 1.1rem !important; }
 
-.lead { font-size: 1.3rem !important; }
+.lead { 
+    font-size: 1.2rem !important;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #666;
+}
 
-/* Ajustes para as estatísticas */
+/* Enhanced Statistics and Visual Elements */
 .stat-number {
-    font-size: 2.8rem !important;
+    font-size: 3rem !important;
     font-weight: 700 !important;
-    line-height: 1.2 !important;
+    line-height: 1.1 !important;
+    color: #ff6600;
+    text-shadow: 0 2px 4px rgba(255, 102, 0, 0.2);
 }
 
 .stat-label {
     font-size: 1.1rem !important;
+    color: #666;
+    font-weight: 500;
 }
 
-/* Ajustes para área laranja reduzida */
+/* Professional spacing and effects */
 .cta-section {
-    padding: 0.5cm 0 !important;
+    padding: 4rem 0 !important;
+    background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.cta-section > * {
+    position: relative;
+    z-index: 2;
 }
 
 /* Ajustes para WhatsApp button e espaçamento do header */
@@ -587,24 +688,43 @@ h6 { font-size: 1.1rem !important; }
 
 /* ===== MELHORIAS DO CABEÇALHO SOLICITADAS ===== */
 
-/* Alinhamento e consistência visual do cabeçalho */
+/* Fixed Header with Better Visibility */
 .navbar {
-    padding: 0.75rem 0 !important;
-    min-height: 80px;
+    padding: 1rem 0 !important;
+    min-height: 88px;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
 }
 
 .navbar-nav {
     align-items: center;
 }
 
+/* Improved Header Text Visibility */
 .navbar-nav .nav-link {
-    font-size: 1rem !important;
-    font-weight: 500 !important;
-    padding: 0.75rem 1rem !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    padding: 0.8rem 1.2rem !important;
     white-space: nowrap;
     height: 100%;
     display: flex;
     align-items: center;
+    color: #333 !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.025em;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 102, 0, 0.1);
+    color: #ff6600 !important;
+    transform: translateY(-1px);
 }
 
 /* Ajuste dos botões para ficarem menores e alinhados */
@@ -616,42 +736,55 @@ h6 { font-size: 1.1rem !important; }
     align-items: center;
 }
 
-/* Hover laranja para todos os itens do cabeçalho */
+/* Modern Header Items with Better Accessibility */
 .header-item {
     transition: all 0.3s ease !important;
-    border-radius: 4px !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    padding: 0.625rem 1rem !important;
+    min-height: 44px !important;
+    font-weight: 500 !important;
+    color: #333 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-item:hover {
-    background-color: #FFA500 !important;
-    color: #000 !important;
+    background-color: rgba(255, 102, 0, 0.1) !important;
+    color: #ff6600 !important;
+    transform: translateY(-1px);
 }
 
 /* Hover específico para links de navegação */
 .nav-link.header-item:hover {
-    background-color: #FFA500 !important;
-    color: #000 !important;
+    background-color: rgba(255, 102, 0, 0.1) !important;
+    color: #ff6600 !important;
 }
 
 /* Hover para botões */
 .btn.header-item:hover {
-    background-color: #FFA500 !important;
-    color: #000 !important;
-    border-color: #FFA500 !important;
+    background-color: rgba(255, 102, 0, 0.1) !important;
+    color: #ff6600 !important;
+    border-color: #ff6600 !important;
 }
 
-/* Seletor de idiomas estilizado */
+/* Language selector improvements */
 .language-selector {
-    font-size: 0.9rem !important;
-    padding: 0.5rem 1rem !important;
-    border: 1px solid #ddd !important;
-    height: auto;
+    font-size: 0.95rem !important;
+    padding: 0.625rem 1rem !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    min-height: 44px;
+    transition: all 0.3s ease !important;
+    background-color: white;
 }
 
 .language-selector:hover {
-    background-color: #FFA500 !important;
-    color: #000 !important;
-    border-color: #FFA500 !important;
+    background-color: rgba(255, 102, 0, 0.05) !important;
+    border-color: #ff6600 !important;
+    color: #ff6600 !important;
+    transform: translateY(-1px);
 }
 
 /* Alinhamento dos itens do cabeçalho */
@@ -674,28 +807,88 @@ h6 { font-size: 1.1rem !important; }
     align-items: center;
 }
 
-/* Responsividade para telas menores */
+/* Professional Mobile Layout (375px focused) */
 @media (max-width: 1200px) {
     .navbar-nav .nav-link {
-        font-size: 0.9rem !important;
-        padding: 0.6rem 0.8rem !important;
+        font-size: 0.95rem !important;
+        padding: 0.6rem 0.9rem !important;
     }
     
     .btn-sm {
-        font-size: 0.85rem !important;
-        padding: 0.4rem 0.8rem !important;
+        font-size: 0.9rem !important;
+        padding: 0.5rem 1rem !important;
     }
 }
 
 @media (max-width: 992px) {
     .navbar-nav .nav-link {
-        font-size: 0.95rem !important;
-        padding: 0.5rem 1rem !important;
+        font-size: 1rem !important;
+        padding: 0.75rem 1rem !important;
+        margin: 0.25rem 0;
     }
     
     .d-flex.align-items-center {
         margin-top: 1rem;
         justify-content: center;
+        gap: 0.75rem;
+    }
+    
+    .header-item {
+        min-height: 48px !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 475px) {
+    /* Optimized for 375px mobile devices */
+    .navbar {
+        padding: 0.75rem 0 !important;
+        min-height: 76px;
+    }
+    
+    .navbar-brand img {
+        width: 120px !important;
+        height: auto;
+    }
+    
+    .hero-section {
+        padding: 60px 0 !important;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.2rem !important;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+    
+    .hero-section p.lead {
+        font-size: 1.1rem !important;
+        margin-bottom: 2rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.2rem !important;
+        font-size: 0.95rem !important;
+        min-height: 48px !important;
+    }
+    
+    .service-card, .transport-card {
+        padding: 1.5rem !important;
+        margin-bottom: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem !important;
+    }
+    
+    .section-title {
+        font-size: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 </style>
