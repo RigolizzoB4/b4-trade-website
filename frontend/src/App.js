@@ -9,6 +9,8 @@ import CapitalGiro from './pages/services/CapitalGiro';
 import Finep from './pages/services/Finep';
 import BNDES from './pages/services/BNDES';
 import Consorcio from './pages/services/Consorcio';
+import Cambio from './pages/services/Cambio';
+import CapitalInvestimento from './pages/services/CapitalInvestimento';
 import Contato from './pages/Contato';
 import './App.css';
 
