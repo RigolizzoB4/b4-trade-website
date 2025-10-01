@@ -165,7 +165,8 @@ const Home = () => {
               <Link 
                 key={index}
                 to={service.path}
-                className="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl group"
+                className="service-card neuro-card glass-card-white p-8 rounded-2xl shadow-lg hover:shadow-xl group scroll-reveal floating"
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors">
