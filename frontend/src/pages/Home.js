@@ -87,23 +87,8 @@ const Home = () => {
           }}
         />
         
-        {/* Partículas Animadas */}
-        <div className="particles-container z-10">
-          {[...Array(15)].map((_, i) => (
-            <div 
-              key={i}
-              className="particle"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                width: `${Math.random() * 4 + 2}px`,
-                height: `${Math.random() * 4 + 2}px`,
-                animationDelay: `${Math.random() * 6}s`,
-                animationDuration: `${Math.random() * 4 + 4}s`
-              }}
-            />
-          ))}
-        </div>
+        {/* Partículas Interativas */}
+        <ParticleBackground />
         
         <div className="container-custom relative z-10">
           <div className="max-w-4xl">
