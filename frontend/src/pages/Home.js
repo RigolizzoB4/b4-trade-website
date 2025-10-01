@@ -7,31 +7,61 @@ const Home = () => {
     {
       title: 'Home Equity',
       description: 'Use seu imóvel como garantia e obtenha crédito com taxas baixas e prazos longos.',
-      icon: '🏠',
+      icon: (
+        <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z" />
+          </svg>
+        </div>
+      ),
       path: '/servicos/home-equity'
     },
     {
       title: 'Capital de Giro',
       description: 'Financie as operações diárias da sua empresa com flexibilidade e agilidade.',
-      icon: '💰',
+      icon: (
+        <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" />
+          </svg>
+        </div>
+      ),
       path: '/servicos/capital-giro'
     },
     {
       title: 'FINEP',
       description: 'Financiamento para projetos de inovação, pesquisa e desenvolvimento.',
-      icon: '🔬',
+      icon: (
+        <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" />
+          </svg>
+        </div>
+      ),
       path: '/servicos/finep'
     },
     {
       title: 'BNDES',
       description: 'Acesso às linhas de crédito do BNDES para máquinas, equipamentos e projetos.',
-      icon: '🏭',
+      icon: (
+        <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" />
+          </svg>
+        </div>
+      ),
       path: '/servicos/bndes'
     },
     {
       title: 'Consórcio',
       description: 'Adquira bens de forma planejada e econômica, sem juros.',
-      icon: '🎯',
+      icon: (
+        <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+      ),
       path: '/servicos/consorcio'
     }
   ];
