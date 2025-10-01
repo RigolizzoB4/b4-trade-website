@@ -27,9 +27,9 @@ const Layout = ({ children }) => {
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img 
-                src="https://customer-assets.emergentagent.com/job_1d5e8eee-15ec-4b1f-8a8f-6bd463b708d6/artifacts/691cf10y_image.png" 
+                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fskgr5np_IMG-20251001-WA0003-removebg-preview.png" 
                 alt="B4 Soluções Financeiras" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
 
