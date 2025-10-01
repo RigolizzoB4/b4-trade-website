@@ -76,7 +76,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="hero-section min-h-screen flex items-center relative overflow-hidden">
+      <section className="hero-section min-h-screen flex items-center relative overflow-hidden hero-parallax">
         <div 
           className="absolute inset-0 z-0"
           style={{
@@ -85,6 +85,24 @@ const Home = () => {
             backgroundPosition: 'center'
           }}
         />
+        
+        {/* Partículas Animadas */}
+        <div className="particles-container z-10">
+          {[...Array(15)].map((_, i) => (
+            <div 
+              key={i}
+              className="particle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                width: `${Math.random() * 4 + 2}px`,
+                height: `${Math.random() * 4 + 2}px`,
+                animationDelay: `${Math.random() * 6}s`,
+                animationDuration: `${Math.random() * 4 + 4}s`
+              }}
+            />
+          ))}
+        </div>
         
         <div className="container-custom relative z-10">
           <div className="max-w-4xl">
