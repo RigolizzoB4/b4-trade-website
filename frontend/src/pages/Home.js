@@ -91,24 +91,29 @@ const Home = () => {
         <div className="container-custom relative z-10 text-center text-white">
           <div className="max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-              <span className="text-white/90 text-sm font-medium">Bem-vindo ao mundo das soluções financeiras</span>
+            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-6 hover:bg-white/20 transition-all duration-300">
+              <span className="w-2 h-2 bg-orange-400 rounded-full mr-3 animate-pulse"></span>
+              <span className="text-white/90 text-sm font-semibold">Desbloqueie o potencial financeiro do seu negócio</span>
             </div>
             
             {/* Main Title */}
-            <h1 className="hero-title text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <div className="mb-6">
               <img 
                 src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fskgr5np_IMG-20251001-WA0003-removebg-preview.png" 
                 alt="B4 Soluções Financeiras"
-                className="h-24 md:h-32 lg:h-40 mx-auto mb-4"
+                className="h-24 md:h-32 lg:h-40 mx-auto mb-6 drop-shadow-2xl"
               />
-            </h1>
+              <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <span className="text-white">Transformamos desafios financeiros</span>
+                <br />
+                <span className="text-orange-300">em oportunidades de sucesso</span>
+              </h1>
+            </div>
             
             {/* Subtitle */}
-            <p className="hero-subtitle text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl leading-relaxed">
-              <span className="block mb-2 text-orange-300 font-semibold">"Soluções Financeiras - Conecta você ao melhor crédito"</span>
-              A B4 Soluções Financeiras conecta empresas e pessoas às melhores oportunidades de captação de recursos, de forma ágil e estratégica, com ética e excelência em todas as etapas, apoiando nossos clientes antes, durante e após a operação.
+            <p className="hero-subtitle text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl leading-relaxed">
+              Sua empresa terá acesso às <strong className="text-orange-300">MELHORES linhas de crédito</strong> e apoio especializado. 
+              Mais de <strong className="text-white">150 soluções</strong> de crédito para o seu negócio crescer com consistência e segurança.
             </p>
             
             {/* CTA Buttons */}
