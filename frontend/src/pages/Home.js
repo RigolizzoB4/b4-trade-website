@@ -76,7 +76,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="hero-section min-h-screen flex items-center relative overflow-hidden hero-parallax">
+      <section className="hero-section min-h-screen flex items-center relative overflow-hidden">
         <div 
           className="absolute inset-0 z-0"
           style={{
@@ -85,9 +85,6 @@ const Home = () => {
             backgroundPosition: 'center'
           }}
         />
-        
-        {/* Partículas Interativas */}
-        <ParticleBackground />
         
         <div className="container-custom relative z-10">
           <div className="max-w-4xl">
