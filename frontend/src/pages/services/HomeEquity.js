@@ -121,7 +121,7 @@ const HomeEquity = () => {
             
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/1106476/pexels-photo-1106476.jpeg" 
+                src="https://images.unsplash.com/photo-1613977257363-707ba9348227" 
                 alt="Casa moderna" 
                 className="rounded-2xl shadow-2xl"
               />
