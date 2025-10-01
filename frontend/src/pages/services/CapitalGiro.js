@@ -35,13 +35,38 @@ const CapitalGiro = () => {
     'Manter operações sem interrupções'
   ];
 
+  const subprodutos = [
+    {
+      nome: 'Antecipação de Recebíveis',
+      descricao: 'Antecipe o recebimento de vendas a prazo',
+      prazo: '30 a 180 dias'
+    },
+    {
+      nome: 'Desconto de Duplicatas',
+      descricao: 'Transforme suas duplicatas em dinheiro imediato',
+      prazo: '30 a 90 dias'
+    },
+    {
+      nome: 'Crédito Rotativo Empresarial',
+      descricao: 'Linha de crédito flexível para necessidades pontuais',
+      prazo: 'Renovável mensalmente'
+    },
+    {
+      nome: 'Cartão Corporativo',
+      descricao: 'Facilite pagamentos e controle de despesas',
+      prazo: 'Até 40 dias'
+    }
+  ];
+
   const finalidades = [
-    'Pagamento de fornecedores',
-    'Compra de matéria-prima',
-    'Pagamento de salários',
-    'Manutenção de equipamentos',
-    'Despesas operacionais',
-    'Investimentos de curto prazo'
+    'Pagamento de fornecedores e prestadores de serviços',
+    'Compra de matéria-prima e insumos de produção',
+    'Pagamento de salários e encargos trabalhistas',
+    'Manutenção de equipamentos e infraestrutura',
+    'Despesas operacionais e administrativas',
+    'Aproveitamento de oportunidades comerciais',
+    'Adequação de fluxo de caixa sazonal',
+    'Investimentos de curto prazo para crescimento'
   ];
 
   const processoContratacao = [
