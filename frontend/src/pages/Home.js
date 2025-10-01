@@ -184,14 +184,10 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 via-orange-50 to-gray-50 relative overflow-hidden">
-        {/* Morphing Background Shape */}
-        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-orange-200 to-orange-300 morphing-blob opacity-20"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-r from-orange-300 to-orange-400 morphing-blob opacity-15" style={{ animationDelay: '2s' }}></div>
-        
-        <div className="container-custom relative z-10">
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="scroll-reveal">
+            <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Por que escolher a <span className="text-gradient">B4</span>?
               </h2>
