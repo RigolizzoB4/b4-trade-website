@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Users, Target, Award, TrendingUp } from 'lucide-react';
-import ParticleBackground from '../components/ParticleBackground';
-import CutoutImage from '../components/CutoutImage';
-import NeuroButton from '../components/NeuroButton';
 
 const Home = () => {
   const services = [
