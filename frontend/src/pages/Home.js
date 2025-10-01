@@ -146,6 +146,64 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Sobre o Grupo B4 */}
+      <section className="section-padding bg-gradient-to-br from-orange-50 to-white">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Conheça o <span className="text-orange-500">Grupo B4</span>
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                A B4 Soluções Financeiras é parte do renomado Grupo B4, uma empresa consolidada no mercado 
+                financeiro brasileiro. Nosso compromisso é conectar empresas e pessoas às melhores 
+                oportunidades de captação de recursos, sempre com ética, agilidade e excelência.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-orange-500 mt-1 mr-4 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">15+ Anos de Expertise</h3>
+                    <p className="text-gray-600">Mais de uma década conectando clientes às melhores soluções financeiras do mercado.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-orange-500 mt-1 mr-4 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">150+ Soluções de Crédito</h3>
+                    <p className="text-gray-600">Amplo portfólio de produtos financeiros para atender todas as necessidades empresariais.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-orange-500 mt-1 mr-4 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">50+ Instituições Parceiras</h3>
+                    <p className="text-gray-600">Rede robusta de parcerias com os principais bancos e instituições financeiras.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/zbmlmhkp_image.png" 
+                alt="Escritório Grupo B4" 
+                className="rounded-2xl shadow-2xl w-full"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-orange-500 text-white p-6 rounded-xl shadow-lg">
+                <div className="text-center">
+                  <div className="text-2xl font-bold">R$ 500M+</div>
+                  <div className="text-sm opacity-90">Recursos Captados</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
