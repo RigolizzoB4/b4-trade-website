@@ -130,13 +130,13 @@ const Home = () => {
             </div>
             
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                <div key={index} className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="text-2xl md:text-3xl font-bold text-orange-300 mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-gray-300 text-sm">
+                  <div className="text-gray-200 text-sm font-medium">
                     {stat.label}
                   </div>
                 </div>
