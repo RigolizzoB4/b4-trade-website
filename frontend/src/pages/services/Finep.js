@@ -140,7 +140,7 @@ const Finep = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxpbm5vdmF0aW9uJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NTkzNDkyNzB8MA" 
+                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/ris12m9d_image.png" 
                 alt="Engenheira trabalhando com tecnologia" 
                 className="rounded-2xl shadow-2xl"
               />
