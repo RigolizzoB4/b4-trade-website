@@ -75,7 +75,7 @@ const QuemSomos = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.8), rgba(107, 114, 128, 0.8)), url('https://images.unsplash.com/photo-1568992687947-868a62a9f521?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHRlYW18ZW58MHx8fHwxNzU5MzQ5MjU5fDA')`,
+            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.8), rgba(107, 114, 128, 0.8)), url('https://customer-assets.emergentagent.com/job_loanexperts/artifacts/l6mm3nig_image.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
