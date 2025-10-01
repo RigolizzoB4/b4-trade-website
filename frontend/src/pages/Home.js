@@ -225,7 +225,7 @@ const Home = () => {
             
             <div className="relative">
               <img 
-                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/ap34uxty_image.png" 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" 
                 alt="Equipe B4" 
                 className="rounded-2xl shadow-2xl"
               />
