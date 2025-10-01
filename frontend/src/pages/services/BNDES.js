@@ -138,7 +138,7 @@ const BNDES = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBmaW5hbmNlfGVufDB8fHx8MTc1OTM0OTI0OHww" 
+                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fledzhqn_image.png" 
                 alt="Complexo empresarial" 
                 className="rounded-2xl shadow-2xl"
               />
