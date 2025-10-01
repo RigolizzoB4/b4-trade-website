@@ -96,12 +96,16 @@ const Home = () => {
             
             {/* Main Title */}
             <h1 className="hero-title text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              B4 Soluções 
-              <span className="text-orange-500">Financeiras</span>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fskgr5np_IMG-20251001-WA0003-removebg-preview.png" 
+                alt="B4 Soluções Financeiras"
+                className="h-24 md:h-32 lg:h-40 mx-auto mb-4"
+              />
             </h1>
             
             {/* Subtitle */}
             <p className="hero-subtitle text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl leading-relaxed">
+              <span className="block mb-2 text-orange-300 font-semibold">Grupo B4 - Conectando você ao futuro financeiro</span>
               Conectando empresas e pessoas às melhores oportunidades de captação de recursos.
               <span className="block mt-2 text-orange-300 font-medium">
                 Soluções ágeis, estratégicas e éticas em todas as etapas.
