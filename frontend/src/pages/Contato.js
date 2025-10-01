@@ -91,7 +91,7 @@ const Contato = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.8), rgba(107, 114, 128, 0.8)), url('https://customer-assets.emergentagent.com/job_loanexperts/artifacts/ris12m9d_image.png')`,
+            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.8), rgba(107, 114, 128, 0.8)), url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBtb2Rlcm58ZW58MHx8fHwxNzU5MzUwNDMxfDA&ixlib=rb-4.1.0&q=85')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
