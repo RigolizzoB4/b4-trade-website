@@ -74,7 +74,7 @@ const CapitalGiro = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.8), rgba(107, 114, 128, 0.8)), url('https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxjb3Jwb3JhdGUlMjBmaW5hbmNlfGVufDB8fHx8MTc1OTM0OTI0OHww')`,
+            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.8), rgba(107, 114, 128, 0.8)), url('https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fledzhqn_image.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
