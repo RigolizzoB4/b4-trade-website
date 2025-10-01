@@ -191,7 +191,7 @@ const Finep = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <img 
-                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/upc0zjuv_image.png" 
+                src="https://images.unsplash.com/photo-1700427296131-0cc4c4610fc6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxmaW5hbmNlJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NTkzNTA0MjR8MA&ixlib=rb-4.1.0&q=85" 
                 alt="Profissional de negócios" 
                 className="rounded-2xl shadow-2xl"
               />
