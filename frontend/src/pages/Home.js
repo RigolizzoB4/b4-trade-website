@@ -120,17 +120,18 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link 
                 to="/servicos/home-equity" 
-                className="btn-orange inline-flex items-center px-8 py-4 rounded-xl font-semibold text-lg group"
+                className="btn-orange inline-flex items-center px-10 py-5 rounded-2xl font-bold text-lg group shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
               >
-                Conheça nossas soluções
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                Conheça Nossas Soluções
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
               </Link>
               
               <Link 
-                to="/quem-somos" 
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors"
+                to="/contato" 
+                className="inline-flex items-center px-10 py-5 border-2 border-white text-white rounded-2xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 shadow-2xl"
               >
-                Sobre a B4
+                <Phone className="mr-3 h-6 w-6" />
+                Fale Conosco
               </Link>
             </div>
             
