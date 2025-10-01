@@ -80,7 +80,7 @@ const BNDES = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.8), rgba(107, 114, 128, 0.8)), url('https://customer-assets.emergentagent.com/job_loanexperts/artifacts/ap34uxty_image.png')`,
+            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.8), rgba(107, 114, 128, 0.8)), url('https://images.unsplash.com/photo-1565866926760-213f0b57e8b6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHw0fHxpbmR1c3RyeSUyMGZhY3Rvcnl8ZW58MHx8fHwxNzU5MzUwNDQzfDA&ixlib=rb-4.1.0&q=85')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
