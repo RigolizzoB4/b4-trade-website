@@ -212,7 +212,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="scroll-reveal">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Por que escolher a <span className="text-orange-500">B4</span>?
+                Por que escolher a <span className="text-gradient">B4</span>?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 Somos especialistas em conectar você às melhores oportunidades do mercado financeiro, 
