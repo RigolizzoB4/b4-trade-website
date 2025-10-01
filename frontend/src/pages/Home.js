@@ -114,24 +114,20 @@ const Home = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <NeuroButton 
+              <Link 
                 to="/servicos/home-equity" 
-                variant="accent"
-                size="lg"
-                className="group hover-lift"
+                className="btn-orange inline-flex items-center px-8 py-4 rounded-xl font-semibold text-lg group"
               >
                 Conheça nossas soluções
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </NeuroButton>
+              </Link>
               
-              <NeuroButton 
+              <Link 
                 to="/quem-somos" 
-                variant="secondary"
-                size="lg"
-                className="glass-card border-2 border-white text-white hover:bg-white hover:text-gray-900 hover-lift"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors"
               >
                 Sobre a B4
-              </NeuroButton>
+              </Link>
             </div>
             
             {/* Quick Stats */}
