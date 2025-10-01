@@ -1,12 +1,12 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field
-from typing import List
+from pydantic import BaseModel, Field, EmailStr
+from typing import List, Optional
 import uuid
 from datetime import datetime
 
@@ -20,13 +20,27 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
-app = FastAPI()
+app = FastAPI(title="B4 Soluções Financeiras API")
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
 
 
 # Define Models
+class ContactForm(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    nome: str
+    email: EmailStr
+    telefone: str
+    mensagem: str
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+
+class ContactFormCreate(BaseModel):
+    nome: str
+    email: EmailStr
+    telefone: str
+    mensagem: str
+
 class StatusCheck(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     client_name: str
@@ -38,7 +52,30 @@ class StatusCheckCreate(BaseModel):
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "B4 Soluções Financeiras API"}
+
+@api_router.post("/contato", response_model=ContactForm)
+async def create_contact(input: ContactFormCreate):
+    """Endpoint para receber formulários de contato"""
+    try:
+        contact_dict = input.dict()
+        contact_obj = ContactForm(**contact_dict)
+        result = await db.contatos.insert_one(contact_obj.dict())
+        if result.inserted_id:
+            return contact_obj
+        else:
+            raise HTTPException(status_code=500, detail="Erro ao salvar contato")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Erro interno: {str(e)}")
+
+@api_router.get("/contatos", response_model=List[ContactForm])
+async def get_contacts():
+    """Endpoint para listar todos os contatos"""
+    try:
+        contatos = await db.contatos.find().to_list(1000)
+        return [ContactForm(**contato) for contato in contatos]
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Erro ao buscar contatos: {str(e)}")
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
