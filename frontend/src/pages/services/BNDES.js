@@ -36,15 +36,15 @@ const BNDES = () => {
   ];
 
   const setoresAtendidos = [
-    'Indústria de Transformação',
-    'Agroindústria',
-    'Infraestrutura',
-    'Logística e Transporte',
-    'Energia',
-    'Tecnologia da Informação',
-    'Saúde',
-    'Educação',
-    'Turismo'
+    'Indústria de Transformação - Manufatura, metalurgia, química e farmacêutica',
+    'Agroindústria - Processamento de alimentos, frigoríficos e cooperativas',
+    'Infraestrutura - Construção civil, saneamento e obras públicas',
+    'Logística e Transporte - Portos, aeroportos, ferrovias e rodovias',
+    'Energia - Geração, transmissão e distribuição de energia elétrica',
+    'Tecnologia da Informação - Software, hardware e telecomunicações',
+    'Saúde - Hospitais, clínicas e indústria farmacêutica',
+    'Educação - Instituições de ensino e centros de pesquisa',
+    'Turismo - Hotelaria, parques temáticos e infraestrutura turística'
   ];
 
   const processoContratacao = [
