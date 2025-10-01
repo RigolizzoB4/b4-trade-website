@@ -21,7 +21,9 @@ body {
 
 /* Paleta de cores B4 */
 :root {
-  --b4-orange: #FF8A4C;
+  --b4-orange: #F97316;
+  --b4-orange-light: #FB923C;
+  --b4-orange-dark: #EA580C;
   --b4-gray: #6B7280;
   --b4-dark: #1F2937;
   --b4-light: #F9FAFB;
