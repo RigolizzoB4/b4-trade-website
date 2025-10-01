@@ -67,10 +67,12 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Clientes Atendidos' },
-    { number: 'R$ 100M+', label: 'Em Recursos Captados' },
+    { number: '1.500+', label: 'Empresas Atendidas' },
+    { number: 'R$ 500M+', label: 'Em Recursos Captados' },
     { number: '15+', label: 'Anos de Experiência' },
-    { number: '98%', label: 'Taxa de Aprovação' }
+    { number: '95%', label: 'Taxa de Aprovação' },
+    { number: '150+', label: 'Soluções de Crédito' },
+    { number: '50+', label: 'Instituições Parceiras' }
   ];
 
   return (
