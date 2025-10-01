@@ -86,12 +86,12 @@ const Home = () => {
           }}
         />
         
-        <div className="container-custom relative z-10">
-          <div className="max-w-4xl">
+        <div className="container-custom relative z-10 text-center text-white">
+          <div className="max-w-4xl mx-auto">
             {/* Badge */}
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
               <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-              <span className="text-white/90 text-sm font-medium">Conheça a B4</span>
+              <span className="text-white/90 text-sm font-medium">Bem-vindo ao mundo das soluções financeiras</span>
             </div>
             
             {/* Main Title */}
@@ -105,11 +105,8 @@ const Home = () => {
             
             {/* Subtitle */}
             <p className="hero-subtitle text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl leading-relaxed">
-              <span className="block mb-2 text-orange-300 font-semibold">Grupo B4 - Conectando você ao futuro financeiro</span>
-              Conectando empresas e pessoas às melhores oportunidades de captação de recursos.
-              <span className="block mt-2 text-orange-300 font-medium">
-                Soluções ágeis, estratégicas e éticas em todas as etapas.
-              </span>
+              <span className="block mb-2 text-orange-300 font-semibold">"Soluções Financeiras - Conecta você ao melhor crédito"</span>
+              A B4 Soluções Financeiras conecta empresas e pessoas às melhores oportunidades de captação de recursos, de forma ágil e estratégica, com ética e excelência em todas as etapas, apoiando nossos clientes antes, durante e após a operação.
             </p>
             
             {/* CTA Buttons */}
