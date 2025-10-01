@@ -1,34 +1,124 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* B4 Soluções Financeiras - Estilos customizados */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.App {
+  min-height: 100vh;
 }
 
-.App-link {
-    color: #61dafb;
+/* Paleta de cores B4 */
+:root {
+  --b4-orange: #F97316;
+  --b4-gray: #6B7280;
+  --b4-dark: #1F2937;
+  --b4-light: #F9FAFB;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Hero sections */
+.hero-section {
+  background: linear-gradient(135deg, var(--b4-dark) 0%, var(--b4-gray) 100%);
+  color: white;
+}
+
+/* Botões laranja */
+.btn-orange {
+  background-color: var(--b4-orange);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #EA580C;
+  transform: translateY(-2px);
+}
+
+/* Cards de serviços */
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid #E5E7EB;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Animações suaves */
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para dropdown de serviços */
+.dropdown-menu {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Estilo para links ativos */
+.nav-link-active {
+  color: var(--b4-orange) !important;
+  font-weight: 600;
+}
+
+/* Container máximo */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Espaçamento padrão para seções */
+.section-padding {
+  padding: 4rem 0;
+}
+
+/* Títulos das páginas */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--b4-dark);
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  color: var(--b4-gray);
+  margin-bottom: 2rem;
 }
