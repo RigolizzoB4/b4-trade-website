@@ -246,7 +246,7 @@ const Contato = () => {
             <div>
               <div className="relative mb-8">
                 <img 
-                  src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/upc0zjuv_image.png" 
+                  src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/ap34uxty_image.png" 
                   alt="Atendimento B4" 
                   className="rounded-2xl shadow-2xl w-full"
                 />
