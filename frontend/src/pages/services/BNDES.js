@@ -25,12 +25,14 @@ const BNDES = () => {
   ];
 
   const vantagens = [
-    'Taxas de juros subsidiadas e competitivas',
-    'Prazos longos para pagamento',
-    'Suporte ao desenvolvimento industrial',
-    'Fomento à inovação e tecnologia',
-    'Fortalecimento da cadeia produtiva nacional',
-    'Geração de empregos e renda'
+    'Taxas de juros subsidiadas e competitivas - As menores do mercado para financiamento empresarial',
+    'Prazos longos para pagamento - Até 120 meses para quitação, facilitando o planejamento financeiro',
+    'Suporte ao desenvolvimento industrial - Programas específicos para modernização e expansão fabril',
+    'Fomento à inovação e tecnologia - Incentivos especiais para projetos de pesquisa e desenvolvimento',
+    'Fortalecimento da cadeia produtiva nacional - Priorizando fornecedores e insumos brasileiros',
+    'Geração de empregos e renda - Compromisso social com a criação de postos de trabalho qualificados',
+    'Assessoria técnica especializada - Acompanhamento durante todo o processo de implementação',
+    'Flexibilidade de garantias - Diferentes modalidades de garantia para facilitar o acesso'
   ];
 
   const setoresAtendidos = [
