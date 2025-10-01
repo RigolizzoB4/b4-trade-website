@@ -80,6 +80,15 @@ body {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
+/* Aumentar levemente o tamanho das fontes */
+p, span, div {
+  font-size: 1.05em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.1em;
+}
+
 /* Responsividade para mobile */
 @media (max-width: 768px) {
   .hero-title {
