@@ -27,6 +27,8 @@ function App() {
             <Route path="/servicos/finep" element={<Finep />} />
             <Route path="/servicos/bndes" element={<BNDES />} />
             <Route path="/servicos/consorcio" element={<Consorcio />} />
+            <Route path="/servicos/cambio" element={<Cambio />} />
+            <Route path="/servicos/capital-investimento" element={<CapitalInvestimento />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>
         </Layout>
