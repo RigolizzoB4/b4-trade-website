@@ -121,7 +121,7 @@ const HomeEquity = () => {
             
             <div className="relative">
               <img 
-                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/ap34uxty_image.png" 
+                src="https://images.pexels.com/photos/1106476/pexels-photo-1106476.jpeg" 
                 alt="Casa moderna" 
                 className="rounded-2xl shadow-2xl"
               />
