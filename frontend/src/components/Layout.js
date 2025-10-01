@@ -13,6 +13,8 @@ const Layout = ({ children }) => {
     { name: 'FINEP', path: '/servicos/finep' },
     { name: 'BNDES', path: '/servicos/bndes' },
     { name: 'Consórcio', path: '/servicos/consorcio' },
+    { name: 'Câmbio', path: '/servicos/cambio' },
+    { name: 'Capital de Investimento', path: '/servicos/capital-investimento' },
   ];
 
   const isActivePath = (path) => location.pathname === path;
