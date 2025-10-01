@@ -143,8 +143,8 @@ const Consorcio = () => {
             
             <div className="relative">
               <img 
-                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/l6mm3nig_image.png" 
-              alt="Handshake de negócios" 
+                src="https://images.unsplash.com/photo-1541089404510-5c9a779841fc" 
+              alt="Casal feliz planejando" 
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
