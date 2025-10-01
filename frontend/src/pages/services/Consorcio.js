@@ -232,8 +232,8 @@ const Consorcio = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <img 
-                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/upc0zjuv_image.png" 
-                alt="Profissional de finanças" 
+                src="https://images.unsplash.com/photo-1501901609772-df0848060b33" 
+                alt="Casal planejando financeiramente" 
                 className="rounded-2xl shadow-2xl"
               />
             </div>
