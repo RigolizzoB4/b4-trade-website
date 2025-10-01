@@ -163,7 +163,7 @@ const Home = () => {
                 to={service.path}
                 className="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl group"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors">
                   {service.title}
                 </h3>
