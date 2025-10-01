@@ -152,7 +152,7 @@ const Home = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Nossos <span className="text-gradient">Serviços</span>
+              Nossos <span className="text-orange-500">Serviços</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Oferecemos soluções financeiras completas para empresas e pessoas físicas, 
