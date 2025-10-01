@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Users, Target, Award, TrendingUp } from 'lucide-react';
+import ParticleBackground from '../components/ParticleBackground';
 
 const Home = () => {
   const services = [
