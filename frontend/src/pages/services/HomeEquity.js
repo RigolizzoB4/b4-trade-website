@@ -172,8 +172,8 @@ const HomeEquity = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <img 
-                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/l6mm3nig_image.png" 
-                alt="Profissional de finanças" 
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750" 
+                alt="Imóvel de luxo" 
                 className="rounded-2xl shadow-2xl"
               />
             </div>
