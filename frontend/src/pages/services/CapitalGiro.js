@@ -227,7 +227,7 @@ const CapitalGiro = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processoContratacao.map((etapa, index) => (
               <div key={index} className="text-center relative">
-                <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 text-white rounded-2xl flex items-center justify-center text-xl font-semibold mx-auto mb-6 shadow-lg border border-orange-300">
                   {etapa.numero}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
