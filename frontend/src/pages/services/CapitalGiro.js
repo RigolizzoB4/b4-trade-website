@@ -130,7 +130,7 @@ const CapitalGiro = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxjb3Jwb3JhdGUlMjBmaW5hbmNlfGVufDB8fHx8MTc1OTM0OTI0OHww" 
+                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/ris12m9d_image.png" 
                 alt="Executivo analisando gráficos" 
                 className="rounded-2xl shadow-2xl"
               />
