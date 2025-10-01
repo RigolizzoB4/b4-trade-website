@@ -200,8 +200,40 @@ const CapitalGiro = () => {
         </div>
       </section>
 
-      {/* Vantagens e Finalidades */}
+      {/* Subprodutos */}
       <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Modalidades de <span className="text-orange-500">Capital de Giro</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Diferentes soluções para atender as necessidades específicas do seu negócio.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {subprodutos.map((produto, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <h3 className="font-bold text-gray-900 mb-3">
+                  {produto.nome}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  {produto.descricao}
+                </p>
+                <div className="bg-orange-50 p-2 rounded-lg text-center">
+                  <span className="text-orange-700 font-medium text-xs">
+                    {produto.prazo}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vantagens e Finalidades */}
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Vantagens */}
@@ -224,11 +256,11 @@ const CapitalGiro = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 Principais <span className="text-orange-500">Finalidades</span>
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {finalidades.map((finalidade, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mr-4 flex-shrink-0"></div>
-                    <span className="text-gray-700 font-medium">{finalidade}</span>
+                    <span className="text-gray-700 font-medium text-sm">{finalidade}</span>
                   </div>
                 ))}
               </div>
