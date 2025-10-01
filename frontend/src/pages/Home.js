@@ -223,17 +223,16 @@ const Home = () => {
               </div>
             </div>
             
-            <div className="relative scroll-reveal">
-              <CutoutImage
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf"
-                alt="Equipe B4"
-                className="w-full h-96 rounded-2xl shadow-2xl"
-                cutoutStyle="rounded"
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" 
+                alt="Equipe B4" 
+                className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 glass-card-white p-6 rounded-xl shadow-lg border border-orange-100 floating">
-                <Award className="h-8 w-8 mb-2 text-orange-400" />
-                <p className="font-semibold text-gray-800">Certificação</p>
-                <p className="text-sm text-gray-600">ISO 9001</p>
+              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                <Award className="h-8 w-8 mb-2" />
+                <p className="font-semibold">Certificação</p>
+                <p className="text-sm opacity-90">ISO 9001</p>
               </div>
             </div>
           </div>
