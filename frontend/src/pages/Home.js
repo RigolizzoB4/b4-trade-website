@@ -151,11 +151,11 @@ const Home = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                <div key={index} className="text-center glass-card p-4 rounded-2xl hover-lift" style={{ animationDelay: `${index * 0.3}s` }}>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-1 text-gradient">
                     {stat.number}
                   </div>
-                  <div className="text-gray-300 text-sm">
+                  <div className="text-gray-200 text-sm font-medium">
                     {stat.label}
                   </div>
                 </div>
