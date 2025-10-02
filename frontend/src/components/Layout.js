@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react';
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   const services = [
@@ -19,11 +20,22 @@ const Layout = ({ children }) => {
 
   const isActivePath = (path) => location.pathname === path;
   const isActiveService = () => services.some(service => location.pathname === service.path);
+  const isHome = location.pathname === '/';
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [location.pathname]);
+
+  const headerSolid = !isHome || scrolled;
+  const linkBase = headerSolid ? 'text-gray-700 hover:text-orange-500' : 'text-white hover:text-orange-300';
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-md fixed w-full top-0 z-50">
+      <header className={`fixed w-full top-0 z-50 transition-colors duration-300 ${headerSolid ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="container-custom">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -31,7 +43,7 @@ const Layout = ({ children }) => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fskgr5np_IMG-20251001-WA0003-removebg-preview.png" 
                 alt="B4 Soluções Financeiras" 
-                className="h-16 w-auto"
+                className={`h-16 w-auto ${headerSolid ? '' : 'drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]'}`}
               />
             </Link>
 
@@ -39,8 +51,8 @@ const Layout = ({ children }) => {
             <nav className="hidden lg:flex items-center space-x-8">
               <Link 
                 to="/" 
-                className={`text-gray-700 hover:text-orange-500 font-medium transition-colors ${
-                  isActivePath('/') ? 'nav-link-active' : ''
+                className={`${linkBase} font-medium transition-colors ${
+                  isActivePath('/') ? (headerSolid ? 'nav-link-active' : 'text-orange-300') : ''
                 }`}
               >
                 Início
@@ -48,7 +60,7 @@ const Layout = ({ children }) => {
               
               <Link 
                 to="/quem-somos" 
-                className={`text-gray-700 hover:text-orange-500 font-medium transition-colors ${
+                className={`${linkBase} font-medium transition-colors ${
                   isActivePath('/quem-somos') ? 'nav-link-active' : ''
                 }`}
               >
@@ -60,8 +72,8 @@ const Layout = ({ children }) => {
                 <button
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
-                  className={`flex items-center text-gray-700 hover:text-orange-500 font-medium transition-colors ${
-                    isActiveService() ? 'nav-link-active' : ''
+                  className={`flex items-center ${linkBase} font-medium transition-colors ${
+                    isActiveService() ? (headerSolid ? 'nav-link-active' : 'text-orange-300') : ''
                   }`}
                 >
                   Serviços <ChevronDown className="ml-1 h-4 w-4" />
@@ -92,26 +104,20 @@ const Layout = ({ children }) => {
               
               <Link 
                 to="/contato" 
-                className={`text-gray-700 hover:text-orange-500 font-medium transition-colors ${
+                className={`${linkBase} font-medium transition-colors ${
                   isActivePath('/contato') ? 'nav-link-active' : ''
                 }`}
               >
                 Contato
               </Link>
 
-              {/* CTA Button */}
-              <Link 
-                to="/contato" 
-                className="btn-orange px-6 py-3 rounded-lg font-semibold"
-              >
-                Fale Conosco
-              </Link>
+              {/* Header CTA removed per preference (clean header) */}
             </nav>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
+              className={`lg:hidden p-2 rounded-md ${headerSolid ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -119,7 +125,7 @@ const Layout = ({ children }) => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden bg-white border-t">
+            <div className={`lg:hidden ${headerSolid ? 'bg-white' : 'bg-gray-900/80 backdrop-blur'} border-t` }>
               <div className="py-4 space-y-2">
                 <Link 
                   to="/" 
