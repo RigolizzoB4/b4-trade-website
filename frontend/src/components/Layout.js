@@ -43,11 +43,7 @@ const Layout = ({ children }) => {
           <div className="flex items-center justify-between h-[120px]">
             {/* Logo centralizado verticalmente dentro do header, sem borda laranja e sem sobrepor a foto */}
             <Link to="/" className="flex items-center">
-              <img 
-                src="/logo-b4.svg" 
-                alt="B4 Soluções Financeiras" 
-                className="logo-img h-[110px] w-auto"
-              />
+              <LogoB4 height={110} className="logo-img" />
             </Link>
 
             {/* Desktop Navigation */}
