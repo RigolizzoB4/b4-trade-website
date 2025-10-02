@@ -36,9 +36,9 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className={`fixed w-full top-0 z-50 transition-colors duration-300 ${headerSolid ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+      <header className={`fixed w-full top-0 z-50 bg-white shadow-md`}>
         <div className="container-custom">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-[88px]">
             {/* Logo centralizado verticalmente dentro do header, sem borda laranja e sem sobrepor a foto */}
             <Link to="/" className="flex items-center">
               <img 
