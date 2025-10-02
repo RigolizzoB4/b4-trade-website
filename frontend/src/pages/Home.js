@@ -112,20 +112,22 @@ const Home = () => {
       {/* Conheça o Grupo B4 */}
       <section className="section-padding" style={{ backgroundColor: 'var(--b4-orange)' }}>
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Conheça o Grupo B4</h2>
-              <p className="text-white/95 mb-6">A B4 Soluções Financeiras é uma das principais empresas do Grupo B4, com atuação robusta em soluções de crédito e captação para empresas.</p>
-              <ul className="text-white/95 space-y-2 list-disc pl-5">
-                <li>Mais de uma década conectando clientes às melhores soluções financeiras do mercado.</li>
-                <li>Amplo portfólio de produtos para atender diferentes perfis empresariais.</li>
-                <li>Rede de parcerias com os principais bancos e instituições financeiras.</li>
-                <li>Atuação em operações de crédito, fomento mercantil e fundos de investimento.</li>
-                <li>Matriz em Campinas/SP – Av. Coronel Silva Teles, 1002.</li>
+              <h2 className="text-4xl font-bold mb-4">
+                <span className="text-white">Conheça o Grupo</span> <span className="px-2 rounded-md bg-white/15 text-white">B4</span>
+              </h2>
+              <p className="text-white/95 mb-5 text-base">A B4 Soluções Financeiras é uma das principais empresas do Grupo B4, com atuação robusta em soluções de crédito e captação para empresas.</p>
+              <ul className="text-white/95 space-y-2 text-sm">
+                <li>• Mais de uma década conectando clientes às melhores soluções financeiras do mercado.</li>
+                <li>• Amplo portfólio de produtos para atender diferentes perfis empresariais.</li>
+                <li>• Rede de parcerias com os principais bancos e instituições financeiras.</li>
+                <li>• Atuação em operações de crédito, fomento mercantil e fundos de investimento.</li>
+                <li>• Matriz em Campinas/SP – Av. Coronel Silva Teles, 1002.</li>
               </ul>
             </div>
-            <div className="relative">
-              <img src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/zbmlmhkp_image.png" alt="Grupo B4" className="rounded-2xl shadow-2xl w-full" />
+            <div className="relative h-full">
+              <img src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/cfpnf5sv_frente%20vista%20de%20lado.png" alt="Grupo B4" className="rounded-2xl shadow-2xl w-full h-full object-cover" />
             </div>
           </div>
         </div>
