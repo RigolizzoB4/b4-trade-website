@@ -71,9 +71,10 @@ const Layout = ({ children }) => {
               </Link>
 
               {/* Services Dropdown */}
-              <div className="relative" onMouseLeave={() => setIsServicesOpen(false)}>
+              <div className="relative"
+                   onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
+                   onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}>
                 <button
-                  onMouseEnter={() => setIsServicesOpen(true)}
                   onClick={() => setIsServicesOpen((v) => !v)}
                   className={`flex items-center ${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
                     isActiveService() ? (headerSolid ? 'nav-link-active' : 'text-orange-300') : ''
@@ -84,7 +85,8 @@ const Layout = ({ children }) => {
                 
                 {isServicesOpen && (
                   <div 
-                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
+                    onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}
                     className="absolute top-full left-0 mt-2 w-64 dropdown-menu shadow-xl"
                   >
                     <div className="py-2">
