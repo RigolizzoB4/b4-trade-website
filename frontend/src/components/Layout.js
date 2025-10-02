@@ -43,9 +43,9 @@ const Layout = ({ children }) => {
             {/* Esquerda: Logo */}
             <Link to="/" className="flex items-center">
               <img
-                src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/qfku3goc_image%20%281%29.png"
+                src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/emm1j2na_Generated%20Image%20October%2002%2C%202025%20-%203_18AM%20%283%29.png"
                 alt="B4 Soluções financeiras"
-                className="h-[100px] w-auto"
+                className="h-[90px] w-auto"
               />
             </Link>
 
