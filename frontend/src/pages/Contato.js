@@ -53,28 +53,16 @@ const Contato = () => {
 
   const contatos = [
     {
-      icon: <Phone className="h-8 w-8 text-orange-500" />,
-      title: 'Telefone - Pilla',
-      info: '(19) 99708-6955',
-      action: 'tel:+5519997086955'
-    },
-    {
-      icon: <Phone className="h-8 w-8 text-orange-500" />,
-      title: 'Telefone - Anselmo', 
-      info: '(19) 98812-3070',
-      action: 'tel:+5519988123070'
-    },
-    {
-      icon: <Mail className="h-8 w-8 text-orange-500" />,
+      icon: <Mail className="h-8 w-8 text-[var(--b4-orange)]" />,
       title: 'E-mail',
-      info: 'contato@b4solucoes.com.br',
-      action: 'mailto:contato@b4solucoes.com.br'
+      info: 'solucoes.financeiras@b4.com.br',
+      action: 'mailto:solucoes.financeiras@b4.com.br'
     },
     {
-      icon: <MessageCircle className="h-8 w-8 text-orange-500" />,
-      title: 'WhatsApp',
-      info: 'Fale conosco pelo WhatsApp',
-      action: 'https://wa.me/5519997086955'
+      icon: <Phone className="h-8 w-8 text-[var(--b4-orange)]" />,
+      title: 'Telefone', 
+      info: '(19) 3751-4300',
+      action: 'tel:+551937514300'
     }
   ];
 
