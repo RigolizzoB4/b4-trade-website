@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react';
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const closeTimerRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
