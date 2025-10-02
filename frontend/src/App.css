@@ -118,8 +118,8 @@ body {
   transition-delay: .5s; /* aparece ao final do percurso */
 }
 
-/* overlay de identidade laranja muito sutil nas fotos do herói */
-.hero-orange-overlay { background: linear-gradient(90deg, rgba(249,115,22,0.06) 0%, rgba(249,115,22,0.02) 40%, rgba(0,0,0,0) 60%); }
+/* overlay de identidade laranja nas fotos do herói (um pouco mais forte) */
+.hero-orange-overlay { background: linear-gradient(90deg, rgba(249,115,22,0.15) 0%, rgba(249,115,22,0.08) 40%, rgba(0,0,0,0) 60%); }
 
 @keyframes b4-run {
   0% { left: 10px; }
