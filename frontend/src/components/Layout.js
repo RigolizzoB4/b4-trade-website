@@ -38,18 +38,18 @@ const Layout = ({ children }) => {
       <header className={`fixed w-full top-0 z-50 transition-colors duration-300 ${headerSolid ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="container-custom">
           <div className="flex items-center justify-between h-20">
-            {/* Logo com medalhão branco sobreposto ao herói */}
-            <Link to="/" className="flex items-center relative">
-              {/* círculo branco aparece apenas quando header está transparente (home topo) */}
-              <div
-                className={`absolute -left-6 -bottom-7 w-28 h-28 rounded-full bg-white shadow-xl ring-1 ring-gray-200 pointer-events-none transition-opacity duration-300 ${headerSolid ? 'opacity-0' : 'opacity-100'}`}
-                aria-hidden="true"
-              />
-              <img 
-                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fskgr5np_IMG-20251001-WA0003-removebg-preview.png" 
-                alt="B4 Soluções Financeiras" 
-                className={`h-16 md:h-20 w-auto relative z-10 ${headerSolid ? '' : 'drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)]'}`}
-              />
+            {/* Logo com cartão retangular branco e borda laranja, multicolor sempre */}
+            <Link to="/" className="relative flex items-center">
+              {/* Espaço de reserva para não deslocar o menu */}
+              <div className="h-16 w-[180px] md:w-[220px]" aria-hidden="true" />
+              {/* Cartão/Logo sobreposto ao herói */}
+              <div className="absolute -left-4 md:-left-6 -bottom-10 md:-bottom-12 bg-white border border-orange-500 rounded-2xl shadow-2xl px-3 py-2 md:px-4 md:py-3">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fskgr5np_IMG-20251001-WA0003-removebg-preview.png" 
+                  alt="B4 Soluções Financeiras" 
+                  className="logo-img h-[110px] md:h-[150px] w-auto"
+                />
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
