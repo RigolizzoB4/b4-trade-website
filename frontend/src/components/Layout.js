@@ -42,7 +42,11 @@ const Layout = ({ children }) => {
           <div className="flex items-center justify-between h-[120px]">
             {/* Logo centralizado verticalmente dentro do header, sem borda laranja e sem sobrepor a foto */}
             <Link to="/" className="flex items-center">
-              <LogoB4 height={110} className="logo-img" />
+              <img
+                src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/fdcguwuv_Generated%20Image%20October%2002%2C%202025%20-%201_53AM.png"
+                alt="B4 Soluções financeiras"
+                className="h-[100px] w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
