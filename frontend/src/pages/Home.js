@@ -158,13 +158,13 @@ const HeroCarousel = () => {
               <span className="text-white">{slides[index].phrase.post}</span>
             </h1>
             <div className="flex gap-4">
-              <Link to="/contato" className="b4-cta b4-cta--square group">
+              <a href="https://wa.me/" className="b4-cta b4-cta--square group" target="_blank" rel="noreferrer">
                 <span className="b4-cta__mask-left" />
                 <span className="b4-cta__mask-right" />
                 <span className="b4-cta__text" style={{fontWeight: 500}}>Saiba mais</span>
                 <span className="b4-cta__line" />
                 <span className="b4-cta__square" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
