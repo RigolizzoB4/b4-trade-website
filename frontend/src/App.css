@@ -128,6 +128,19 @@ body {
   85% { left: 58%; background: transparent; }
   100% { left: 58%; background: var(--b4-orange); }
 }
+/* CTA quadrado: saiba fora e mais dentro. Quadrado contorna o "mais" e percorre a linha até o fim. */
+.b4-cta--square.b4-cta--hybrid { padding: 0 30px; }
+.b4-cta--square.b4-cta--hybrid .b4-cta__text { position: relative; }
+.b4-cta--square.b4-cta--hybrid .b4-cta__text .saiba { position: relative; left: -10px; }
+.b4-cta--square.b4-cta--hybrid .b4-cta__text .mais { position: relative; margin-left: 6px; }
+.b4-cta--square.b4-cta--hybrid .b4-cta__square { left: 58%; width: 18px; height: 18px; border-width: 2px; }
+.b4-cta--square.b4-cta--hybrid:hover .b4-cta__square { animation: b4-square-path 0.7s ease forwards; }
+@keyframes b4-square-path {
+  0% { left: 58%; background: transparent; }
+  85% { left: calc(100% - 14px); background: transparent; }
+  100% { left: calc(100% - 14px); background: var(--b4-orange); }
+}
+
 
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(249,115,22,0.6) 25%, rgba(249,115,22,0.9) 50%, rgba(249,115,22,0.6) 75%, transparent 100%);
