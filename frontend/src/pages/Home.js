@@ -166,7 +166,7 @@ const HeroCarousel = () => {
             </h1>
             <div className="flex gap-4">
               <Link to="/contato" className="b4-cta b4-cta--square group">
-                <span className="b4-cta__text">Saiba mais</span>
+                <span className="b4-cta__text" style={{fontWeight: 500}}>Saiba mais</span>
                 <span className="b4-cta__line" />
                 <span className="b4-cta__square" />
               </Link>
