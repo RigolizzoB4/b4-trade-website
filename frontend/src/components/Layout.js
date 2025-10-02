@@ -91,7 +91,7 @@ const Layout = ({ children }) => {
                         <Link
                           key={service.path}
                           to={service.path}
-                          className={`block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors ${
+                          className={`block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors ${
                             isActivePath(service.path) ? 'bg-orange-50 text-orange-500' : ''
                           }`}
                         >
