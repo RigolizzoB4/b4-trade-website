@@ -96,13 +96,23 @@ const HeroCarousel = () => {
       },
     },
     {
-      // Cidade / fachada com tons quentes (fallback variado)
-      img: 'https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=2000&q=85',
-      alt: 'Reunião executiva formal em sala de conferência',
+      // Fachada Cambuí Corporate com filtro laranja
+      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/54hj098q_Generated%20Image%20October%2002%2C%202025%20-%203_54AM%20%281%29.png',
+      alt: 'Cambuí Corporate com filtro laranja',
       phrase: {
         pre: 'Especialistas em viabilizar o seu ',
         highlight: 'próximo',
         post: ' passo',
+      },
+    },
+    {
+      // Visão aérea com identidade
+      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/d06ow8hl_Generated%20Image%20October%2002%2C%202025%20-%203_46AM%20%281%29.png',
+      alt: 'Vista aérea Cambuí com overlay laranja',
+      phrase: {
+        pre: 'Capital inteligente para ',
+        highlight: 'impulsionar',
+        post: ' seus projetos',
       },
     },
   ]), []);
