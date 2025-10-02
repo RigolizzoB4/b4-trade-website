@@ -165,10 +165,10 @@ const HeroCarousel = () => {
               <span className="text-white">{slides[index].phrase.post}</span>
             </h1>
             <div className="flex gap-4">
-              <Link to="/contato" className="b4-cta group">
+              <Link to="/contato" className="b4-cta b4-cta--square group">
                 <span className="b4-cta__text">Saiba mais</span>
                 <span className="b4-cta__line" />
-                <span className="b4-cta__circle" />
+                <span className="b4-cta__square" />
               </Link>
             </div>
           </div>
