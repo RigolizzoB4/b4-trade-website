@@ -37,8 +37,10 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className={`fixed w-full top-0 z-50 bg-white shadow-md`}>
-        <div className="container-custom">
+      <header className={`fixed w-full top-0 z-50 bg-white shadow-md header-with-bg`}>
+        {/* Background wave image across the whole header */}
+        <div className="absolute inset-0 pointer-events-none opacity-40 bg-cover bg-center" style={{backgroundImage: "url('https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/esjiqnk7_onda%20laranja.png')"}} />
+        <div className="container-custom relative">
           <div className="flex items-center justify-between h-[120px]">
             {/* Esquerda: Logo */}
             <Link to="/" className="flex items-center">
