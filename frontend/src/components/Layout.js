@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
               <img 
                 src="/logo-b4.svg" 
                 alt="B4 Soluções Financeiras" 
-                className="logo-img h-[96px] md:h-[110px] w-auto"
+                className="logo-img h-[110px] w-auto"
               />
             </Link>
 
