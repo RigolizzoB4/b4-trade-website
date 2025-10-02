@@ -176,7 +176,7 @@ body {
 
 /* Animação de giro sutil para números durante contagem */
 .spin-count { display: inline-block; transform-origin: 50% 50%; }
-@keyframes spinTiny { 0% { transform: rotate(0deg); } 100% { transform: rotate(8deg); } }
+@keyframes spinStraight { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
 /* Cards de serviços */
 .service-card { transition: all 0.3s ease; border: 1px solid #E5E7EB; }
