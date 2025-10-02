@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
       {/* Header */}
       <header className={`fixed w-full top-0 z-50 bg-white shadow-md header-bar`}>
         <div className="container-custom">
-          <div className="flex items-center justify-between h-[213px]">
+          <div className="flex items-center justify-between h-[200px]">
             {/* Esquerda: Logo (SVG/PNG) – 140px de altura, margem esquerda ~59px */}
             <div className="pl-[59px]">
               <Link to="/" className="flex items-center">
