@@ -32,8 +32,8 @@ const StatCard = ({ number, label }) => {
 
   useEffect(() => {
     if (!visible) return;
-    // animação simples de contagem
-    const duration = 900;
+    // animação de contagem com leve giro do número
+    const duration = 1100;
     const start = performance.now();
     const tick = (t) => {
       const p = Math.min(1, (t - start) / duration);
@@ -45,7 +45,8 @@ const StatCard = ({ number, label }) => {
 
   const formatted = () => {
     const n = val.toLocaleString('pt-BR');
-    return `${n}${suffix ? suffix : ''}${plus ? '+' : ''}`;
+    const pct = label?.toLowerCase().includes('taxa') ? '%' : '';
+    return `${n}${pct}${suffix ? suffix : ''}${plus ? '+' : ''}`;
   };
 
   return (
