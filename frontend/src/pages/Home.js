@@ -90,8 +90,8 @@ const HeroCarousel = () => {
     },
     {
       // Cidade / fachada com tons quentes (fallback variado)
-      img: 'https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?auto=format&fit=crop&w=2000&q=85',
-      alt: 'Reunião de negócios com apresentação em mesa',
+      img: 'https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=2000&q=85',
+      alt: 'Reunião executiva formal em sala de conferência',
       phrase: {
         pre: 'Especialistas em viabilizar o seu ',
         highlight: 'próximo',
