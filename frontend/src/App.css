@@ -18,6 +18,9 @@ body {
   font-size: 16px;
 }
 
+/* Logo rendering improvements */
+.logo-img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
+
 .App {
   min-height: 100vh;
 }
