@@ -78,13 +78,13 @@ const Layout = ({ children }) => {
               </nav>
             </div>
 
-            {/* Direita: Ícones sociais (4 ícones), cor da marca, animação sutil */}
-            <div className="flex items-center gap-4">
-              <div className="hidden lg:grid grid-cols-2 gap-3 bg-white rounded-xl px-4 py-3 text-[var(--b4-orange)] shadow-sm">
-                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform hover:-translate-y-0.5"><Instagram size={18} /></a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform hover:-translate-y-0.5"><Linkedin size={18} /></a>
-                <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="Twitter" className="transition-transform hover:-translate-y-0.5"><Twitter size={18} /></a>
-                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-transform hover:-translate-y-0.5"><Facebook size={18} /></a>
+            {/* Direita: Ícones sociais (4 ícones), cor da marca #2596be, sem caixas */}
+            <div className="flex items-center gap-4 pr-[59px]">
+              <div className="hidden lg:grid grid-cols-2 gap-3 text-[var(--b4-primary)]">
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform hover:-translate-y-0.5"><Instagram size={28} /></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform hover:-translate-y-0.5"><Linkedin size={28} /></a>
+                <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="X" className="transition-transform hover:-translate-y-0.5"><Twitter size={28} /></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-transform hover:-translate-y-0.5"><Facebook size={28} /></a>
               </div>
               <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden p-2 rounded-md ${headerSolid ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}>
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
