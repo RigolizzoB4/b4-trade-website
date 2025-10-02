@@ -49,10 +49,10 @@ const Layout = ({ children }) => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-6">
               <Link 
                 to="/" 
-                className={`${linkBase} font-medium transition-colors ${
+                className={`${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
                   isActivePath('/') ? (headerSolid ? 'nav-link-active' : 'text-orange-300') : ''
                 }`}
               >
@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
               
               <Link 
                 to="/quem-somos" 
-                className={`${linkBase} font-medium transition-colors ${
+                className={`${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
                   isActivePath('/quem-somos') ? 'nav-link-active' : ''
                 }`}
               >
