@@ -23,14 +23,15 @@ const Layout = ({ children }) => {
   const isHome = location.pathname === '/';
 
   useEffect(() => {
+    // Mantemos o listener para futura evolução, mas a decisão agora é header sempre sólido
     const onScroll = () => setScrolled(window.scrollY > 10);
     onScroll();
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, [location.pathname]);
 
-  const headerSolid = !isHome || scrolled;
-  const linkBase = headerSolid ? 'text-gray-700 hover:text-orange-500' : 'text-white hover:text-orange-300';
+  const headerSolid = true; // cabeçalho sempre sólido como no Loara
+  const linkBase = 'text-gray-700 hover:text-orange-500';
 
   return (
     <div className="min-h-screen bg-gray-50">
