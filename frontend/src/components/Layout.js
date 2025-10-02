@@ -39,18 +39,13 @@ const Layout = ({ children }) => {
       <header className={`fixed w-full top-0 z-50 transition-colors duration-300 ${headerSolid ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="container-custom">
           <div className="flex items-center justify-between h-20">
-            {/* Logo com cartão retangular branco e borda laranja, multicolor sempre */}
-            <Link to="/" className="relative flex items-center">
-              {/* Espaço de reserva para não deslocar o menu */}
-              <div className="h-16 w-[180px] md:w-[220px]" aria-hidden="true" />
-              {/* Cartão/Logo sobreposto ao herói */}
-              <div className="absolute -left-4 md:-left-6 -bottom-10 md:-bottom-12 bg-white border border-orange-500 rounded-2xl shadow-2xl px-3 py-2 md:px-4 md:py-3">
-                <img 
-                  src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fskgr5np_IMG-20251001-WA0003-removebg-preview.png" 
-                  alt="B4 Soluções Financeiras" 
-                  className="logo-img h-[110px] md:h-[150px] w-auto"
-                />
-              </div>
+            {/* Logo centralizado verticalmente dentro do header, sem borda laranja e sem sobrepor a foto */}
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/logo-b4.svg" 
+                alt="B4 Soluções Financeiras" 
+                className="logo-img h-[96px] md:h-[110px] w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
