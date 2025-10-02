@@ -58,8 +58,13 @@ const StatCard = ({ number, label }) => {
         <span className="spin-count" style={{animation: visible ? 'spinTiny 1.1s ease-out' : 'none'}}>{formatted()}</span>
       </div>
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-150">
-        <div className="text-black text-[18px] font-semibold">
-          {label}
+        <div className="text-black text-[18px] font-semibold leading-tight">
+          {/* "Taxa" em cima e "de Aprovação" embaixo quando presente */}
+          {label.toLowerCase().includes('aprovação') ? (
+            <div className="flex flex-col items-center"><span>Taxa</span><span>de Aprovação</span></div>
+          ) : (
+            <span>{label}</span>
+          )}
         </div>
       </div>
       <div className="absolute inset-0 rounded-xl pointer-events-none border border-orange-300/50" />
