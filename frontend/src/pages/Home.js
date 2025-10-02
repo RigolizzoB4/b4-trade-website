@@ -76,44 +76,24 @@ const StatCard = ({ number, label }) => {
 const HeroCarousel = () => {
   const slides = useMemo(() => ([
     {
-      // Cambuí Corporate - nova imagem enviada
-      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/np79oo4v_essa.jpg',
-      alt: 'Cambuí Corporate - Campinas',
-      phrase: {
-        pre: 'Crédito com segurança e ',
-        highlight: 'agilidade',
-        post: ' para sua empresa',
-      },
+      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/zkqbmno5_Generated%20Image%20October%2002%2C%202025%20-%202_48AM.png',
+      alt: 'Fachada com blur laranja',
+      phrase: { pre: 'Crédito com segurança e ', highlight: 'agilidade', post: ' para sua empresa' },
     },
     {
-      // Foto com blur laranja enviada
       img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/6l04g3ky_Generated%20Image%20October%2002%2C%202025%20-%202_48AM.png',
-      alt: 'Equipe em reunião com overlay laranja',
-      phrase: {
-        pre: 'Estruturação financeira que ',
-        highlight: 'impulsiona',
-        post: ' decisões',
-      },
+      alt: 'Equipe com blur laranja',
+      phrase: { pre: 'Estruturação financeira que ', highlight: 'impulsiona', post: ' decisões' },
     },
     {
-      // Fachada Cambuí Corporate com filtro laranja
       img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/54hj098q_Generated%20Image%20October%2002%2C%202025%20-%203_54AM%20%281%29.png',
       alt: 'Cambuí Corporate com filtro laranja',
-      phrase: {
-        pre: 'Especialistas em viabilizar o seu ',
-        highlight: 'próximo',
-        post: ' passo',
-      },
+      phrase: { pre: 'Especialistas em viabilizar o seu ', highlight: 'próximo', post: ' passo' },
     },
     {
-      // Visão aérea com identidade
       img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/d06ow8hl_Generated%20Image%20October%2002%2C%202025%20-%203_46AM%20%281%29.png',
       alt: 'Vista aérea Cambuí com overlay laranja',
-      phrase: {
-        pre: 'Capital inteligente para ',
-        highlight: 'impulsionar',
-        post: ' seus projetos',
-      },
+      phrase: { pre: 'Capital inteligente para ', highlight: 'impulsionar', post: ' seus projetos' },
     },
   ]), []);
 
