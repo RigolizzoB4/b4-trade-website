@@ -24,19 +24,13 @@ body {
 
 /* Paleta de cores B4 */
 :root {
-  --b4-orange: #F97316;
-  --b4-orange-light: #FB923C;
-  --b4-orange-dark: #EA580C;
-  --b4-gray: #6B7280;
-  --b4-dark: #1F2937;
-  --b4-light: #F9FAFB;
-/* === B4 Brand Palette (archived) ===
-   Laranja/Amarelo: #F7B500
-   Cinza Escuro:    #545454
-   Cinza Claro:     #909090
-   Branco:          #FFFFFF
-*/
-
+  /* Updated to brand palette provided */
+  --b4-orange: #F7B500;        /* primary accent */
+  --b4-orange-light: #FFD24D;  /* derived lighter */
+  --b4-orange-dark: #D99E00;   /* derived darker */
+  --b4-gray: #909090;          /* light gray */
+  --b4-dark: #545454;          /* dark gray for texts */
+  --b4-light: #FFFFFF;         /* background white */
 }
 
 /* Ajustes hero para visibilidade de elementos sobre imagens variadas */
