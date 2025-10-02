@@ -49,6 +49,24 @@ const Layout = ({ children }) => {
               />
             </Link>
 
+            {/* Social icons (como no Loara) */}
+            <div className="hidden lg:flex items-center gap-4">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-[#0d2b3b] hover:opacity-80" aria-label="Facebook">
+                <i className="ri-facebook-fill text-[18px]"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-[#0d2b3b] hover:opacity-80" aria-label="Instagram">
+                <i className="ri-instagram-line text-[18px]"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-[#0d2b3b] hover:opacity-80" aria-label="LinkedIn">
+                <i className="ri-linkedin-box-fill text-[18px]"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="text-[#0d2b3b] hover:opacity-80" aria-label="Twitter">
+                <i className="ri-twitter-fill text-[18px]"></i>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="text-[#0d2b3b] hover:opacity-80" aria-label="YouTube">
+                <i className="ri-youtube-fill text-[18px]"></i>
+              </a>
+            </div>
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
               <Link 
