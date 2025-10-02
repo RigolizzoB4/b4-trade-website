@@ -137,133 +137,34 @@ const Contato = () => {
         </div>
       </section>
 
-      {/* Formulário de Contato */}
-      <section className="section-padding bg-gray-50">
+      {/* Informações e Mapa (sem formulário) */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Formulário */}
+            {/* Mapa Google (metade) */}
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Envie sua <span className="text-orange-500">Mensagem</span>
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Preencha o formulário abaixo e nossa equipe entrará em contato em até 24 horas.
-              </p>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="nome" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nome Completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    required
-                    value={formData.nome}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                    placeholder="Seu nome completo"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    E-mail *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="telefone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Telefone *
-                  </label>
-                  <input
-                    type="tel"
-                    id="telefone"
-                    name="telefone"
-                    required
-                    value={formData.telefone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                    placeholder="(11) 99999-9999"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="mensagem" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensagem *
-                  </label>
-                  <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    required
-                    rows={6}
-                    value={formData.mensagem}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors resize-none"
-                    placeholder="Conte-nos como podemos ajudá-lo..."
-                  />
-                </div>
-                
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full btn-orange px-8 py-4 rounded-lg font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                >
-                  {isSubmitting ? (
-                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white mr-3" />
-                  ) : (
-                    <Send className="mr-3 h-6 w-6" />
-                  )}
-                  {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
-                </button>
-              </form>
-            </div>
-            
-            {/* Imagem e Informações Adicionais */}
-            <div>
-              <div className="relative mb-8">
-                <img 
-                  src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/ap34uxty_image.png" 
-                  alt="Atendimento B4" 
-                  className="rounded-2xl shadow-2xl w-full"
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Onde estamos</h2>
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <iframe
+                  title="Mapa B4"
+                  width="100%"
+                  height="380"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=Av.%20Coronel%20Silva%20Teles%2C%201002%20-%20Cambu%C3%AD%2C%20Campinas%20-%20SP&output=embed"
                 />
-                <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                  <div className="flex items-center">
-                    <CheckCircle className="h-8 w-8 text-orange-500 mr-3" />
-                    <div>
-                      <div className="font-bold text-gray-900">Resposta em 24h</div>
-                      <div className="text-sm text-gray-600">Garantida</div>
-                    </div>
-                  </div>
-                </div>
               </div>
-              
-              {/* Horário de Funcionamento */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                <div className="flex items-center mb-6">
-                  <Clock className="h-8 w-8 text-orange-500 mr-3" />
-                  <h3 className="text-xl font-bold text-gray-900">Horário de Funcionamento</h3>
-                </div>
-                
-                <div className="space-y-3">
-                  {horarioFuncionamento.map((horario, index) => (
-                    <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
-                      <span className="font-medium text-gray-700">{horario.dia}</span>
-                      <span className="text-gray-600">{horario.horario}</span>
-                    </div>
-                  ))}
-                </div>
+            </div>
+
+            {/* Informações */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Fale com a B4 Soluções Financeiras</h2>
+              <div className="space-y-6">
+                <div className="flex items-center"><Mail className="h-6 w-6 text-[var(--b4-orange)] mr-3" /><span className="text-gray-700">solucoes.financeiras@b4.com.br</span></div>
+                <div className="flex items-center"><Phone className="h-6 w-6 text-[var(--b4-orange)] mr-3" /><span className="text-gray-700">(19) 3751-4300</span></div>
+                <p className="text-gray-600">Av. Coronel Silva Teles, 1002 — Cambuí, Campinas/SP</p>
               </div>
             </div>
           </div>
