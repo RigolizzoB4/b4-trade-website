@@ -243,19 +243,12 @@ const Home = () => {
       {/* Header-overlay hero (carousel) */}
       <HeroCarousel />
 
-      {/* Quick Stats over white background to separate sections */}
-      <section className="bg-white py-8">
+      {/* Quick Stats dinâmicas com hover para revelar texto + contador animado */}
+      <section className="bg-white py-10">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center bg-gray-50 rounded-xl p-4 border border-gray-200">
-                <div className="text-2xl md:text-3xl font-bold text-orange-500 mb-1">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 text-sm font-medium">
-                  {stat.label}
-                </div>
-              </div>
+              <StatCard key={index} number={stat.number} label={stat.label} />
             ))}
           </div>
         </div>
