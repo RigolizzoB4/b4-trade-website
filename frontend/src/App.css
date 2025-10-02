@@ -88,6 +88,47 @@ body {
   top: 50%;
   left: 10px;
   right: 10px;
+/* CTA Loara-like com quadrado que se encaixa ao texto (metade dentro/fora) */
+.b4-cta--square {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 26px;
+  border: 2px solid var(--b4-orange); /* linha média */
+  border-radius: 12px;
+  color: white;
+  overflow: hidden;
+}
+.b4-cta--square .b4-cta__text {
+  position: relative;
+  z-index: 2;
+  font-weight: 500; /* menos negrito */
+}
+/* Linha central para deslocamento visual do quadrado */
+.b4-cta--square .b4-cta__line { position:absolute; top:50%; left:10px; right:10px; height:1px; background: rgba(255,255,255,0.0); transform:translateY(-50%); }
+/* Quadrado: inicia antes do texto e termina encaixado no meio do texto */
+.b4-cta--square .b4-cta__square {
+  position: absolute; top: 50%; left: 14px; width: 14px; height: 14px;
+  border: 2px solid var(--b4-orange); background: transparent; transform: translate(-50%, -50%);
+}
+/* Texto com metade aparente dentro do quadrado: aplicamos uma máscara */
+.b4-cta--square .b4-cta__mask-left, .b4-cta--square .b4-cta__mask-right {
+  position: absolute; top: 0; height: 100%; width: 50%; pointer-events: none;
+}
+.b4-cta--square .b4-cta__mask-left { left: 0; background: rgba(0,0,0,0); }
+.b4-cta--square .b4-cta__mask-right { right: 0; background: rgba(0,0,0,0); }
+
+/* Animação: quadrado corre e para no meio do texto, preenchendo ao final */
+.b4-cta--square:hover .b4-cta__square {
+  animation: b4-square-snap 0.7s ease forwards;
+}
+@keyframes b4-square-snap {
+  0% { left: 14px; background: transparent; }
+  85% { left: 58%; background: transparent; }
+  100% { left: 58%; background: var(--b4-orange); }
+}
+
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(249,115,22,0.6) 25%, rgba(249,115,22,0.9) 50%, rgba(249,115,22,0.6) 75%, transparent 100%);
   transform: translateY(-50%);
