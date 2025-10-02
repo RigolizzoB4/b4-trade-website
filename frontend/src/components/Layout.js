@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
             {/* Esquerda: Logo (sem fundo) sem fundo branco por trás */}
             <Link to="/" className="flex items-center">
               <img
-                src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/rpuemvp7_logo%20sem%20fundo.png"
+                src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/4vmm5qxl_logo%20sem%20fundo.png"
                 alt="B4 Soluções Financeiras"
                 className="h-[90px] w-auto"
               />
