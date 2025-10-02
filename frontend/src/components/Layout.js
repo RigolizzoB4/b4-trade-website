@@ -49,23 +49,13 @@ const Layout = ({ children }) => {
               />
             </Link>
 
-            {/* Social icons (como no Loara) */}
-            <div className="hidden lg:flex items-center gap-4">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-[#0d2b3b] hover:opacity-80" aria-label="Facebook">
-                <i className="ri-facebook-fill text-[18px]"></i>
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-[#0d2b3b] hover:opacity-80" aria-label="Instagram">
-                <i className="ri-instagram-line text-[18px]"></i>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-[#0d2b3b] hover:opacity-80" aria-label="LinkedIn">
-                <i className="ri-linkedin-box-fill text-[18px]"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="text-[#0d2b3b] hover:opacity-80" aria-label="Twitter">
-                <i className="ri-twitter-fill text-[18px]"></i>
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="text-[#0d2b3b] hover:opacity-80" aria-label="YouTube">
-                <i className="ri-youtube-fill text-[18px]"></i>
-              </a>
+            {/* Social icons (como no Loara) entre logo e Início */}
+            <div className="hidden lg:flex items-center gap-4 text-[#0d2b3b]">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:opacity-80"><Facebook size={18} /></a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:opacity-80"><Instagram size={18} /></a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:opacity-80"><Linkedin size={18} /></a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter" className="hover:opacity-80"><Twitter size={18} /></a>
+              <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:opacity-80"><Youtube size={18} /></a>
             </div>
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
