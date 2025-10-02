@@ -53,10 +53,10 @@ const StatCard = ({ number, label }) => {
       ref={ref}
       className="group relative text-center bg-white rounded-xl p-6 border-[2px] border-orange-400 transition-all shadow-sm hover:shadow-md"
     >
-      <div className="text-2xl md:text-3xl font-extrabold text-orange-500 mb-1 tabular-nums group-hover:opacity-0 transition-opacity duration-150">
+      <div className="text-2xl md:text-3xl font-extrabold text-orange-500 mb-1 tabular-nums group-hover:opacity-0 transition-opacity duration-150 flex items-center justify-center min-h-[36px]">
         {formatted()}
       </div>
-      <div className="text-gray-700 text-base font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+      <div className="text-black text-[18px] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center justify-center min-h-[36px]">
         {label}
       </div>
       {/* contagem se aproxima: reforça com barra sutil */}
