@@ -124,7 +124,7 @@ const Layout = ({ children }) => {
 
             {/* Direita: Ícones sociais (desktop) + Botão menu (mobile) */}
             <div className="flex items-center gap-4">
-              <div className="hidden lg:flex items-center gap-4 text-[var(--b4-orange)]">
+              <div className="hidden lg:flex items-center gap-4 bg-white rounded-full px-4 py-2 text-[var(--b4-orange)] shadow-sm">
                 <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:opacity-80"><Facebook size={18} /></a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:opacity-80"><Instagram size={18} /></a>
                 <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:opacity-80"><Linkedin size={18} /></a>
