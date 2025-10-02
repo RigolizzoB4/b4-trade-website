@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Mail, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,33 +21,29 @@ const Layout = ({ children }) => {
 
   const isActivePath = (path) => location.pathname === path;
   const isActiveService = () => services.some(service => location.pathname === service.path);
-  const isHome = location.pathname === '/';
 
   useEffect(() => {
-    // Mantemos o listener para futura evolução, mas a decisão agora é header sempre sólido
     const onScroll = () => setScrolled(window.scrollY > 10);
     onScroll();
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, [location.pathname]);
 
-  const headerSolid = true; // cabeçalho sempre sólido como no Loara
-  const linkBase = 'text-gray-700 hover:text-orange-500';
+  const headerSolid = true;
+  const linkBase = 'text-gray-700 hover:text-[var(--b4-orange)]';
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className={`fixed w-full top-0 z-50 bg-white shadow-md header-with-bg`}>
-        {/* Background wave image across the whole header */}
-        <div className="absolute inset-0 pointer-events-none opacity-40 bg-cover bg-center" style={{backgroundImage: "url('https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/esjiqnk7_onda%20laranja.png')"}} />
+      <header className={`fixed w-full top-0 z-50 bg-white shadow-md`}>
         <div className="container-custom relative">
           <div className="flex items-center justify-between h-[120px]">
-            {/* Esquerda: Logo (sem fundo) dentro de chip branco */}
+            {/* Esquerda: Logo (sem fundo) em chip branco arredondado */}
             <div className="bg-white rounded-xl px-3 py-2">
               <Link to="/" className="flex items-center">
                 <img
-                  src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/4vmm5qxl_logo%20sem%20fundo.png"
-                  alt="B4 Soluções financeiras"
+                  src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/rpuemvp7_logo%20sem%20fundo.png"
+                  alt="B4 Soluções Financeiras"
                   className="h-[90px] w-auto"
                 />
               </Link>
@@ -56,53 +52,21 @@ const Layout = ({ children }) => {
             {/* Centro: Navegação (chip branco) */}
             <div className="hidden lg:flex flex-1 justify-center">
               <nav className="bg-white rounded-full px-6 py-3 flex items-center space-x-6 shadow-sm">
-                <Link 
-                  to="/" 
-                  className={`${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
-                    isActivePath('/') ? (headerSolid ? 'nav-link-active' : 'text-orange-300') : ''
-                  }`}
-                >
-                  Início
-                </Link>
-                
-                <Link 
-                  to="/quem-somos" 
-                  className={`${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
-                    isActivePath('/quem-somos') ? 'nav-link-active' : ''
-                  }`}
-                >
-                  Quem Somos
-                </Link>
-
-                {/* Services Dropdown */}
+                <Link to="/" className={`${linkBase} text-[14px] font-semibold tracking-wide ${isActivePath('/') ? 'nav-link-active' : ''}`}>Início</Link>
+                <Link to="/quem-somos" className={`${linkBase} text-[14px] font-semibold tracking-wide ${isActivePath('/quem-somos') ? 'nav-link-active' : ''}`}>Quem Somos</Link>
                 <div className="relative"
                      onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
                      onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}>
-                  <button
-                    onClick={() => setIsServicesOpen((v) => !v)}
-                    className={`flex items-center ${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
-                      isActiveService() ? (headerSolid ? 'nav-link-active' : 'text-orange-300') : ''
-                    }`}
-                  >
+                  <button onClick={() => setIsServicesOpen((v) => !v)} className={`flex items-center ${linkBase} text-[14px] font-semibold tracking-wide ${isActiveService() ? 'nav-link-active' : ''}`}>
                     Serviços <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
-                  
                   {isServicesOpen && (
-                    <div 
-                      onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
-                      onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}
-                      className="absolute top-full left-0 mt-2 w-64 dropdown-menu shadow-xl"
-                    >
+                    <div onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
+                         onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}
+                         className="absolute top-full left-0 mt-2 w-64 dropdown-menu shadow-xl">
                       <div className="py-2">
                         {services.map((service) => (
-                          <Link
-                            key={service.path}
-                            to={service.path}
-                            onClick={() => setIsServicesOpen(false)}
-                            className={`block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors ${
-                              isActivePath(service.path) ? 'bg-orange-50 text-orange-500' : ''
-                            }`}
-                          >
+                          <Link key={service.path} to={service.path} onClick={() => setIsServicesOpen(false)} className={`block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-[var(--b4-orange)] ${isActivePath(service.path) ? 'bg-orange-50 text-[var(--b4-orange)]' : ''}`}>
                             {service.name}
                           </Link>
                         ))}
@@ -110,155 +74,55 @@ const Layout = ({ children }) => {
                     </div>
                   )}
                 </div>
-                
-                <Link 
-                  to="/contato" 
-                  className={`${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
-                    isActivePath('/contato') ? 'nav-link-active' : ''
-                  }`}
-                >
-                  Contato
-                </Link>
+                <Link to="/contato" className={`${linkBase} text-[14px] font-semibold tracking-wide ${isActivePath('/contato') ? 'nav-link-active' : ''}`}>Contato</Link>
               </nav>
             </div>
 
-            {/* Direita: Ícones sociais (desktop) + Botão menu (mobile) */}
+            {/* Direita: Ícones sociais (4 ícones), cor da marca, animação sutil */}
             <div className="flex items-center gap-4">
-              <div className="hidden lg:flex items-center gap-4 bg-white rounded-full px-4 py-2 text-[var(--b4-orange)] shadow-sm">
-                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:opacity-80"><Facebook size={18} /></a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:opacity-80"><Instagram size={18} /></a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:opacity-80"><Linkedin size={18} /></a>
-                <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="Twitter" className="hover:opacity-80"><Twitter size={18} /></a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:opacity-80"><Youtube size={18} /></a>
+              <div className="hidden lg:grid grid-cols-2 gap-3 bg-white rounded-xl px-4 py-3 text-[var(--b4-orange)] shadow-sm">
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform hover:-translate-y-0.5"><Instagram size={18} /></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform hover:-translate-y-0.5"><Linkedin size={18} /></a>
+                <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="Twitter" className="transition-transform hover:-translate-y-0.5"><Twitter size={18} /></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-transform hover:-translate-y-0.5"><Facebook size={18} /></a>
               </div>
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`lg:hidden p-2 rounded-md ${headerSolid ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
-              >
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden p-2 rounded-md ${headerSolid ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}>
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
           </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className={`lg:hidden ${headerSolid ? 'bg-white' : 'bg-gray-900/80 backdrop-blur'} border-t` }>
-              <div className="py-4 space-y-2">
-                <Link 
-                  to="/" 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block px-4 py-2 text-gray-700 hover:text-orange-500"
-                >
-                  Início
-                </Link>
-                <Link 
-                  to="/quem-somos" 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block px-4 py-2 text-gray-700 hover:text-orange-500"
-                >
-                  Quem Somos
-                </Link>
-                
-                <div className="px-4 py-2">
-                  <div className="font-medium text-gray-900 mb-2">Serviços</div>
-                  {services.map((service) => (
-                    <Link
-                      key={service.path}
-                      to={service.path}
-                      onClick={() => setIsMenuOpen(false)}
-                      className="block pl-4 py-1 text-gray-600 hover:text-orange-500"
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-                
-                <Link 
-                  to="/contato" 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block px-4 py-2 text-gray-700 hover:text-orange-500"
-                >
-                  Contato
-                </Link>
-              </div>
-            </div>
-          )}
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="pt-[88px]">
+      <main className="pt-[120px]">
         {children}
       </main>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white">
         <div className="container-custom py-12">
-          <div className="grid md:grid-cols-4 gap-8">
-            {/* Logo e Descrição */}
-            <div className="md:col-span-2">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_1d5e8eee-15ec-4b1f-8a8f-6bd463b708d6/artifacts/691cf10y_image.png" 
-                alt="B4 Soluções Financeiras" 
-                className="h-12 w-auto mb-4 filter brightness-0 invert"
-              />
-              <p className="text-gray-300 mb-4 max-w-md">
-                A B4 Soluções Financeiras conecta empresas e pessoas às melhores 
-                oportunidades de captação de recursos, com ética e excelência em todas as etapas.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
-                  <span className="text-white font-bold">in</span>
-                </a>
-                <a href="#" className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
-                  <span className="text-white font-bold">ig</span>
-                </a>
-              </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="md:col-span-1">
+              <img src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/rpuemvp7_logo%20sem%20fundo.png" alt="B4 Soluções Financeiras" className="h-12 w-auto mb-4 filter brightness-0 invert" />
+              <p className="text-gray-300 mb-4 max-w-md">A B4 Soluções Financeiras conecta empresas e pessoas às melhores oportunidades de captação de recursos, com ética e excelência em todas as etapas.</p>
             </div>
-
-            {/* Serviços */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Serviços</h3>
               <ul className="space-y-2">
                 {services.map((service) => (
-                  <li key={service.path}>
-                    <Link 
-                      to={service.path} 
-                      className="text-gray-300 hover:text-orange-500 transition-colors"
-                    >
-                      {service.name}
-                    </Link>
-                  </li>
+                  <li key={service.path}><Link to={service.path} className="text-gray-300 hover:text-[var(--b4-orange)] transition-colors">{service.name}</Link></li>
                 ))}
               </ul>
             </div>
-
-            {/* Contato */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Contato</h3>
               <div className="space-y-3">
-                <div className="flex items-center">
-                  <Phone className="h-5 w-5 text-orange-500 mr-3" />
-                  <div>
-                    <p className="text-gray-300">(19) 99708-6955</p>
-                    <p className="text-gray-400 text-sm">Pilla</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="h-5 w-5 text-orange-500 mr-3" />
-                  <div>
-                    <p className="text-gray-300">(19) 98812-3070</p>
-                    <p className="text-gray-400 text-sm">Anselmo</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-5 w-5 text-orange-500 mr-3" />
-                  <p className="text-gray-300">contato@b4solucoes.com.br</p>
-                </div>
+                <div className="flex items-center"><Mail className="h-5 w-5 text-[var(--b4-orange)] mr-3" /><p className="text-gray-300">financeiras@b4com.br</p></div>
+                <div className="flex items-center"><Phone className="h-5 w-5 text-[var(--b4-orange)] mr-3" /><p className="text-gray-300">(19) 3751-4300</p></div>
               </div>
             </div>
           </div>
-          
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 B4 Soluções Financeiras. Todos os direitos reservados.</p>
           </div>

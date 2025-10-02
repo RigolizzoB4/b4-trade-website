@@ -12,6 +12,7 @@ import Consorcio from './pages/services/Consorcio';
 import Cambio from './pages/services/Cambio';
 import CapitalInvestimento from './pages/services/CapitalInvestimento';
 import Contato from './pages/Contato';
+import Insights from './pages/Insights';
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/servicos/consorcio" element={<Consorcio />} />
             <Route path="/servicos/cambio" element={<Cambio />} />
             <Route path="/servicos/capital-investimento" element={<CapitalInvestimento />} />
+            <Route path="/insights" element={<Insights />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>
         </Layout>
