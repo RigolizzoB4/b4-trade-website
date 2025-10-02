@@ -122,7 +122,7 @@
     file: "/app/frontend/src/components/Layout.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: false
         agent: "user"
@@ -130,6 +130,9 @@
       - working: true
         agent: "main"
         comment: "Header agora sólido 120px de altura; logo 110px dentro do header; menu 14px; alinhado."
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: Header height exactly 120px, logo 110px height, solid white background with shadow, navigation links ~14px font, hover orange color working, layout properly aligned left/right."
 
   - task: "Hero carousel com 3 slides, frases com palavra laranja, overlay e controles"
     implemented: true
