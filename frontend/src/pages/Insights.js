@@ -12,10 +12,10 @@ const Article = ({ img, title, children }) => (
 
 export default function Insights() {
   return (
-    <div className="bg-[#f8f9fa] min-h-screen">
-      <header className="bg-[#2c3f33] text-white text-center py-8">
-        <h1 className="text-3xl font-bold">Insights Financeiros | B4 Soluções Financeiras</h1>
-        <p className="opacity-90">Análises, tendências e soluções para o futuro financeiro do seu negócio</p>
+    <div className="bg-white min-h-screen">
+      <header className="text-center py-10">
+        <h1 className="text-4xl font-bold" style={{color: 'var(--b4-text-dark)'}}>Insights <span style={{color: 'var(--b4-orange)'}}>Financeiros</span></h1>
+        <p className="opacity-80" style={{color: 'var(--b4-text-dark)'}}>Análises, tendências e soluções para o futuro financeiro do seu negócio</p>
       </header>
       <main className="container-custom py-10 max-w-5xl">
         <Article img="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" title="💡 Insights Financeiros">
