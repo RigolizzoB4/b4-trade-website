@@ -52,16 +52,22 @@ const StatCard = ({ number, label }) => {
   return (
     <div
       ref={ref}
-      className="group relative text-center bg-white rounded-xl p-6 border-[2px] border-orange-400 transition-all shadow-sm hover:shadow-md"
+      className="group relative bg-white rounded-xl p-6 border-2 border-orange-500 transition-all shadow-sm hover:shadow-md min-h-[120px] grid place-items-center text-center"
     >
-      <div className="text-2xl md:text-3xl font-extrabold text-orange-500 mb-1 tabular-nums group-hover:opacity-0 transition-opacity duration-150 flex items-center justify-center min-h-[36px]">
-        <span className="spin-count" style={{animation: visible ? 'spinTiny 1.1s ease-out' : 'none'}}>{formatted()}</span>
+      {/* Camada do número (central absoluta) */}
+      <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-150">
+        <div className="text-2xl md:text-3xl font-extrabold text-orange-500 tabular-nums">
+          <span className="spin-count" style={{animation: visible ? 'spinTiny 1.1s ease-out' : 'none'}}>{formatted()}</span>
+        </div>
       </div>
-      <div className="text-black text-[18px] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center justify-center min-h-[36px]">
-        {label}
+      {/* Camada do texto (central absoluta) */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+        <div className="text-black text-[18px] font-semibold">
+          {label}
+        </div>
       </div>
-      {/* contagem se aproxima: reforça com barra sutil */}
-      <div className="absolute inset-0 rounded-xl pointer-events-none border border-orange-300/60" />
+      {/* moldura interna sutil (opcional) */}
+      <div className="absolute inset-0 rounded-xl pointer-events-none border border-orange-300/50" />
     </div>
   );
 };
