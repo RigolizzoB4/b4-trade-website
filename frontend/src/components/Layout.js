@@ -105,7 +105,7 @@ const Layout = ({ children }) => {
               
               <Link 
                 to="/contato" 
-                className={`${linkBase} font-medium transition-colors ${
+                className={`${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
                   isActivePath('/contato') ? 'nav-link-active' : ''
                 }`}
               >
