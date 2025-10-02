@@ -208,6 +208,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px; /* retangular com cantos suaves */
   color: white;
   overflow: hidden;
+/* Animação de giro sutil para números durante contagem */
+.spin-count { display: inline-block; transform-origin: 50% 50%; }
+@keyframes spinTiny { 0% { transform: rotate(0deg); } 100% { transform: rotate(8deg); } }
+
 }
 
 /* texto escondido até a animação cruzar a lateral */
