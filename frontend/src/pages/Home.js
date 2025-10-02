@@ -59,6 +59,8 @@ const StatCard = ({ number, label }) => {
         <div className="text-2xl md:text-3xl font-extrabold text-orange-500 tabular-nums">
           <span className="spin-count" style={{animation: visible ? 'spinTiny 1.1s ease-out' : 'none'}}>{formatted()}</span>
         </div>
+      {/* Branding sutil em cada slide */}
+      <div className="hero-brand">B4 Soluções Financeiras</div>
       </div>
       {/* Camada do texto (central absoluta) */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-150">
