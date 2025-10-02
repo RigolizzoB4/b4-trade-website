@@ -2,22 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  color: #333;
-  font-size: 16px;
+  margin: 0; padding: 0; line-height: 1.6; color: #333; font-size: 16px;
 }
 
-.App {
-  min-height: 100vh;
-}
+.App { min-height: 100vh; }
 
 /* Logo rendering improvements */
 .logo-img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
@@ -46,137 +38,31 @@ body {
 /* Header como no Loara: sempre sólido, alinhado e com altura fixa */
 .header-solid { height: 88px; }
 
-/* Header wave background */
-.header-wave {
-  background-image: url('https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/bt8b93kb_Generated%20Image%20October%2002%2C%202025%20-%202_27AM.png');
-  background-repeat: no-repeat;
-  background-size: cover; /* de ponta a ponta */
-  background-position: center bottom;
-}
-
 /* Hero sections */
-.hero-section {
-  background: linear-gradient(135deg, var(--b4-dark) 0%, var(--b4-gray) 100%);
-  color: white;
-}
+.hero-section { background: linear-gradient(135deg, var(--b4-dark) 0%, var(--b4-gray) 100%); color: white; }
 
-/* Botões laranja (base) */
-.btn-orange {
-  background-color: var(--b4-orange);
-  color: white;
-  transition: all 0.3s ease;
+/* CTA SPLIT (Saiba fora, mais dentro) */
+.cta-split { position: relative; display: inline-flex; align-items: center; gap: 10px; color: #fff; }
+.cta-split .cta-left { font-weight: 500; }
+.cta-split .cta-box {
+  position: relative; display: inline-flex; align-items: center; justify-content: center;
+  height: 48px; padding: 0 26px 0 34px; border: 2px solid var(--b4-orange); border-radius: 12px; overflow: hidden;
 }
-
-.btn-orange:hover {
-  background-color: #FF7A39;
-  transform: translateY(-2px);
+.cta-split .cta-mais { position: relative; z-index: 1; font-weight: 500; }
+.cta-split .cta-line { position: absolute; left: 10px; right: 10px; top: 50%; height: 1px; background: rgba(247,181,0,0.7); transform: translateY(-50%); }
+.cta-split .cta-square {
+  position: absolute; top: 50%; left: 16px; width: 16px; height: 16px; transform: translate(-50%, -50%);
+  border: 2px solid var(--b4-orange); background: transparent; z-index: 2;
 }
-
-/* CTA animado estilo Loara (retangular, linha + círculo) - legado */
-.b4-cta {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 52px;
-  padding: 0 28px;
-  border: 1px solid var(--b4-orange);
-  border-radius: 10px; /* retangular com cantos suaves */
-  color: white;
-  overflow: hidden;
+.cta-split:hover .cta-square { animation: cta-travel 0.8s ease forwards; }
+@keyframes cta-travel {
+  0% { left: 16px; background: transparent; }
+  90% { left: calc(100% - 16px); background: transparent; }
+  100% { left: calc(100% - 16px); background: var(--b4-orange); }
 }
-
-/* texto escondido até a animação cruzar a lateral */
-.b4-cta__text {
-  position: relative;
-  z-index: 2;
-  color: white;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  opacity: 0;
-  transform: translateX(-8px);
-  transition: opacity .25s ease, transform .25s ease;
-}
-
-/* linha central fina */
-.b4-cta__line {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  right: 10px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(247,181,0,0.6) 25%, rgba(247,181,0,0.9) 50%, rgba(247,181,0,0.6) 75%, transparent 100%);
-  transform: translateY(-50%);
-  overflow: hidden;
-}
-
-/* círculo que corre pela linha */
-.b4-cta__circle {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  border: 1px solid var(--b4-orange);
-  background: rgba(247,181,0,0.12);
-  transform: translate(-50%, -50%);
-}
-
-/* animação no hover: círculo percorre além da borda direita */
-.b4-cta:hover .b4-cta__circle {
-  animation: b4-run 0.7s ease forwards; /* velocidade média */
-}
-
-.b4-cta:hover .b4-cta__text {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: .5s; /* aparece ao final do percurso */
-}
-
-@keyframes b4-run {
-  0% { left: 10px; }
-  85% { left: calc(100% - 10px); }
-  100% { left: calc(100% + 6px); } /* ultrapassa a lateral do retângulo */
-}
-
-/* CTA animado (novo) com QUADRADO que corre e se encaixa */
-.b4-cta--square {
-  height: 48px; /* semelhante ao tamanho do Loara */
-  padding: 0 26px;
-  border-radius: 12px;
-  border-width: 2px; /* linha média */
-  border-color: var(--b4-orange);
-}
-.b4-cta--square .b4-cta__line { height: 1px; }
-.b4-cta--square .b4-cta__square {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  width: 12px;
-  height: 12px;
-  background: transparent;
-  border: 2px solid var(--b4-orange);
-  transform: translate(-50%, -50%);
-}
-.b4-cta--square:hover .b4-cta__square { animation: b4-square-run 0.7s ease forwards; }
-@keyframes b4-square-run { 0% { left: 10px; background: transparent; } 80% { left: calc(100% - 10px); background: transparent; } 100% { left: calc(100% - 10px); background: var(--b4-orange); border-color: var(--b4-orange); } }
-
-/* CTA híbrido: "Saiba" fora e "mais" dentro */
-.b4-cta--square.b4-cta--hybrid { padding: 0 30px; }
-.b4-cta--square.b4-cta--hybrid .b4-cta__text { position: relative; font-weight: 500; }
-.b4-cta--square.b4-cta--hybrid .b4-cta__text .saiba { position: relative; left: -10px; }
-.b4-cta--square.b4-cta--hybrid .b4-cta__text .mais { position: relative; margin-left: 6px; }
-.b4-cta--square.b4-cta--hybrid .b4-cta__square { left: 58%; width: 18px; height: 18px; border-width: 2px; }
-.b4-cta--square.b4-cta--hybrid:hover .b4-cta__square { animation: b4-square-path 0.7s ease forwards; }
-@keyframes b4-square-path { 0% { left: 58%; background: transparent; } 85% { left: calc(100% - 14px); background: transparent; } 100% { left: calc(100% - 14px); background: var(--b4-orange); } }
 
 /* overlay de identidade laranja nas fotos do herói (mais perceptível) */
-.hero-orange-overlay { background: linear-gradient(90deg, rgba(247,181,0,0.28) 0%, rgba(247,181,0,0.14) 45%, rgba(0,0,0,0) 65%); }
-
-/* Animação de giro sutil para números durante contagem */
-.spin-count { display: inline-block; transform-origin: 50% 50%; }
-@keyframes spinStraight { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.hero-orange-overlay { background: linear-gradient(90deg, rgba(247,181,0,0.30) 0%, rgba(247,181,0,0.16) 45%, rgba(0,0,0,0) 65%); }
 
 /* Cards de serviços */
 .service-card { transition: all 0.3s ease; border: 1px solid #E5E7EB; }
