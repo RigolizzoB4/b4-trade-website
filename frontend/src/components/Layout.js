@@ -42,18 +42,20 @@ const Layout = ({ children }) => {
         <div className="absolute inset-0 pointer-events-none opacity-40 bg-cover bg-center" style={{backgroundImage: "url('https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/esjiqnk7_onda%20laranja.png')"}} />
         <div className="container-custom relative">
           <div className="flex items-center justify-between h-[120px]">
-            {/* Esquerda: Logo */}
-            <Link to="/" className="flex items-center">
-              <img
-                src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/emm1j2na_Generated%20Image%20October%2002%2C%202025%20-%203_18AM%20%283%29.png"
-                alt="B4 Soluções financeiras"
-                className="h-[90px] w-auto"
-              />
-            </Link>
+            {/* Esquerda: Logo (sem fundo) dentro de chip branco */}
+            <div className="bg-white rounded-xl px-3 py-2">
+              <Link to="/" className="flex items-center">
+                <img
+                  src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/4vmm5qxl_logo%20sem%20fundo.png"
+                  alt="B4 Soluções financeiras"
+                  className="h-[90px] w-auto"
+                />
+              </Link>
+            </div>
 
-            {/* Centro: Navegação */}
+            {/* Centro: Navegação (chip branco) */}
             <div className="hidden lg:flex flex-1 justify-center">
-              <nav className="flex items-center space-x-6">
+              <nav className="bg-white rounded-full px-6 py-3 flex items-center space-x-6 shadow-sm">
                 <Link 
                   to="/" 
                   className={`${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
