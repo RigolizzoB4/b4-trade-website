@@ -1,4 +1,7 @@
 /* B4 Soluções Financeiras - Estilos customizados */
+/* Ajustes hero para visibilidade de elementos sobre imagens variadas */
+.hero-readable-shadow { text-shadow: 0 2px 16px rgba(0,0,0,.45); }
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
