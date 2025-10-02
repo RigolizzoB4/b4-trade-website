@@ -76,9 +76,9 @@ const StatCard = ({ number, label }) => {
 const HeroCarousel = () => {
   const slides = useMemo(() => ([
     {
-      // Cambuí Corporate (or similar modern building)
-      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/xpvvfjwy_image.png',
-      alt: 'Edifício corporativo moderno em Campinas',
+      // Cambuí Corporate - nova imagem enviada
+      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/np79oo4v_essa.jpg',
+      alt: 'Cambuí Corporate - Campinas',
       phrase: {
         pre: 'Crédito com segurança e ',
         highlight: 'agilidade',
