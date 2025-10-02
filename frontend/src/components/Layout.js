@@ -38,16 +38,14 @@ const Layout = ({ children }) => {
       <header className={`fixed w-full top-0 z-50 bg-white shadow-md`}>
         <div className="container-custom relative">
           <div className="flex items-center justify-between h-[120px]">
-            {/* Esquerda: Logo (sem fundo) em chip branco arredondado */}
-            <div className="bg-white rounded-xl px-3 py-2">
-              <Link to="/" className="flex items-center">
-                <img
-                  src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/rpuemvp7_logo%20sem%20fundo.png"
-                  alt="B4 Soluções Financeiras"
-                  className="h-[90px] w-auto"
-                />
-              </Link>
-            </div>
+            {/* Esquerda: Logo (sem fundo) sem fundo branco por trás */}
+            <Link to="/" className="flex items-center">
+              <img
+                src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/rpuemvp7_logo%20sem%20fundo.png"
+                alt="B4 Soluções Financeiras"
+                className="h-[90px] w-auto"
+              />
+            </Link>
 
             {/* Centro: Navegação (chip branco) */}
             <div className="hidden lg:flex flex-1 justify-center">
