@@ -52,23 +52,16 @@ const StatCard = ({ number, label }) => {
   return (
     <div
       ref={ref}
-      className="group relative bg-white rounded-xl p-6 border-2 border-orange-500 transition-all shadow-sm hover:shadow-md min-h-[120px] grid place-items-center text-center"
+      className="group relative bg-white rounded-xl p-6 border-2 border-orange-500 transition-all shadow-sm hover:shadow-md min-h-[120px] flex items-center justify-center text-center"
     >
-      {/* Camada do número (central absoluta) */}
-      <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-150">
-        <div className="text-2xl md:text-3xl font-extrabold text-orange-500 tabular-nums">
-          <span className="spin-count" style={{animation: visible ? 'spinTiny 1.1s ease-out' : 'none'}}>{formatted()}</span>
-        </div>
-      {/* Branding sutil em cada slide */}
-      <div className="hero-brand">B4 Soluções Financeiras</div>
+      <div className="text-2xl md:text-3xl font-extrabold text-orange-500 tabular-nums group-hover:opacity-0 transition-opacity duration-150">
+        <span className="spin-count" style={{animation: visible ? 'spinTiny 1.1s ease-out' : 'none'}}>{formatted()}</span>
       </div>
-      {/* Camada do texto (central absoluta) */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-150">
         <div className="text-black text-[18px] font-semibold">
           {label}
         </div>
       </div>
-      {/* moldura interna sutil (opcional) */}
       <div className="absolute inset-0 rounded-xl pointer-events-none border border-orange-300/50" />
     </div>
   );
