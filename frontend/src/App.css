@@ -1,7 +1,4 @@
 /* B4 Soluções Financeiras - Estilos customizados */
-/* Ajustes hero para visibilidade de elementos sobre imagens variadas */
-.hero-readable-shadow { text-shadow: 0 2px 16px rgba(0,0,0,.45); }
-
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
@@ -18,19 +15,16 @@ body {
   font-size: 16px;
 }
 
-/* Logo rendering improvements */
-.logo-img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
-
 .App {
   min-height: 100vh;
 }
 
+/* Logo rendering improvements */
+.logo-img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
+
 /* Paleta de cores B4 */
 :root {
   --b4-orange: #F97316;
-/* Header como no Loara: sempre sólido, alinhado e com altura fixa */
-.header-solid { height: 88px; }
-
   --b4-orange-light: #FB923C;
   --b4-orange-dark: #EA580C;
   --b4-gray: #6B7280;
@@ -38,13 +32,19 @@ body {
   --b4-light: #F9FAFB;
 }
 
+/* Ajustes hero para visibilidade de elementos sobre imagens variadas */
+.hero-readable-shadow { text-shadow: 0 2px 16px rgba(0,0,0,.45); }
+
+/* Header como no Loara: sempre sólido, alinhado e com altura fixa */
+.header-solid { height: 88px; }
+
 /* Hero sections */
 .hero-section {
   background: linear-gradient(135deg, var(--b4-dark) 0%, var(--b4-gray) 100%);
   color: white;
 }
 
-/* Botões laranja */
+/* Botões laranja (base) */
 .btn-orange {
   background-color: var(--b4-orange);
   color: white;
@@ -56,147 +56,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Cards de serviços */
-.service-card {
-  transition: all 0.3s ease;
-  border: 1px solid #E5E7EB;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Animações suaves */
-.fade-in {
-  animation: fadeIn 0.8s ease-in;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Estilos para dropdown de serviços */
-.dropdown-menu {
-  background: white;
-  border: 1px solid #E5E7EB;
-  border-radius: 8px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos para dropdown de serviços */
-.dropdown-menu {
-  background: white;
-  border: 1px solid #E5E7EB;
-  border-radius: 8px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsividade para mobile */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-}
-
-/* Estilo para links ativos */
-.nav-link-active {
-  color: var(--b4-orange) !important;
-  font-weight: 600;
-}
-
-/* Container máximo */
-.container-custom {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Espaçamento padrão para seções */
-.section-padding {
-  padding: 4rem 0;
-}
-
-/* Títulos das páginas */
-.page-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--b4-dark);
-  margin-bottom: 1rem;
-}
-
-.page-subtitle {
-  font-size: 1.25rem;
-  color: var(--b4-gray);
-  margin-bottom: 2rem;
-}
-
-/* Aumentar levemente o tamanho das fontes */
-p, span, div {
-  font-size: 1.05em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 1.1em;
-}
-
-/* Responsividade para mobile */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-}
-
-/* Estilo para links ativos */
-.nav-link-active {
-  color: var(--b4-orange) !important;
-  font-weight: 600;
-}
-
-/* Container máximo */
-.container-custom {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Espaçamento padrão para seções */
-.section-padding {
-  padding: 4rem 0;
-}
-
-/* Títulos das páginas */
-.page-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--b4-dark);
-  margin-bottom: 1rem;
-}
-
-.page-subtitle {
-  font-size: 1.25rem;
-  color: var(--b4-gray);
-  margin-bottom: 2rem;
-}
-
-/* CTA animado estilo Loara (retangular, traço + círculo) */
+/* CTA animado estilo Loara (retangular, linha + círculo) - legado */
 .b4-cta {
   position: relative;
   display: inline-flex;
@@ -208,10 +68,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px; /* retangular com cantos suaves */
   color: white;
   overflow: hidden;
-/* Animação de giro sutil para números durante contagem */
-.spin-count { display: inline-block; transform-origin: 50% 50%; }
-@keyframes spinTiny { 0% { transform: rotate(0deg); } 100% { transform: rotate(8deg); } }
-
 }
 
 /* texto escondido até a animação cruzar a lateral */
@@ -253,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* animação no hover: círculo percorre além da borda direita */
 .b4-cta:hover .b4-cta__circle {
-  animation: b4-run 0.7s ease forwards;
+  animation: b4-run 0.7s ease forwards; /* velocidade média */
 }
 
 .b4-cta:hover .b4-cta__text {
@@ -267,3 +123,97 @@ h1, h2, h3, h4, h5, h6 {
   85% { left: calc(100% - 10px); }
   100% { left: calc(100% + 6px); } /* ultrapassa a lateral do retângulo */
 }
+
+/* CTA animado (novo) com QUADRADO que corre e preenche */
+.b4-cta--square {
+  height: 48px; /* semelhante ao tamanho do Loara */
+  padding: 0 26px;
+  border-radius: 12px;
+  border-width: 1px; /* linha fina */
+}
+.b4-cta--square .b4-cta__line { height: 1px; }
+.b4-cta--square .b4-cta__square {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 1px solid var(--b4-orange);
+  transform: translate(-50%, -50%);
+}
+.b4-cta--square:hover .b4-cta__square {
+  animation: b4-square-run 0.7s ease forwards; /* velocidade média */
+}
+.b4-cta--square:hover .b4-cta__text { transition-delay: .55s; }
+@keyframes b4-square-run {
+  0% { left: 10px; background: transparent; }
+  80% { left: calc(100% - 10px); background: transparent; }
+  100% { left: calc(100% - 10px); background: var(--b4-orange); border-color: var(--b4-orange); }
+}
+
+/* Animação de giro sutil para números durante contagem */
+.spin-count { display: inline-block; transform-origin: 50% 50%; }
+@keyframes spinTiny { 0% { transform: rotate(0deg); } 100% { transform: rotate(8deg); } }
+
+/* Cards de serviços */
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid #E5E7EB;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Animações suaves */
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para dropdown de serviços */
+.dropdown-menu {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle { font-size: 1.1rem; }
+}
+
+/* Estilo para links ativos */
+.nav-link-active { color: var(--b4-orange) !important; font-weight: 600; }
+
+/* Container máximo */
+.container-custom { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+/* Espaçamento padrão para seções */
+.section-padding { padding: 4rem 0; }
+
+/* Títulos das páginas */
+.page-title { font-size: 2.5rem; font-weight: 700; color: var(--b4-dark); margin-bottom: 1rem; }
+.page-subtitle { font-size: 1.25rem; color: var(--b4-gray); margin-bottom: 2rem; }
+
+/* Aumentar levemente o tamanho das fontes globais, mantendo equilíbrio */
+p, span, div { font-size: 1.05em; }
+h1, h2, h3, h4, h5, h6 { font-size: 1.1em; }
