@@ -120,12 +120,12 @@ const Layout = ({ children }) => {
 
             {/* Direita: Ícones sociais (desktop) + Botão menu (mobile) */}
             <div className="flex items-center gap-4">
-              <div className="hidden lg:flex items-center gap-4 text-[#545454]">
-                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-[var(--b4-orange)]"><Facebook size={18} /></a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-[var(--b4-orange)]"><Instagram size={18} /></a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-[var(--b4-orange)]"><Linkedin size={18} /></a>
-                <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="Twitter" className="hover:text-[var(--b4-orange)]"><Twitter size={18} /></a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:text-[var(--b4-orange)]"><Youtube size={18} /></a>
+              <div className="hidden lg:flex items-center gap-4 text-[var(--b4-orange)]">
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:opacity-80"><Facebook size={18} /></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:opacity-80"><Instagram size={18} /></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:opacity-80"><Linkedin size={18} /></a>
+                <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="Twitter" className="hover:opacity-80"><Twitter size={18} /></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:opacity-80"><Youtube size={18} /></a>
               </div>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
