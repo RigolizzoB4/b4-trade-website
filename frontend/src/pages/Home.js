@@ -26,8 +26,8 @@ const HeroCarousel = () => {
     },
     {
       // Cidade / fachada com tons quentes (fallback variado)
-      img: 'https://images.unsplash.com/photo-1626422747932-9f3d20027e74?auto=format&fit=crop&w=2000&q=85',
-      alt: 'Skyline corporativo ao entardecer',
+      img: 'https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?auto=format&fit=crop&w=2000&q=85',
+      alt: 'Reunião de negócios com apresentação em mesa',
       phrase: {
         pre: 'Especialistas em viabilizar o seu ',
         highlight: 'próximo',
