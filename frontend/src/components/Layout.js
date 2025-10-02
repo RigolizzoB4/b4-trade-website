@@ -49,9 +49,9 @@ const Layout = ({ children }) => {
               </Link>
             </div>
 
-            {/* Centro: Navegação (chip branco) */}
+            {/* Centro: Navegação centralizada (sem caixa) */}
             <div className="hidden lg:flex flex-1 justify-center">
-              <nav className="bg-white rounded-full px-6 py-3 flex items-center space-x-6 shadow-sm">
+              <nav className="flex items-center space-x-8">
                 <Link to="/" className={`${linkBase} text-[14px] font-semibold tracking-wide ${isActivePath('/') ? 'nav-link-active' : ''}`}>Início</Link>
                 <Link to="/quem-somos" className={`${linkBase} text-[14px] font-semibold tracking-wide ${isActivePath('/quem-somos') ? 'nav-link-active' : ''}`}>Quem Somos</Link>
                 <div className="relative"
