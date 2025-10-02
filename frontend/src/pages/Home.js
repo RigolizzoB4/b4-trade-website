@@ -86,9 +86,9 @@ const HeroCarousel = () => {
       },
     },
     {
-      // Interior Grupo B4 (ou similar)
-      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/a2u1hr44_image.png',
-      alt: 'Recepção Grupo B4',
+      // Foto com blur laranja enviada
+      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/6l04g3ky_Generated%20Image%20October%2002%2C%202025%20-%202_48AM.png',
+      alt: 'Equipe em reunião com overlay laranja',
       phrase: {
         pre: 'Estruturação financeira que ',
         highlight: 'impulsiona',
