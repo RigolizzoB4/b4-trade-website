@@ -143,9 +143,7 @@ const HeroCarousel = () => {
               <img
                 src={s.img}
                 alt={s.alt}
-                className={`w-full h-full object-cover transform transition-transform duration-[6000ms] ease-linear ${
-                  i === index ? 'scale-[1.07]' : 'scale-100'
-                }`}
+                className={`w-full h-full object-cover ${i === index ? '' : ''}`}
                 style={{ objectPosition: 'center' }}
               />
               {/* gradient for readability */}
