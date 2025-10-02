@@ -153,11 +153,10 @@ const HeroCarousel = () => {
         <div className="container-custom h-full flex items-center">
           <div className="max-w-3xl">
             <h1 className="hero-readable-shadow text-white text-3xl md:text-5xl font-extrabold leading-tight mb-3">
-              <span className="text-white">{slides[index].phrase.pre}</span>
+              <span className="text-white">B4 Soluções Financeiras — {slides[index].phrase.pre}</span>
               <span className="text-orange-500">{slides[index].phrase.highlight}</span>
               <span className="text-white">{slides[index].phrase.post}</span>
             </h1>
-            <div className="text-white/90 text-sm md:text-base mb-6">B4 Soluções Financeiras</div>
             <div className="flex gap-4">
               <Link to="/contato" className="b4-cta b4-cta--square group">
                 <span className="b4-cta__mask-left" />
