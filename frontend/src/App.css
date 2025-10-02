@@ -22,6 +22,13 @@ body {
 /* Logo rendering improvements */
 .logo-img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
 
+/* === B4 Brand Palette (archived) ===
+   Laranja/Amarelo: #F7B500
+   Cinza Escuro:    #545454
+   Cinza Claro:     #909090
+   Branco:          #FFFFFF
+*/
+
 /* Paleta de cores B4 */
 :root {
   /* Updated to brand palette provided */
@@ -38,6 +45,14 @@ body {
 
 /* Header como no Loara: sempre sólido, alinhado e com altura fixa */
 .header-solid { height: 88px; }
+
+/* Header wave background */
+.header-wave {
+  background-image: url('https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/bt8b93kb_Generated%20Image%20October%2002%2C%202025%20-%202_27AM.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* de ponta a ponta */
+  background-position: center bottom;
+}
 
 /* Hero sections */
 .hero-section {
@@ -89,62 +104,8 @@ body {
   top: 50%;
   left: 10px;
   right: 10px;
-/* CTA Loara-like com quadrado que se encaixa ao texto (metade dentro/fora) */
-.b4-cta--square {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  height: 48px;
-  padding: 0 26px;
-  border: 2px solid var(--b4-orange); /* linha média */
-  border-radius: 12px;
-  color: white;
-  overflow: hidden;
-}
-.b4-cta--square .b4-cta__text {
-  position: relative;
-  z-index: 2;
-  font-weight: 500; /* menos negrito */
-}
-/* Linha central para deslocamento visual do quadrado */
-.b4-cta--square .b4-cta__line { position:absolute; top:50%; left:10px; right:10px; height:1px; background: rgba(255,255,255,0.0); transform:translateY(-50%); }
-/* Quadrado: inicia antes do texto e termina encaixado no meio do texto */
-.b4-cta--square .b4-cta__square {
-  position: absolute; top: 50%; left: 14px; width: 14px; height: 14px;
-  border: 2px solid var(--b4-orange); background: transparent; transform: translate(-50%, -50%);
-}
-/* Texto com metade aparente dentro do quadrado: aplicamos uma máscara */
-.b4-cta--square .b4-cta__mask-left, .b4-cta--square .b4-cta__mask-right {
-  position: absolute; top: 0; height: 100%; width: 50%; pointer-events: none;
-}
-.b4-cta--square .b4-cta__mask-left { left: 0; background: rgba(0,0,0,0); }
-.b4-cta--square .b4-cta__mask-right { right: 0; background: rgba(0,0,0,0); }
-
-/* Animação: quadrado corre e para no meio do texto, preenchendo ao final */
-.b4-cta--square:hover .b4-cta__square {
-  animation: b4-square-snap 0.7s ease forwards;
-}
-@keyframes b4-square-snap {
-  0% { left: 14px; background: transparent; }
-  85% { left: 58%; background: transparent; }
-  100% { left: 58%; background: var(--b4-orange); }
-}
-/* CTA quadrado: saiba fora e mais dentro. Quadrado contorna o "mais" e percorre a linha até o fim. */
-.b4-cta--square.b4-cta--hybrid { padding: 0 30px; }
-.b4-cta--square.b4-cta--hybrid .b4-cta__text { position: relative; }
-.b4-cta--square.b4-cta--hybrid .b4-cta__text .saiba { position: relative; left: -10px; }
-.b4-cta--square.b4-cta--hybrid .b4-cta__text .mais { position: relative; margin-left: 6px; }
-.b4-cta--square.b4-cta--hybrid .b4-cta__square { left: 58%; width: 18px; height: 18px; border-width: 2px; }
-.b4-cta--square.b4-cta--hybrid:hover .b4-cta__square { animation: b4-square-path 0.7s ease forwards; }
-@keyframes b4-square-path {
-  0% { left: 58%; background: transparent; }
-  85% { left: calc(100% - 14px); background: transparent; }
-  100% { left: calc(100% - 14px); background: var(--b4-orange); }
-}
-
-
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(249,115,22,0.6) 25%, rgba(249,115,22,0.9) 50%, rgba(249,115,22,0.6) 75%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(247,181,0,0.6) 25%, rgba(247,181,0,0.9) 50%, rgba(247,181,0,0.6) 75%, transparent 100%);
   transform: translateY(-50%);
   overflow: hidden;
 }
@@ -158,7 +119,7 @@ body {
   height: 10px;
   border-radius: 999px;
   border: 1px solid var(--b4-orange);
-  background: rgba(249,115,22,0.12);
+  background: rgba(247,181,0,0.12);
   transform: translate(-50%, -50%);
 }
 
@@ -173,21 +134,19 @@ body {
   transition-delay: .5s; /* aparece ao final do percurso */
 }
 
-/* overlay de identidade laranja nas fotos do herói (mais perceptível) */
-.hero-orange-overlay { background: linear-gradient(90deg, rgba(249,115,22,0.28) 0%, rgba(249,115,22,0.14) 45%, rgba(0,0,0,0) 65%); }
-
 @keyframes b4-run {
   0% { left: 10px; }
   85% { left: calc(100% - 10px); }
   100% { left: calc(100% + 6px); } /* ultrapassa a lateral do retângulo */
 }
 
-/* CTA animado (novo) com QUADRADO que corre e preenche */
+/* CTA animado (novo) com QUADRADO que corre e se encaixa */
 .b4-cta--square {
   height: 48px; /* semelhante ao tamanho do Loara */
   padding: 0 26px;
   border-radius: 12px;
-  border-width: 1px; /* linha fina */
+  border-width: 2px; /* linha média */
+  border-color: var(--b4-orange);
 }
 .b4-cta--square .b4-cta__line { height: 1px; }
 .b4-cta--square .b4-cta__square {
@@ -197,73 +156,42 @@ body {
   width: 12px;
   height: 12px;
   background: transparent;
-  border: 1px solid var(--b4-orange);
+  border: 2px solid var(--b4-orange);
   transform: translate(-50%, -50%);
 }
-.b4-cta--square:hover .b4-cta__square {
-  animation: b4-square-run 0.7s ease forwards; /* velocidade média */
-}
-.b4-cta--square:hover .b4-cta__text { transition-delay: .55s; }
-@keyframes b4-square-run {
-  0% { left: 10px; background: transparent; }
-  80% { left: calc(100% - 10px); background: transparent; }
-  100% { left: calc(100% - 10px); background: var(--b4-orange); border-color: var(--b4-orange); }
-}
+.b4-cta--square:hover .b4-cta__square { animation: b4-square-run 0.7s ease forwards; }
+@keyframes b4-square-run { 0% { left: 10px; background: transparent; } 80% { left: calc(100% - 10px); background: transparent; } 100% { left: calc(100% - 10px); background: var(--b4-orange); border-color: var(--b4-orange); } }
+
+/* CTA híbrido: "Saiba" fora e "mais" dentro */
+.b4-cta--square.b4-cta--hybrid { padding: 0 30px; }
+.b4-cta--square.b4-cta--hybrid .b4-cta__text { position: relative; font-weight: 500; }
+.b4-cta--square.b4-cta--hybrid .b4-cta__text .saiba { position: relative; left: -10px; }
+.b4-cta--square.b4-cta--hybrid .b4-cta__text .mais { position: relative; margin-left: 6px; }
+.b4-cta--square.b4-cta--hybrid .b4-cta__square { left: 58%; width: 18px; height: 18px; border-width: 2px; }
+.b4-cta--square.b4-cta--hybrid:hover .b4-cta__square { animation: b4-square-path 0.7s ease forwards; }
+@keyframes b4-square-path { 0% { left: 58%; background: transparent; } 85% { left: calc(100% - 14px); background: transparent; } 100% { left: calc(100% - 14px); background: var(--b4-orange); } }
+
+/* overlay de identidade laranja nas fotos do herói (mais perceptível) */
+.hero-orange-overlay { background: linear-gradient(90deg, rgba(247,181,0,0.28) 0%, rgba(247,181,0,0.14) 45%, rgba(0,0,0,0) 65%); }
 
 /* Animação de giro sutil para números durante contagem */
 .spin-count { display: inline-block; transform-origin: 50% 50%; }
 @keyframes spinTiny { 0% { transform: rotate(0deg); } 100% { transform: rotate(8deg); } }
 
 /* Cards de serviços */
-.service-card {
-  transition: all 0.3s ease;
-  border: 1px solid #E5E7EB;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-/* Marca discreta em cada slide */
-.hero-brand {
-  position: absolute; left: 0; bottom: 16px;
-  background: rgba(0,0,0,0.3);
-  color: #fff; font-weight: 500; font-size: 12px;
-  padding: 6px 10px; border-top-right-radius: 8px; border-bottom-right-radius: 8px;
-}
-
-}
+.service-card { transition: all 0.3s ease; border: 1px solid #E5E7EB; }
+.service-card:hover { transform: translateY(-5px); shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
 
 /* Animações suaves */
-.fade-in {
-  animation: fadeIn 0.8s ease-in;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+.fade-in { animation: fadeIn 0.8s ease-in; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
 /* Estilos para dropdown de serviços */
-.dropdown-menu {
-  background: white;
-  border: 1px solid #E5E7EB;
-  border-radius: 8px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
+.dropdown-menu { background: white; border: 1px solid #E5E7EB; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
 
 /* Responsividade para mobile */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-  
+  .hero-title { font-size: 2rem; line-height: 1.2; }
   .hero-subtitle { font-size: 1.1rem; }
 }
 
