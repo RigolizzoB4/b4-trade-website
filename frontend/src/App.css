@@ -186,3 +186,71 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--b4-gray);
   margin-bottom: 2rem;
 }
+
+/* CTA animado estilo Loara (retangular, traço + círculo) */
+.b4-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 28px;
+  border: 1px solid var(--b4-orange);
+  border-radius: 10px; /* retangular com cantos suaves */
+  color: white;
+  overflow: hidden;
+}
+
+/* texto escondido até a animação cruzar a lateral */
+.b4-cta__text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+/* linha central fina */
+.b4-cta__line {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(249,115,22,0.6) 25%, rgba(249,115,22,0.9) 50%, rgba(249,115,22,0.6) 75%, transparent 100%);
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+/* círculo que corre pela linha */
+.b4-cta__circle {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid var(--b4-orange);
+  background: rgba(249,115,22,0.12);
+  transform: translate(-50%, -50%);
+}
+
+/* animação no hover: círculo percorre além da borda direita */
+.b4-cta:hover .b4-cta__circle {
+  animation: b4-run 0.7s ease forwards;
+}
+
+.b4-cta:hover .b4-cta__text {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: .5s; /* aparece ao final do percurso */
+}
+
+@keyframes b4-run {
+  0% { left: 10px; }
+  85% { left: calc(100% - 10px); }
+  100% { left: calc(100% + 6px); } /* ultrapassa a lateral do retângulo */
+}
