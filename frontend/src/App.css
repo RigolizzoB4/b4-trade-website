@@ -24,7 +24,7 @@ body {
 /* Paleta de cores B4 */
 :root {
   /* Updated to brand palette provided */
-  --b4-orange: #F7B500;        /* primary accent */
+  --b4-orange: #F39C12;        /* primary accent – laranja mais profundo */
   --b4-orange-light: #FFD24D;  /* derived lighter */
   --b4-orange-dark: #D99E00;   /* derived darker */
   --b4-gray: #909090;          /* light gray */
