@@ -49,6 +49,14 @@ const Layout = ({ children }) => {
               />
             </Link>
 
+            {/* Social icons - centralizado entre logo e Início (formato Loara) */}
+            <div className="hidden lg:flex items-center gap-4 text-[#0d2b3b]">
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:opacity-80"><Facebook size={18} /></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:opacity-80"><Instagram size={18} /></a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:opacity-80"><Linkedin size={18} /></a>
+              <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="Twitter" className="hover:opacity-80"><Twitter size={18} /></a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:opacity-80"><Youtube size={18} /></a>
+            </div>
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
               <Link 
