@@ -2,6 +2,70 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Users, Target, Award, TrendingUp, Phone, ChevronLeft, ChevronRight } from 'lucide-react';
 
+// Componente de métrica com borda laranja, contador e label que aparece no hover
+const StatCard = ({ number, label }) => {
+  // Extrai número e sufixos para animar 1500+, 500M+, etc.
+  const parseNumber = (raw) => {
+    const match = String(raw).match(/([0-9.,]+)\s*([A-Za-z]*)\+?/);
+    if (!match) return { base: 0, suffix: raw, plus: raw.includes('+') };
+    const base = parseFloat(match[1].replace('.', '').replace(',', '.')) || 0;
+    const suffix = match[2] || '';
+    const plus = String(raw).includes('+');
+    return { base, suffix, plus };
+  };
+
+  const { base, suffix, plus } = parseNumber(number);
+  const [val, setVal] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) setVisible(true);
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!visible) return;
+    // animação simples de contagem
+    const duration = 900;
+    const start = performance.now();
+    const tick = (t) => {
+      const p = Math.min(1, (t - start) / duration);
+      setVal(Math.floor(base * p));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }, [visible, base]);
+
+  const formatted = () => {
+    const n = val.toLocaleString('pt-BR');
+    return `${n}${suffix ? suffix : ''}${plus ? '+' : ''}`;
+  };
+
+  return (
+    <div
+      ref={ref}
+      className="group relative text-center bg-white rounded-xl p-5 border border-orange-200 hover:border-orange-400 transition-all shadow-sm hover:shadow-md"
+    >
+      <div className="text-2xl md:text-3xl font-extrabold text-orange-500 mb-1 tabular-nums">
+        {formatted()}
+      </div>
+      <div className="text-gray-500 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        {label}
+      </div>
+      {/* contagem se aproxima: reforça com barra sutil */}
+      <div className="absolute inset-0 rounded-xl pointer-events-none border border-orange-300/60" />
+    </div>
+  );
+};
+
+
 const HeroCarousel = () => {
   const slides = useMemo(() => ([
     {
