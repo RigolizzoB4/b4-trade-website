@@ -147,7 +147,7 @@ const HeroCarousel = () => {
                 style={{ objectPosition: 'center' }}
               />
               {/* gradient for readability */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/35 to-transparent hero-orange-overlay" />
             </div>
           </div>
         ))}
