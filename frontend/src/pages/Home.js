@@ -55,7 +55,7 @@ const StatCard = ({ number, label }) => {
       className="group relative text-center bg-white rounded-xl p-6 border-[2px] border-orange-400 transition-all shadow-sm hover:shadow-md"
     >
       <div className="text-2xl md:text-3xl font-extrabold text-orange-500 mb-1 tabular-nums group-hover:opacity-0 transition-opacity duration-150 flex items-center justify-center min-h-[36px]">
-        {formatted()}
+        <span className="spin-count" style={{animation: visible ? 'spinTiny 1.1s ease-out' : 'none'}}>{formatted()}</span>
       </div>
       <div className="text-black text-[18px] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center justify-center min-h-[36px]">
         {label}
