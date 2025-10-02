@@ -1,6 +1,145 @@
-import React from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Users, Target, Award, TrendingUp, Phone } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Target, Award, TrendingUp, Phone, ChevronLeft, ChevronRight } from 'lucide-react';
+
+const HeroCarousel = () => {
+  const slides = useMemo(() => ([
+    {
+      // Cambuí Corporate (or similar modern building)
+      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/xpvvfjwy_image.png',
+      alt: 'Edifício corporativo moderno em Campinas',
+      phrase: {
+        pre: 'Crédito com segurança e ',
+        highlight: 'agilidade',
+        post: ' para sua empresa',
+      },
+    },
+    {
+      // Interior Grupo B4 (ou similar)
+      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/a2u1hr44_image.png',
+      alt: 'Recepção Grupo B4',
+      phrase: {
+        pre: 'Estruturação financeira que ',
+        highlight: 'impulsiona',
+        post: ' decisões',
+      },
+    },
+    {
+      // Cidade / fachada com tons quentes (fallback variado)
+      img: 'https://images.unsplash.com/photo-1626422747932-9f3d20027e74?auto=format&fit=crop&w=2000&q=85',
+      alt: 'Skyline corporativo ao entardecer',
+      phrase: {
+        pre: 'Especialistas em viabilizar o seu ',
+        highlight: 'próximo',
+        post: ' passo',
+      },
+    },
+  ]), []);
+
+  const [index, setIndex] = useState(0);
+  const [hover, setHover] = useState(false);
+  const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    if (hover) return;
+    timeoutRef.current && clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => timeoutRef.current && clearTimeout(timeoutRef.current);
+  }, [index, hover, slides.length]);
+
+  const go = (dir) => {
+    setIndex((prev) => (prev + (dir === 'next' ? 1 : -1) + slides.length) % slides.length);
+  };
+
+  return (
+    <section
+      className="relative overflow-hidden h-[58vh] md:h-[62vh] lg:h-[64vh]"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      {/* Slides */}
+      <div className="absolute inset-0">
+        {slides.map((s, i) => (
+          <div
+            key={i}
+            className={`absolute inset-0 transition-opacity duration-700 ease-out ${i === index ? 'opacity-100' : 'opacity-0'}
+            `}
+            aria-hidden={i !== index}
+          >
+            <div className="w-full h-full relative">
+              <img
+                src={s.img}
+                alt={s.alt}
+                className={`w-full h-full object-cover transform transition-transform duration-[6000ms] ease-linear ${
+                  i === index ? 'scale-[1.07]' : 'scale-100'
+                }`}
+                style={{ objectPosition: 'center' }}
+              />
+              {/* gradient for readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 h-full">
+        <div className="container-custom h-full flex items-center">
+          <div className="max-w-3xl">
+            <h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight mb-6">
+              <span className="text-white">{slides[index].phrase.pre}</span>
+              <span className="text-orange-500">{slides[index].phrase.highlight}</span>
+              <span className="text-white">{slides[index].phrase.post}</span>
+            </h1>
+            <div className="flex gap-4">
+              <Link to="/contato" className="b4-cta group">
+                <span className="b4-cta__text">Saiba mais</span>
+                <span className="b4-cta__line" />
+                <span className="b4-cta__circle" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Controls */}
+      <button
+        aria-label="Anterior"
+        onClick={() => go('prev')}
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 text-white flex items-center justify-center hover:bg-black/50 transition"
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      <button
+        aria-label="Próximo"
+        onClick={() => go('next')}
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 text-white flex items-center justify-center hover:bg-black/50 transition"
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
+
+      {/* Dots */}
+      <div className="absolute bottom-5 left-0 right-0">
+        <div className="container-custom">
+          <div className="flex items-center gap-2">
+            {slides.map((_, i) => (
+              <button
+                key={`dot-${i}`}
+                onClick={() => setIndex(i)}
+                className={`h-[3px] rounded-full transition-all duration-300 ${
+                  i === index ? 'bg-white w-10' : 'bg-white/40 w-5 hover:bg-white/70'
+                }`}
+                aria-label={`Ir para slide ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Home = () => {
   const services = [
@@ -101,77 +240,23 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section */}
-      <section className="hero-section min-h-screen flex items-center relative overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.6), rgba(107, 114, 128, 0.6)), url('https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fledzhqn_image.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        />
-        
-        <div className="container-custom relative z-10 text-center text-white">
-          <div className="max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-6 hover:bg-white/20 transition-all duration-300">
-              <span className="w-2 h-2 bg-orange-400 rounded-full mr-3 animate-pulse"></span>
-              <span className="text-white/90 text-sm font-semibold">Desbloqueie o potencial financeiro do seu negócio</span>
-            </div>
-            
-            {/* Main Title */}
-            <div className="mb-6">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_loanexperts/artifacts/fskgr5np_IMG-20251001-WA0003-removebg-preview.png" 
-                alt="B4 Soluções Financeiras"
-                className="h-24 md:h-32 lg:h-40 mx-auto mb-6 drop-shadow-2xl"
-              />
-              <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-white">Transformamos desafios financeiros</span>
-                <br />
-                <span className="text-orange-300">em oportunidades de sucesso</span>
-              </h1>
-            </div>
-            
-            {/* Subtitle */}
-            <p className="hero-subtitle text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl leading-relaxed">
-              Sua empresa terá acesso às <strong className="text-orange-300">MELHORES linhas de crédito</strong> e apoio especializado. 
-              Mais de <strong className="text-white">150 soluções</strong> de crédito para o seu negócio crescer com consistência e segurança.
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Link 
-                to="/servicos/home-equity" 
-                className="btn-orange inline-flex items-center px-10 py-5 rounded-2xl font-bold text-lg group shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
-              >
-                Conheça Nossas Soluções
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
-              </Link>
-              
-              <Link 
-                to="/contato" 
-                className="inline-flex items-center px-10 py-5 border-2 border-white text-white rounded-2xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 shadow-2xl"
-              >
-                <Phone className="mr-3 h-6 w-6" />
-                Fale Conosco
-              </Link>
-            </div>
-            
-            {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-2xl md:text-3xl font-bold text-orange-300 mb-1">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-200 text-sm font-medium">
-                    {stat.label}
-                  </div>
+      {/* Header-overlay hero (carousel) */}
+      <HeroCarousel />
+
+      {/* Quick Stats over white background to separate sections */}
+      <section className="bg-white py-8">
+        <div className="container-custom">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center bg-gray-50 rounded-xl p-4 border border-gray-200">
+                <div className="text-2xl md:text-3xl font-bold text-orange-500 mb-1">
+                  {stat.number}
                 </div>
-              ))}
-            </div>
+                <div className="text-gray-600 text-sm font-medium">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
