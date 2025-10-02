@@ -51,7 +51,7 @@ const StatCard = ({ number, label }) => {
   return (
     <div
       ref={ref}
-      className="group relative text-center bg-white rounded-xl p-6 border-[3px] border-orange-400 transition-all shadow-sm hover:shadow-md"
+      className="group relative text-center bg-white rounded-xl p-6 border-[2px] border-orange-400 transition-all shadow-sm hover:shadow-md"
     >
       <div className="text-2xl md:text-3xl font-extrabold text-orange-500 mb-1 tabular-nums group-hover:opacity-0 transition-opacity duration-150">
         {formatted()}
