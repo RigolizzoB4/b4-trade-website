@@ -88,7 +88,7 @@ const HeroCarousel = () => {
       <div className="relative z-10 h-full">
         <div className="container-custom h-full flex items-center">
           <div className="max-w-3xl">
-            <h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight mb-6">
+            <h1 className="hero-readable-shadow text-white text-3xl md:text-5xl font-extrabold leading-tight mb-6">
               <span className="text-white">{slides[index].phrase.pre}</span>
               <span className="text-orange-500">{slides[index].phrase.highlight}</span>
               <span className="text-white">{slides[index].phrase.post}</span>
