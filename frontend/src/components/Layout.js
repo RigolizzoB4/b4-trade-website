@@ -35,9 +35,9 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className={`fixed w-full top-0 z-50 bg-white shadow-md`}>
+      <header className={`fixed w-full top-0 z-50 bg-white shadow-md header-bar`}>
         <div className="container-custom">
-          <div className="flex items-center justify-between h-[120px]">
+          <div className="flex items-center justify-between h-[213px]">
             {/* Esquerda: Logo (sem fundo) sem fundo branco por trás */}
             <Link to="/" className="flex items-center">
               <img
