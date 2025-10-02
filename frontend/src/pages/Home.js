@@ -1,31 +1,13 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Users, Target, Award, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react';
-
-// Componente de métrica removido conforme instrução (grid eliminado)
+import { CheckCircle, Users, Target, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const HeroCarousel = () => {
   const slides = useMemo(() => ([
-    {
-      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/zkqbmno5_Generated%20Image%20October%2002%2C%202025%20-%202_48AM.png',
-      alt: 'Fachada com blur laranja',
-      phrase: { pre: 'Crédito com segurança e ', highlight: 'agilidade', post: ' para sua empresa' },
-    },
-    {
-      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/6l04g3ky_Generated%20Image%20October%2002%2C%202025%20-%202_48AM.png',
-      alt: 'Equipe com blur laranja',
-      phrase: { pre: 'Estruturação financeira que ', highlight: 'impulsiona', post: ' decisões' },
-    },
-    {
-      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/54hj098q_Generated%20Image%20October%2002%2C%202025%20-%203_54AM%20%281%29.png',
-      alt: 'Cambuí Corporate com filtro laranja',
-      phrase: { pre: 'Especialistas em viabilizar o seu ', highlight: 'próximo', post: ' passo' },
-    },
-    {
-      img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/d06ow8hl_Generated%20Image%20October%2002%2C%202025%20-%203_46AM%20%281%29.png',
-      alt: 'Vista aérea Cambuí com overlay laranja',
-      phrase: { pre: 'Capital inteligente para ', highlight: 'impulsionar', post: ' seus projetos' },
-    },
+    { img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/zkqbmno5_Generated%20Image%20October%2002%2C%202025%20-%202_48AM.png', alt: 'Fachada com blur laranja', phrase: { pre: 'Crédito com segurança e ', highlight: 'agilidade', post: ' para sua empresa' }, pos: 'center' },
+    { img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/6l04g3ky_Generated%20Image%20October%2002%2C%202025%20-%202_48AM.png', alt: 'Equipe com blur laranja', phrase: { pre: 'Estruturação financeira que ', highlight: 'impulsiona', post: ' decisões' }, pos: 'center top' },
+    { img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/54hj098q_Generated%20Image%20October%2002%2C%202025%20-%203_54AM%20%281%29.png', alt: 'Cambuí Corporate com filtro laranja', phrase: { pre: 'Especialistas em viabilizar o seu ', highlight: 'próximo', post: ' passo' }, pos: 'center' },
+    { img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/d06ow8hl_Generated%20Image%20October%2002%2C%202025%20-%203_46AM%20%281%29.png', alt: 'Vista aérea Cambuí com overlay laranja', phrase: { pre: 'Capital inteligente para ', highlight: 'impulsionar', post: ' seus projetos' }, pos: 'center' },
   ]), []);
 
   const [index, setIndex] = useState(0);
@@ -39,16 +21,14 @@ const HeroCarousel = () => {
     return () => timeoutRef.current && clearTimeout(timeoutRef.current);
   }, [index, hover, slides.length]);
 
-  const go = (dir) => setIndex((prev) => (prev + (dir === 'next' ? 1 : -1) + slides.length) % slides.length);
-
   return (
-    <section className="relative overflow-hidden h-[58vh] md:h-[62vh] lg:h-[64vh]" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+    <section className="relative overflow-hidden h-[calc(100vh-200px)]" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <div className="absolute inset-0">
         {slides.map((s, i) => (
           <div key={i} className={`absolute inset-0 transition-opacity duration-700 ease-out ${i === index ? 'opacity-100' : 'opacity-0'}`} aria-hidden={i !== index}>
             <div className="w-full h-full relative">
-              <img src={s.img} alt={s.alt} className={`w-full h-full object-cover`} style={{ objectPosition: 'center' }} />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/38 to-transparent hero-orange-overlay" />
+              <img src={s.img} alt={s.alt} className={`w-full h-full object-cover`} style={{ objectPosition: s.pos }} />
+              <div className="absolute inset-0 hero-orange-overlay" />
             </div>
           </div>
         ))}
@@ -56,26 +36,25 @@ const HeroCarousel = () => {
       <div className="relative z-10 h-full">
         <div className="container-custom h-full flex items-center">
           <div className="max-w-3xl">
-            <h1 className="hero-readable-shadow text-white text-3xl md:text-5xl font-extrabold leading-tight mb-3">
+            <h1 className="hero-readable-shadow text-white text-4xl md:text-5xl font-extrabold leading-tight mb-6">
               <span className="text-white">{slides[index].phrase.pre}</span>
               <span className="text-[var(--b4-orange)]">{slides[index].phrase.highlight}</span>
               <span className="text-white">{slides[index].phrase.post}</span>
             </h1>
+            {/* CTA todo branco, sem linha, mais comprido e fino */}
             <div className="flex gap-4">
               <Link to="/insights" className="cta-split">
                 <span className="cta-left">Insights</span>
-                <span className="cta-box">
-                  <span className="cta-line" />
-                  <span className="cta-square" />
-                  <span className="cta-mais">Financeiros</span>
+                <span className="cta-box" style={{borderColor: '#fff', height: '46px', padding: '0 34px 0 42px'}}>
+                  <span className="cta-square" style={{borderColor: '#fff'}} />
+                  <span className="cta-mais" style={{fontSize: '15px'}}>Financeiros</span>
                 </span>
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <button aria-label="Anterior" onClick={() => go('prev')} className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 text-white flex items-center justify-center hover:bg-black/50 transition"><ChevronLeft className="w-5 h-5" /></button>
-      <button aria-label="Próximo" onClick={() => go('next')} className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 text-white flex items-center justify-center hover:bg-black/50 transition"><ChevronRight className="w-5 h-5" /></button>
+      {/* Removidos botões laterais do hero */}
       <div className="absolute bottom-5 left-0 right-0">
         <div className="container-custom"><div className="flex items-center gap-2">{slides.map((_, i) => (<button key={`dot-${i}`} onClick={() => setIndex(i)} className={`h-[3px] rounded-full transition-all duration-300 ${i === index ? 'bg-white w-10' : 'bg-white/40 w-5 hover:bg-white/70'}`} aria-label={`Ir para slide ${i + 1}`} />))}</div></div>
       </div>
@@ -89,14 +68,14 @@ const Home = () => {
       <HeroCarousel />
 
       {/* Por que escolher a B4 Soluções Financeiras */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding section-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             <div>
               <h2 className="text-4xl font-bold mb-6">
-                <span className="text-gray-900">B4</span> <span className="text-[var(--b4-orange)]">Soluções Financeiras</span>
+                <span className="text-[#333]">B4</span> <span className="text-[var(--b4-orange)]">Soluções Financeiras</span>
               </h2>
-              <div className="space-y-6 text-gray-700 leading-relaxed">
+              <div className="space-y-6 text-[#444] leading-relaxed">
                 <div className="flex items-start"><CheckCircle className="h-6 w-6 text-[var(--b4-orange)] mt-1 mr-4 flex-shrink-0" /><p className="text-base">Experiência comprovada – Mais de 15 anos conectando clientes às melhores oportunidades de crédito.</p></div>
                 <div className="flex items-start"><Users className="h-6 w-6 text-[var(--b4-orange)] mt-1 mr-4 flex-shrink-0" /><p className="text-base">Atendimento personalizado – Soluções sob medida e acompanhamento próximo.</p></div>
                 <div className="flex items-start"><Target className="h-6 w-6 text-[var(--b4-orange)] mt-1 mr-4 flex-shrink-0" /><p className="text-base">Foco em resultados – Agilidade e eficiência para garantir a aprovação do crédito.</p></div>
@@ -110,15 +89,15 @@ const Home = () => {
       </section>
 
       {/* Conheça o Grupo B4 */}
-      <section className="section-padding" style={{ backgroundColor: 'var(--b4-orange)' }}>
+      <section className="section-padding section-orange">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-4">
                 <span className="text-white">Conheça o Grupo</span> <span className="px-2 rounded-md bg-white/15 text-white">B4</span>
               </h2>
-              <p className="text-white/95 mb-5 text-base">A B4 Soluções Financeiras é uma das principais empresas do Grupo B4, com atuação robusta em soluções de crédito e captação para empresas.</p>
-              <ul className="text-white/95 space-y-2 text-sm">
+              <p className="text-white/95 mb-5 text-lg">A B4 Soluções Financeiras é uma das principais empresas do Grupo B4, com atuação robusta em soluções de crédito e captação para empresas.</p>
+              <ul className="text-white/95 space-y-2 text-base">
                 <li>• Mais de uma década conectando clientes às melhores soluções financeiras do mercado.</li>
                 <li>• Amplo portfólio de produtos para atender diferentes perfis empresariais.</li>
                 <li>• Rede de parcerias com os principais bancos e instituições financeiras.</li>

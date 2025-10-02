@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone, Mail, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const closeTimerRef = useRef(null);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   const services = [
@@ -22,23 +21,15 @@ const Layout = ({ children }) => {
   const isActivePath = (path) => location.pathname === path;
   const isActiveService = () => services.some(service => location.pathname === service.path);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    onScroll();
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [location.pathname]);
-
-  const headerSolid = true;
-  const linkBase = 'text-gray-700 hover:text-[var(--b4-orange)]';
+  const linkBase = 'text-[#333] hover:text-[var(--b4-orange)]';
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className={`fixed w-full top-0 z-50 bg-white shadow-md header-bar`}>
         <div className="container-custom">
           <div className="flex items-center justify-between h-[200px]">
-            {/* Esquerda: Logo (SVG/PNG) – 140px de altura, margem esquerda ~59px */}
+            {/* Logo à esquerda (160px) */}
             <div className="pl-[59px]">
               <Link to="/" className="flex items-center">
                 <img
@@ -49,21 +40,21 @@ const Layout = ({ children }) => {
               </Link>
             </div>
 
-            {/* Centro: Navegação centralizada (sem caixa) */}
+            {/* Navegação central */}
             <div className="hidden lg:flex flex-1 justify-center">
-              <nav className="flex items-center space-x-8">
-                <Link to="/" className={`${linkBase} text-[14px] font-semibold tracking-wide ${isActivePath('/') ? 'nav-link-active' : ''}`}>Início</Link>
-                <Link to="/quem-somos" className={`${linkBase} text-[14px] font-semibold tracking-wide ${isActivePath('/quem-somos') ? 'nav-link-active' : ''}`}>Quem Somos</Link>
+              <nav className="flex items-center space-x-10">
+                <Link to="/" className={`${linkBase} text-[16px] font-semibold tracking-wide ${isActivePath('/') ? 'nav-link-active' : ''}`}>Início</Link>
+                <Link to="/quem-somos" className={`${linkBase} text-[16px] font-semibold tracking-wide ${isActivePath('/quem-somos') ? 'nav-link-active' : ''}`}>Quem Somos</Link>
                 <div className="relative"
                      onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
                      onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}>
-                  <button onClick={() => setIsServicesOpen((v) => !v)} className={`flex items-center ${linkBase} text-[14px] font-semibold tracking-wide ${isActiveService() ? 'nav-link-active' : ''}`}>
+                  <button onClick={() => setIsServicesOpen((v) => !v)} className={`flex items-center ${linkBase} text-[16px] font-semibold tracking-wide ${isActiveService() ? 'nav-link-active' : ''}`}>
                     Serviços <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                   {isServicesOpen && (
                     <div onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
                          onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}
-                         className="absolute top-full left-0 mt-2 w-64 dropdown-menu shadow-xl">
+                         className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-xl">
                       <div className="py-2">
                         {services.map((service) => (
                           <Link key={service.path} to={service.path} onClick={() => setIsServicesOpen(false)} className={`block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-[var(--b4-orange)] ${isActivePath(service.path) ? 'bg-orange-50 text-[var(--b4-orange)]' : ''}`}>
@@ -74,19 +65,21 @@ const Layout = ({ children }) => {
                     </div>
                   )}
                 </div>
-                <Link to="/contato" className={`${linkBase} text-[14px] font-semibold tracking-wide ${isActivePath('/contato') ? 'nav-link-active' : ''}`}>Contato</Link>
+                <Link to="/insights" className={`${linkBase} text-[16px] font-semibold tracking-wide ${isActivePath('/insights') ? 'nav-link-active' : ''}`}>Insights</Link>
+                <Link to="/contato" className={`${linkBase} text-[16px] font-semibold tracking-wide ${isActivePath('/contato') ? 'nav-link-active' : ''}`}>Contato</Link>
               </nav>
             </div>
 
-            {/* Direita: Ícones sociais (4 ícones), cor da marca #2596be, sem caixas */}
+            {/* Redes sociais à direita (2x2), laranja e menores */}
             <div className="flex items-center gap-4 pr-[59px]">
-              <div className="hidden lg:grid grid-cols-2 gap-3 text-[var(--b4-primary)]">
-                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform hover:-translate-y-0.5"><Instagram size={28} /></a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform hover:-translate-y-0.5"><Linkedin size={28} /></a>
-                <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="X" className="transition-transform hover:-translate-y-0.5"><Twitter size={28} /></a>
-                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-transform hover:-translate-y-0.5"><Facebook size={28} /></a>
+              <div className="hidden lg:grid grid-cols-2 gap-2 text-[var(--b4-orange)]">
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform hover:-translate-y-0.5"><Instagram size={20} /></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform hover:-translate-y-0.5"><Linkedin size={20} /></a>
+                {/* Ícone X (substitui Twitter) */}
+                <a href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="X" className="font-bold text-[18px] leading-none transition-transform hover:-translate-y-0.5">X</a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-transform hover:-translate-y-0.5"><Facebook size={20} /></a>
               </div>
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden p-2 rounded-md ${headerSolid ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}>
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100`}>
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
@@ -95,7 +88,7 @@ const Layout = ({ children }) => {
       </header>
 
       {/* Main Content */}
-      <main className="pt-[120px]">
+      <main className="pt-[200px]">
         {children}
       </main>
 
@@ -118,7 +111,7 @@ const Layout = ({ children }) => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contato</h3>
               <div className="space-y-3">
-                <div className="flex items-center"><Mail className="h-5 w-5 text-[var(--b4-orange)] mr-3" /><p className="text-gray-300">financeiras@b4com.br</p></div>
+                <div className="flex items-center"><Mail className="h-5 w-5 text-[var(--b4-orange)] mr-3" /><p className="text-gray-300">solucoes.financeiras@b4.com.br</p></div>
                 <div className="flex items-center"><Phone className="h-5 w-5 text-[var(--b4-orange)] mr-3" /><p className="text-gray-300">(19) 3751-4300</p></div>
               </div>
             </div>
