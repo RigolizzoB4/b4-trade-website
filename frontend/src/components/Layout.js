@@ -69,10 +69,10 @@ const Layout = ({ children }) => {
               </Link>
 
               {/* Services Dropdown */}
-              <div className="relative">
+              <div className="relative" onMouseLeave={() => setIsServicesOpen(false)}>
                 <button
                   onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
+                  onClick={() => setIsServicesOpen((v) => !v)}
                   className={`flex items-center ${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
                     isActiveService() ? (headerSolid ? 'nav-link-active' : 'text-orange-300') : ''
                   }`}
@@ -83,14 +83,14 @@ const Layout = ({ children }) => {
                 {isServicesOpen && (
                   <div 
                     onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                    className="absolute top-full left-0 mt-1 w-56 dropdown-menu"
+                    className="absolute top-full left-0 mt-2 w-64 dropdown-menu shadow-xl"
                   >
                     <div className="py-2">
                       {services.map((service) => (
                         <Link
                           key={service.path}
                           to={service.path}
+                          onClick={() => setIsServicesOpen(false)}
                           className={`block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors ${
                             isActivePath(service.path) ? 'bg-orange-50 text-orange-500' : ''
                           }`}
