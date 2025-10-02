@@ -73,7 +73,7 @@ const Layout = ({ children }) => {
                 <button
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
-                  className={`flex items-center ${linkBase} font-medium transition-colors ${
+                  className={`flex items-center ${linkBase} text-[14px] font-semibold tracking-wide transition-colors ${
                     isActiveService() ? (headerSolid ? 'nav-link-active' : 'text-orange-300') : ''
                   }`}
                 >
