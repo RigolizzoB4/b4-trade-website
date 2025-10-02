@@ -140,11 +140,14 @@
     file: "/app/frontend/src/pages/Home.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Carrossel com fade, auto-advance, setas e dots."
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: 3 slides with fade transitions, auto-advance every 7 seconds, orange highlighted words ('agilidade'), left/right arrow controls functional, dot navigation working, overlay text properly positioned."
 
   - task: "CTA animado estilo Loara (retangular, linha + quadrado correndo)"
     implemented: partial
