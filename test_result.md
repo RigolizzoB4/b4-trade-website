@@ -99,5 +99,108 @@
 
 
 #====================================================================================================
+
+## user_problem_statement: "Header/hero overhaul to match Loara style; improve logo quality and placement; implement hero carousel; redesign metrics with hover behavior and count-up; CTA animation."
+
+## backend:
+  - task: "Contact API (existing)"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "No backend changes in this iteration."
+
+## frontend:
+  - task: "Header solid like Loara, logo 110px, nav typography 14px, layout alignment"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/Layout.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: false
+        agent: "user"
+        comment: "Logo antes estava sumido e sobre a foto; pediu cabeçalho idêntico ao Loara."
+      - working: true
+        agent: "main"
+        comment: "Header agora sólido 120px de altura; logo 110px dentro do header; menu 14px; alinhado."
+
+  - task: "Hero carousel com 3 slides, frases com palavra laranja, overlay e controles"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Carrossel com fade, auto-advance, setas e dots."
+
+  - task: "CTA animado estilo Loara (retangular, linha + quadrado correndo)"
+    implemented: partial
+    working: "NA"
+    file: "/app/frontend/src/App.css"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: false
+        agent: "main"
+        comment: "Versão atual usa círculo; será trocado por quadrado nas próximas alterações."
+
+  - task: "Métricas centralizadas com borda 3px laranja, count-up, hover troca número por texto"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: false
+        agent: "user"
+        comment: "Pediu centralizar, bordas mais grossas e texto no hover."
+      - working: true
+        agent: "main"
+        comment: "Cards centralizados, borda 3px, número oculta no hover e texto aparece; animação de contagem ao entrar."
+
+  - task: "Recriação do logo em SVG multicolor fiel"
+    implemented: partial
+    working: "NA"
+    file: "/app/frontend/public/logo-b4.svg"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: false
+        agent: "main"
+        comment: "SVG placeholder criado; vetorização fiel será entregue na próxima rodada."
+
+## metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 0
+  run_ui: true
+
+## test_plan:
+  current_focus:
+    - "Header layout (altura, alinhamento, logo 110px)"
+    - "Hero carousel funcionalidade e legibilidade"
+    - "Métricas: hover e count-up"
+  stuck_tasks:
+    - "CTA quadrado com animação de percurso e preenchimento (próxima rodada)"
+  test_all: false
+  test_priority: "high_first"
+
+## agent_communication:
+  - agent: "main"
+    message: "Por favor, validar visualmente o header (altura 120px, logo 110px), nav em 14px, carrossel (fade, setas, dots), e métricas (borda 3px, hover troca número por texto, count-up ao entrar). Testar em desktop e mobile (responsividade)."
+
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
