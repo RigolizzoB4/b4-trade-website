@@ -43,13 +43,13 @@ const HeroCarousel = () => {
             </h1>
             {/* CTA todo branco, sem linha, mais comprido e fino */}
             <div className="flex gap-4">
-              <Link to="/insights" className="cta-split">
+              <a href="/insights" className="cta-split">
                 <span className="cta-left">Insights</span>
-                <span className="cta-box" style={{borderColor: '#fff', height: '46px', padding: '0 34px 0 42px'}}>
-                  <span className="cta-square" style={{borderColor: '#fff'}} />
-                  <span className="cta-mais" style={{fontSize: '15px'}}>Financeiros</span>
+                <span className="cta-box">
+                  <span className="cta-square" />
+                  <span className="cta-mais">Financeiros</span>
                 </span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
