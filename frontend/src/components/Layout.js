@@ -42,13 +42,13 @@ const Layout = ({ children }) => {
 
             {/* Navegação central */}
             <div className="hidden lg:flex flex-1 justify-center">
-              <nav className="flex items-center space-x-10">
-                <Link to="/" className={`${linkBase} text-[16px] font-semibold tracking-wide ${isActivePath('/') ? 'nav-link-active' : ''}`}>Início</Link>
-                <Link to="/quem-somos" className={`${linkBase} text-[16px] font-semibold tracking-wide ${isActivePath('/quem-somos') ? 'nav-link-active' : ''}`}>Quem Somos</Link>
+              <nav className="flex items-center space-x-12">
+                <Link to="/" className={`${linkBase} text-[17px] font-semibold tracking-wide ${isActivePath('/') ? 'nav-link-active' : ''}`}>Início</Link>
+                <Link to="/quem-somos" className={`${linkBase} text-[17px] font-semibold tracking-wide ${isActivePath('/quem-somos') ? 'nav-link-active' : ''}`}>Quem Somos</Link>
                 <div className="relative"
                      onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
                      onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}>
-                  <button onClick={() => setIsServicesOpen((v) => !v)} className={`flex items-center ${linkBase} text-[16px] font-semibold tracking-wide ${isActiveService() ? 'nav-link-active' : ''}`}>
+                  <button onClick={() => setIsServicesOpen((v) => !v)} className={`flex items-center ${linkBase} text-[17px] font-semibold tracking-wide ${isActiveService() ? 'nav-link-active' : ''}`}>
                     Serviços <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                   {isServicesOpen && (
@@ -65,8 +65,8 @@ const Layout = ({ children }) => {
                     </div>
                   )}
                 </div>
-                <Link to="/insights" className={`${linkBase} text-[16px] font-semibold tracking-wide ${isActivePath('/insights') ? 'nav-link-active' : ''}`}>Insights</Link>
-                <Link to="/contato" className={`${linkBase} text-[16px] font-semibold tracking-wide ${isActivePath('/contato') ? 'nav-link-active' : ''}`}>Contato</Link>
+                <Link to="/insights" className={`${linkBase} text-[17px] font-semibold tracking-wide ${isActivePath('/insights') ? 'nav-link-active' : ''}`}>Insights</Link>
+                <Link to="/contato" className={`${linkBase} text-[17px] font-semibold tracking-wide ${isActivePath('/contato') ? 'nav-link-active' : ''}`}>Contato</Link>
               </nav>
             </div>
 
