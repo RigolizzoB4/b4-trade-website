@@ -33,12 +33,16 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Rob
 /* CTA SPLIT (Insights Financeiros) – fino e comprido, cor da marca */
 .cta-split { position: relative; display: inline-flex; align-items: center; gap: 10px; color: var(--b4-white); }
 .cta-split .cta-left { font-weight: 500; font-size: 16px; color: var(--b4-white); }
-.cta-split .cta-box { position: relative; display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 0 38px 0 42px; border: 2px solid var(--b4-orange); border-radius: 8px; overflow: hidden; }
-.cta-split .cta-mais { position: relative; z-index: 1; font-weight: 600; font-size: 17px; color: var(--b4-white); }
+/* Retângulo branco mais curto e fino */
+.cta-split .cta-box { position: relative; display: inline-flex; align-items: center; justify-content: center; height: 38px; padding: 0 30px 0 40px; border: 2px solid #fff; border-radius: 8px; overflow: hidden; }
+/* "Financeiros" (maior que Insights) */
+.cta-split .cta-mais { position: relative; z-index: 1; font-weight: 700; font-size: 18px; color: #fff; }
 .cta-split .cta-line { display: none; }
+/* Quadrado-trilho na cor da marca */
 .cta-split .cta-square { position: absolute; top: 50%; left: 18px; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 2px solid var(--b4-orange); background: transparent; z-index: 3; }
-.cta-split:hover .cta-square { animation: cta-travel 1.4s ease forwards; }
-@keyframes cta-travel { 0% { left: 18px; background: transparent; border-color: var(--b4-orange); } 90% { left: calc(100% - 30px); background: transparent; border-color: var(--b4-orange); } 100% { left: calc(100% - 30px); background: var(--b4-orange); border-color: var(--b4-orange); } }
+/* Mais lento e para antes da borda (gap ~30px) entre texto e borda */
+.cta-split:hover .cta-square { animation: cta-travel 1.6s ease forwards; }
+@keyframes cta-travel { 0% { left: 18px; background: transparent; border-color: var(--b4-orange); } 92% { left: calc(100% - 44px); background: transparent; border-color: var(--b4-orange); } 100% { left: calc(100% - 44px); background: var(--b4-orange); border-color: var(--b4-orange); } }
 
 /* Overlay de identidade (leve para texto escuro) */
 .hero-orange-overlay { background: linear-gradient(90deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.18) 45%, rgba(0,0,0,0.0) 65%); }
