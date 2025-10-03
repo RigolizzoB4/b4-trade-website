@@ -43,7 +43,7 @@ const HeroCarousel = () => {
             </h1>
             {/* CTA todo branco, sem linha, mais comprido e fino */}
             <div className="flex gap-4">
-              <a href="/insights" className="cta-split">
+              <a href="/insights" className="cta-split" onMouseEnter={(e)=>{const a=e.currentTarget;setTimeout(()=>{window.location.href='/insights'},1600);}}>
                 <span className="cta-left">Insights</span>
                 <span className="cta-box">
                   <span className="cta-square" />
