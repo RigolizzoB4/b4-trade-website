@@ -54,10 +54,7 @@ const HeroCarousel = () => {
           </div>
         </div>
       </div>
-      {/* Removidos botões laterais do hero */}
-      <div className="absolute bottom-5 left-0 right-0">
-        <div className="container-custom"><div className="flex items-center gap-2">{slides.map((_, i) => (<button key={`dot-${i}`} onClick={() => setIndex(i)} className={`h-[3px] rounded-full transition-all duration-300 ${i === index ? 'bg-white w-10' : 'bg-white/40 w-5 hover:bg-white/70'}`} aria-label={`Ir para slide ${i + 1}`} />))}</div></div>
-      </div>
+      {/* Removidos botões laterais do hero e também os dots */}
     </section>
   );
 };
