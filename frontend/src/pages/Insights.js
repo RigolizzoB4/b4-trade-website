@@ -1,13 +1,17 @@
 import React from 'react';
 
-const Block = ({ img, title, children }) => (
-  <section className="bg-white rounded-2xl shadow-sm overflow-hidden mb-8 grid md:grid-cols-[380px_1fr]">
-    <img src={img} alt={title} className="w-full h-full object-cover" />
-    <div className="p-6 md:p-8">
-      <h2 className="text-2xl font-semibold mb-2" style={{color:'#666'}}>{title}</h2>
+const Block = ({ img, title, href, children }) => (
+  <article className="grid md:grid-cols-[300px_1fr] gap-0 border-b border-[#eee] pb-6 mb-6">
+    <a href={href} target="_blank" rel="noreferrer" className="block overflow-hidden rounded-md">
+      <img src={img} alt={title} className="w-full h-[180px] md:h-[200px] object-cover hover:scale-[1.02] transition-transform" />
+    </a>
+    <div className="md:pl-6">
+      <h2 className="text-[22px] font-semibold mb-2" style={{color:'#666'}}>
+        <a href={href} target="_blank" rel="noreferrer" className="hover:underline">{title}</a>
+      </h2>
       <div className="leading-relaxed" style={{color:'#666'}}>{children}</div>
     </div>
-  </section>
+  </article>
 );
 
 export default function Insights() {
