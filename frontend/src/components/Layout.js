@@ -33,9 +33,9 @@ const Layout = ({ children }) => {
             <div className="pl-[40px]">
               <Link to="/" className="flex items-center">
                 <img
-                  src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/we8upocw_Parab%C3%A9ns%20feliz%20anivers%C3%A1rio%20moderno%20fotogr%C3%A1fico%20bal%C3%A3o%20cinza%20instagram%20post.svg"
+                  src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/ahdi5aqg_Black%20and%20White%20Smart%20Technology%20Logo.svg"
                   alt="B4 Soluções Financeiras"
-                  className="h-[180px] w-auto"
+                  className="h-[200px] w-auto"
                 />
               </Link>
             </div>
